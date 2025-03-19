@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List table form</title>
+    <link rel="shortcut icon" href="/html/favicon (2).ico" type="image/x-icon">
+</head>
+<body>
+    <div>
+        <ol type="1">
+           <li>Phone</li>
+           <li>PC</li>
+           <li>Laptop</li>
+        </ol>
+    </div>
+    <div>
+        <ul type="disc">
+            <li>Phone</li>
+            <li>PC</li>
+            <li>Laptop</li>
+        </ul>
+    </div>
+    <hr>
+    <div>
+        <table>
+            <thead>
+                <caption>Enter your Details</caption>
+             <tr>
+                <th>S.No.</th>
+                <th>Name</th>
+                <th>Adhr</th>
+                <th>Phone</th>
+                <th>Email</th>
+             </tr>
+             <tr>
+                <th>S.No.</th>
+                <th>Name</th>
+                <th colspan="3">Not necessary</th>
+             </tr>
+
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Sudha</td>
+                    <td>xxxxxxxxxxxx</td>
+                    <td>9305483852</td>
+                    <td>sudhakumarichauhan24@gmail.com</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Sudha</td>
+                    <td>xxxxxxxxxxxx</td>
+                    <td>9305483852</td>
+                    <td>sudhakumarichauhan24@gmail.com</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <hr>
+    <div>
+        <h1>Travel</h1>
+        <form action="form.html">
+            <input type="text" placeholder="Enter Name">
+            <label for="sectionida">
+                <input type="radio"value="Sectiona"name="section"id="sectionida">helloA
+            </label>
+            <label for="sectionidb">
+                <input type="radio"value="Sectionb"name="section"id="sectionidb">helloB
+            </label>
+            <!-- for selecting only at button label is not used -->
+            <input type="radio"value="Sectionc"name="section"id="sectionidc">helloA
+            <br>
+            <label for="food">
+                <input type="checkbox"name="Want food"id="food" class="hot">Food
+
+            </label>
+            <br>
+            <textarea name="explain" id="explain" cols="30" rows="10" placeholder="Explain why you are here"></textarea>
+            <br>
+            <select name="dress" id="dress">
+                <option value="Select type">Select Type</option>
+                <option value="frock">Frock</option>
+                <option value="saree">Saree</option>
+                <option value="western">Western</option>
+            </select>
+
+            
+            
+           
+
+
+        </form>
+       
+    </div>
+    
+    
+</body>
+</html>

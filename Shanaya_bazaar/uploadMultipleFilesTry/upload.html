@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="ecommerce site" />
+    <meta name="keywords" content="HTML, CSS, JavaScript" />
+    <meta name="author" content="Sudha" />
+
+    <title>Upload multiple</title>
+
+</head>
+
+<body>
+
+<!-- https://stackoverflow.com/questions/24895170/multiple-image-upload-php-form-with-one-input -->
+
+
+
+
+
+
+
+
+
+
+    <form action="uploadMultipleTry.php" method="post" enctype="multipart/form-data">
+        <table width="100%">
+            <tr>
+                <td>Select Photo (one or multiple):</td>
+                <td><input type="file" name="files[]" multiple /></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">Note: Supported image format: .jpeg, .jpg, .png, .gif</td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center"><input type="submit" value="Create Gallery" id="selectedButton" /></td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Upload</title>
+</head>
+
+<body>
+
+    <!-- https://www.geeksforgeeks.org/how-to-upload-multiple-images-and-text-to-mysql-database-in-php/ -->
+
+    <br><br>
+    <form action="" method="post" enctype="multipart/form-data">
+    <!-- <form action="file.php" method="post" enctype="multipart/form-data"> -->
+        <!-- we add action when something is present in another file. -->
+
+        <!-- <?php include 'uploadProfileImage.php';?> -->
+         <!-- used to link one php with another php but here it is .html it can't incluede it. -->
+
+        
+
+        Select Image Files:
+        <input type="file" name="images[]" multiple>
+        <br><br>
+        <input type="text" name="text_data">
+        <br><br>
+        <input type="submit" name="submit" value="Upload">
+        <!-- <php?
+        require 'uploadMultipleTry.php';
+        ?> -->
+    </form>
+</body>
+
+</html>
+
+
+
+</html>

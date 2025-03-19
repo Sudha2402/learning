@@ -1,0 +1,38 @@
+{
+    "sqltools.connections": [
+        
+        {
+            "mysqlOptions": {
+                "authProtocol": "default",
+                "enableSsl": "Disabled"
+            },
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 3306,
+            "driver": "MySQL",
+            "name": "MySQL local Shanaya",
+            "group": "Sudha",
+            "database": "shanayawork",
+            "username": "root",
+            "password": "#sudha@2402",
+            "connectionTimeout": 30
+        },
+        {
+            "mysqlOptions": {
+                "authProtocol": "default",
+                "enableSsl": "Disabled"
+            },
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 3306,
+            "driver": "MySQL",
+            "name": "MYSQL_Local",
+            "database": "sudhadatabase",
+            "username": "root",
+            "password": "#sudha@2402",
+            "connectionTimeout": 30,
+            "group": "Shanaya"
+        }
+    ],
+    "liveServer.settings.port": 5501
+}

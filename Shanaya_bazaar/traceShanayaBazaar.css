@@ -1,0 +1,85 @@
+.switcher {
+    list-style: none;
+    margin: 2px 0 0;
+    padding: 0;
+    overflow: hidden;
+    float: right
+}
+
+.switcher ul {
+    float: left
+}
+
+
+.switcher li {
+    float: left;
+    width: 20px;
+    height: 20px;
+    margin: 0 5px 0 0!important;
+    border-radius: 30px;
+    border: 2px solid #FFF
+}
+
+.switcher li::before {
+    background: none
+}
+
+.blueButton {
+    background: #111E6C
+}
+
+.greenButton {
+    background: #388E3C
+}
+
+.pomogranateButton {
+    background: #D32F2F
+}
+
+
+
+
+#switcher {
+    list-style: none;
+    margin: 2px 0 0;
+    padding: 0;
+    overflow: hidden;
+    float: right
+}
+
+#switcher ul {
+    float: left
+}
+
+#switcher li {
+    float: left;
+    width: 20px;
+    height: 20px;
+    margin: 0 5px 0 0!important;
+    border-radius: 30px;
+    border: 2px solid #FFF
+}
+
+#switcher li::before {
+    background: none
+}
+
+#blueButton {
+    background: #111E6C
+}
+
+#greenButton {
+    background: #388E3C
+}
+
+#pomogranateButton {
+    background: #D32F2F
+}
+
+#seagreenButton {
+    background: #00796B
+}
+
+#pinkButton {
+    background: #9A419C
+}
