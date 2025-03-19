@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>TraceShanayaBazaar</title>
+   
+
+    <!-- <link rel="html" type="" href="shanaya_bazaar_main.php"> -->
+
+    <!-- linking another html file here -->
+
+    <link rel="stylesheet" type="" href="traceShanayaBazaar.css">
+
+
+</head>
+
+<body style="background-color: blue;color: white;" onclick="myFunctionactive()" id="body">
+    <p id="demoactive">active Element:</p>
+    <div>
+        div section
+    </div>
+    <h1 id="display">Hello</h1>
+
+
+
+
+
+<div id="colorTheme">
+    <ul id="switcher">
+        <li id="blueButton" onclick="chBackcolor('#b8b8f4');"></li>
+        <li id="greenButton" onclick="chBackcolor('green');"></li>
+        <li id="pomogranateButton" onclick="chBackcolor('red');"></li>
+        <li id="whiteButton" onclick="chBackcolor('white');" style="border: 2px solid red; background-color: White;"></li>
+    </ul>
+
+    <!-- later on apply js here -->
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+
+
+<script src="traceShanayaBazaar.js"></script>
+
+<!-- adding another html to the corrent page.
+ It is just like iframe when we are using object tag -->
+ 
+<script>
+    function load_anotherpage() {
+     document.getElementById("display").innerHTML='<object type="text/html" data="shanaya_bazaar_main.php"></object>';
+    }
+
+   // this way of tracing the file is  not activated, even it will not trace the object tag of script
+    
+    load_anotherpage();
+    </script>
+
+
+<script src="allPageCommonScript.js"></script>
+
+
+</html>

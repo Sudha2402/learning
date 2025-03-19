@@ -1,0 +1,121 @@
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&family=Qwitcher+Grypen&display=swap');
+/* font-family: 'Oswald', sans-serif; */
+/* font-family: 'Qwitcher Grypen', cursive; */
+:root {
+    /* --main-bg-color: rgb(116, 42, 165); */
+    --main-bg-color: #2874f0;
+}
+  
+
+*{
+    padding: 0;
+    margin: 0;
+}
+header{
+    background: black;
+}
+nav{
+    height: 65px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    /* flex-wrap: wrap; */
+
+}
+.logo img{
+    height: 60px;
+}
+nav ul{
+    display: flex;
+}
+nav ul li{
+    list-style: none;
+    padding: 0vh 1vw;
+    
+
+}
+nav ul li a{
+    color: white;
+    text-decoration: none;
+}
+nav ul li a:hover{
+    color: #00ffff;
+    font-weight:bolder;
+}
+.emoji{
+    font-size: 30px;
+    padding-right: 0.2vw;
+}
+.search{
+    display: flex;
+}
+.search input{
+    height: 32px;
+    width: 30vw;
+
+}
+.search button{
+}
+.btn{
+    height: 30px;
+    transform: translate(-105%);
+    color: white;
+    background: #2874f0;
+    border-radius: 20%;
+    border: 0.5vh solid black;
+    cursor: pointer;
+    align-self: center;
+    
+}
+.container{
+    min-height: calc(100vh - 65px - 40px);
+}
+.slider{
+    /* margin: auto;
+    width: 90vw;   very unsystematic center */
+    display: flex; 
+    justify-content: center;
+    /* height: 40vh;
+    width: 90vw; */
+    padding: 2vh 0px; 
+}
+.topslider{
+    width: 80vw;
+    height: 40vh;
+}
+.carts{
+    margin: 1vw;
+    /* display: grid;
+    gap: 0.5% ; */
+}
+.latestfashion{
+    /* max-width: 95vw;
+    margin: auto; */
+    /* float: top; */
+    display: flex; 
+    text-align: center;
+    overflow: scroll;
+    
+    /* justify-content: center; it will disalign everything as we don't need side by side alignment*/ 
+}
+.cart-item1{
+    padding: 0.3%;
+}
+.lines{
+    /* text-align: center; */
+}
+
+
+footer{
+    color: blue;
+    background-color: azure;
+    height: 40px;
+    font-size: 3vh;
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    font-family: 'Oswald', sans-serif; 
+    /* background-color: var(--main-bg-color);  */
+
+  } 

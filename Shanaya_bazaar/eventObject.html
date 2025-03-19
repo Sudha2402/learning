@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="description" content="ecommerce site">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="Sudha">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> events Object </title>
+
+
+    <style>
+        #myDIVAnimation {
+            width: 93vw;
+            height: 100px;
+            background: orange;
+            position: relative;
+            font-size: 18px;
+            padding: 16px;
+        }
+
+        @keyframes mymove {
+            from {
+                top: 0px;
+            }
+
+            to {
+                /* top: 200px; */
+                top: 35vh;
+            }
+        }
+    </style>
+
+   
+
+
+</head>
+
+
+
+
+
+
+<body>
+
+    <div id="myDIVAnimation" onclick="myAnimationFunction()">Click me to start the animation.</div>
+
+    <div>
+        <video width="50vw" height="40vh" controls oncanplay="myFunctionOnCanPlay()">
+            <source src="" type="video/mp4">
+        </video>
+    </div>
+
+
+    <h1 id="myH1server"></h1>
+<div id="myDIVserver">
+    
+</div>
+
+</body>
+<script>
+
+    const div1 = document.getElementById("myDIVAnimation");
+
+    function myAnimationFunction() {
+        div1.style.animation = "mymove 4s 2";
+    }
+
+    div1.addEventListener("animationstart", myStartFunction);
+    div1.addEventListener("animationiteration", myRepeatFunction);
+    div1.addEventListener("animationend", myEndFunction);
+
+    function myStartFunction() {
+        this.innerHTML = "The animation has started";
+        this.style.backgroundColor = "pink";
+    }
+    function myRepeatFunction() {
+        this.innerHTML = "The animation was played again";
+        this.style.backgroundColor = "lightblue";
+    }
+    function myEndFunction() {
+        this.innerHTML = "The animation has completed";
+        this.style.backgroundColor = "lightgray";
+    }
+
+
+
+
+
+
+//onmessage event object
+//it will be covered in php
+    if(typeof(EventSource) !== "undefined") {
+  var source = new EventSource("/html/demo_sse.php");
+  source.onopen = function() {
+    document.getElementById("myH1server").innerHTML = "Getting server updates";
+  };
+  
+  source.onmessage = function(event) {
+    document.getElementById("myDIVserver").innerHTML += event.data + "<br>";
+  };
+
+} else {
+  document.getElementById("myDIVserver").innerHTML = "Sorry, your browser does not support server-sent events...";
+}
+
+
+
+
+
+
+
+
+</script>
+
+</html>

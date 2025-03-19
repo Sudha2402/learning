@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="ecommerce site" />
+    <meta name="keywords" content="HTML, CSS, JavaScript" />
+    <meta name="author" content="Sudha" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your address</title>
+  
+
+    <link rel="stylesheet" href="/allPageCommonStyle.css">
+
+
+
+
+</head>
+
+<body>
+<p id="demogeolocation"></p>
+</body>
+
+
+
+<script>
+
+
+
+
+if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);//calls showPosition() function .
+    } else {
+        // document.getElementById("demogeolocation").innerHTML = "Geolocation is not supported by this browser.";
+        document.writeln("Geolocation is not supported by this browser.")
+
+    }
+
+    function showPosition(position) {
+        // document.getElementById("demogeolocation").innerHTML =
+        //     "Latitude: " + position.coords.latitude + "<br>" +
+        //     "Longitude: " + position.coords.longitude;
+
+
+        document.writeln(`
+            "Latitude: "  ${position.coords.latitude}<br>
+            "Longitude: " ${ position.coords.longitude};
+  
+`)
+
+    }
+
+ 
+
+
+
+
+
+</script>
+
+
+<script src="allPageCommonScript.js"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+</html>
