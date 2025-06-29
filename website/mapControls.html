@@ -1,0 +1,31 @@
+<div id="map5" style="height: 500px; width: 100%;"></div>
+
+<script>
+function initMap() {  
+    var mapOptions = {  
+      panControl: true,  
+      zoomControl: true,  
+      mapTypeControl: true,  
+      scaleControl: true,  
+      streetViewControl: true,  
+      overviewMapControl: true,  
+      rotateControl: true,  
+      center: { lat: -34.397, lng: 150.644 }, // Example coordinates  
+      zoom: 8 // Example zoom level  
+    };  
+  
+    var map5 = new google.maps.Map(document.getElementById('map5'), mapOptions);  
+  }  
+  
+  // Load the Google Maps script with your API key  
+  function loadScript() {  
+    var script = document.createElement('script');  
+    script.src = 'https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap';  
+    script.async = true;  
+    document.body.appendChild(script);  
+  }  
+  
+  // Call loadScript when the window loads  
+  window.onload = loadScript;
+
+</script>

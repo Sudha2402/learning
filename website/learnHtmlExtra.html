@@ -1,0 +1,3836 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A glimpses of Sudha">
+  <meta name="keywords" content="Sudha,Fit Hit Sana">
+  <meta name="author" content="Sudha Kumari">
+  <!-- <link rel="stylesheet" href="/html/favicon.ico"> -->
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <title>Left concept of HTML</title>
+</head>
+
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+<!-- this is plotly whole .js file syntax for all kind of controls , hence we are linking it to our website -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<!-- //it works but above one not get connected -->
+<!-- this is chart whole .js file syntax for all kind of controls , hence we are linking it to our website -->
+
+<script src="https://www.gstatic.com/charts/loader.js"></script>
+
+
+<script src="https://d3js.org/d3.v4.js"></script>
+<!-- //this is d3.js whole .js file syntax for all kind of controls , hence we
+ are linking it to our website -->
+
+
+<!-- //Consider this below later  -->
+
+<!-- 
+If you use a shortcode, place something like this in the head element of your baseof.html template
+
+{{ if .HasShortcode "chart" }}
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+{{ end }}
+And you’ll get a unique canvas for each chart with something as simple as:
+
+{{ $id := printf "chart-js-%d" .Ordinal }}
+<div><canvas id="{{ $id }}"></canvas></div>
+<script>
+  var ctx = document.getElementById({{ $id }});
+  new Chart(ctx, {{ .Inner | safeJS }} );
+</script> -->
+
+
+
+
+
+
+
+
+<body>
+  <header>
+    <nav>
+      <h1>
+        This is header
+      </h1>
+
+    </nav>
+    This is header
+  </header>
+
+  <!-- 
+    The <kbd> element defines keyboard input
+        The <samp> element defines sample output from a computer program
+        The <code> element defines a piece of computer code
+        The <var> element defines a variable in programming or in a mathematical expression
+        The <pre> element defines preformatted text -->
+
+
+  <!-- HTML <kbd> For Keyboard Input -->
+  <!-- The HTML <kbd> element is used to define keyboard input. The content inside is displayed in the browser's default monospace font. -->
+
+  Example
+  Define some text as keyboard input in a document:
+
+  <p>Save the document by pressing <kbd>Ctrl + S</kbd></p>
+  <!-- Result: -->
+
+  <!-- Save the document by pressing Ctrl + S -->
+
+  <!-- HTML <samp> For Program Output
+                The HTML <samp> element is used to define sample output from a computer program. The content inside is displayed in the browser's default monospace font. -->
+
+  Example
+  Define some text as sample output from a computer program in a document:
+
+  <p>Message from my computer:</p>
+  <p><samp>File not found.<br>Press F1 to continue</samp></p>
+  <!-- Result: -->
+
+  <!-- Message from my computer: -->
+  <!-- File not found. -->
+  <!-- Press F1 to continue -->
+
+
+
+  <!-- HTML <code> For Computer Code
+                The HTML <code> element  is used to define a piece of computer code. The content inside is displayed in the browser's default monospace font. -->
+
+  Example
+  Define some text as computer code in a document:
+
+  <code>
+                x = 5;
+                y = 6;
+                z = x + y;
+                </code>
+  <!-- Result: -->
+
+  x = 5; y = 6; z = x + y;
+  <!-- Notice that the <code> element does not preserve extra whitespace and line-breaks. -->
+
+  <!-- To fix this, you can put the <code> element inside a <pre> element: -->
+
+  Example
+  <pre>
+     <code>
+        x = 5;
+        y = 6;
+        z = x + y;
+    </code>
+    </pre>
+  <!-- Result: -->
+
+  <!-- x = 5;
+                y = 6;
+                z = x + y; -->
+
+  HTML <var> For Variables
+    The HTML <var> element is used to define a variable in programming or in a mathematical expression. The content
+      inside is typically displayed in italic.
+
+      Example
+      Define some text as variables in a document:
+
+      <p>The area of a triangle is: 1/2 x <var>b</var> x <var>h</var>, where <var>b</var> is the base, and
+        <var>h</var> is the vertical height.
+      </p>
+      <!-- Result: -->
+
+      The area of a triangle is: 1/2 x b x h, where b is the base, and h is the vertical height.
+
+
+
+
+
+      A semantic element clearly describes its meaning to both the browser and the developer.
+      <!-- 
+                Examples of non-semantic elements: <div> and <span> - Tells nothing about its content. -->
+
+      <!-- Examples of semantic elements: <form>, <table>, and <article> - Clearly defines its content.
+                    <article>: The <article> element specifies independent, self-contained content.
+
+            An article should make sense on its own, and it should be possible to distribute it independently from the rest of the web site.
+
+            Examples of where the <article> element can be used:
+
+Forum posts
+Blog posts
+User comments
+Product cards
+Newspaper articles
+
+
+<aside>:The <aside> element defines some content aside from the content it is placed in (like a sidebar).
+
+The <aside> content should be indirectly related to the surrounding content.
+
+
+<details>
+
+<figcaption>:The <figcaption> tag defines a caption for a <figure> element. The <figcaption> element can be placed as the first or as the last child of a <figure> element.
+
+The <img> element defines the actual image/illustration. 
+
+<figure>:The <figure> tag specifies self-contained content, like illustrations, diagrams, photos, code listings, etc.
+
+
+<footer>:The <footer> element defines a footer for a document or section.
+
+A <footer> element typically contains:
+
+authorship information
+copyright information
+contact information
+sitemap
+back to top links
+related documents
+You can have several <footer> elements in one document.
+
+    
+<header>:The <header> element represents a container for introductory content or a set of navigational links.
+
+A <header> element typically contains:
+
+one or more heading elements (<h1> - <h6>)
+logo or icon
+authorship information
+
+You can have several <header> elements in one HTML document. However, <header> cannot be placed within a <footer>, <address> or another <header> element.
+
+<main>
+<mark>
+<nav>
+
+
+<section> :The <section> element defines a section in a document. //Use CSS to style the <article> element:
+
+According to W3C's HTML documentation: "A section is a thematic grouping of content, typically with a heading."
+    Examples of where a <section> element can be used:
+
+Chapters
+Introduction
+News items
+Contact information
+
+
+//Nesting <article> in <section> or Vice Versa?
+
+
+<summary>
+<time> -->
+
+
+
+
+
+
+
+      <!-- HTML Canvas Graphics -->
+
+
+      <!-- The HTML <canvas> element is used to draw graphics on a web page. -->
+
+
+      <!-- 
+        The HTML <canvas> element is used to draw graphics, on the fly, via JavaScript.
+
+            The <canvas> element is only a container for graphics. You must use JavaScript to actually draw the graphics.
+            
+            Canvas has several methods for drawing paths, boxes, circles, text, and adding images. -->
+
+      <!-- A canvas is a rectangular area on an HTML page. By default, a canvas has no border and no content. -->
+
+
+      <!-- <canvas id="myCanvas" width="200" height="100"></canvas> -->
+      Note: Always specify an id attribute (to be referred to in a script), and a width and height attribute to
+      define the size of the canvas. To add a border, use the style attribute.
+      <br>
+      <canvas id="myCanvasEmpty" width="200" height="100" style="border:1px solid #000000;">Hello......
+      </canvas>
+
+      <canvas id="myCanvasLine" width="200" height="100" style="border:1px solid #000000;">
+        Add a JavaScript , After creating the rectangular canvas area, you must add a JavaScript to do the
+        drawing.</canvas>
+
+      <canvas id="myCanvasCircle" width="200" height="100" style="border:1px solid #d3d3d3;">
+        Your browser does not support the HTML canvas tag.</canvas>
+
+
+      <canvas id="myCanvasText" width="200" height="100" style="border:1px solid #d3d3d3;"></canvas>
+
+      <canvas id="myCanvasTextBaseline" width="500" height="150" style="border:1px solid grey;">
+        Sorry, your browser does not support canvas.
+      </canvas>
+
+      <canvas id="myCanvastextAlign" width="500" height="150" style="border:1px solid grey;">
+        Sorry, your browser does not support canvas.
+      </canvas>
+
+
+      <canvas id="myCanvasStrokeText" width="200" height="100" style="border:1px solid #d3d3d3;"></canvas>
+
+
+      <canvas id="myCanvasLineGradient" width="200" height="100" style="border:1px solid #d3d3d3;"></canvas>
+
+      <canvas id="myCanvasCircularGradient" width="200" height="100" style="border:1px solid #d3d3d3;"></canvas>
+
+
+      <canvas id="myCanvasStrokeStyle" width="200" height="100" style="border:1px solid #000000;"></canvas>
+
+      <canvas id="myCanvasShapes" width="200" height="100" style="border:1px solid #000000;"></canvas>
+
+      <canvas id="myCanvasShapesAd" width="200" height="100" style="border:1px solid #000000;"></canvas>
+
+
+      <canvas id="myCanvasRect" width="200" height="100" style="border:1px solid #000000;"></canvas>
+
+
+      <canvas id="myCanvas3Rect" width="300" height="150" style="border:1px solid black">
+        Sorry, your browser does not support canvas.
+      </canvas>
+
+
+      <canvas id="myCanvasCurves" width="300" height="150" style="border:1px solid black">
+        Sorry, your browser does not support canvas.
+      </canvas>
+
+
+      <canvas id="myCanvasquadraticCurves" width="300" height="150" style="border:1px solid black">
+        Sorry, your browser does not support canvas.
+      </canvas>
+
+
+
+
+      <canvas id="myCanvasshadowColor" width="300" height="150" style="border:1px solid grey">
+        Sorry, your browser does not support canvas.
+      </canvas>
+
+      <canvas id="myCanvasshadowBlur" width="300" height="150" style="border:1px solid grey">
+        Sorry, your browser does not support canvas.
+      </canvas>
+
+
+      <canvas id="myCanvasTextshadow" width="300" height="150" style="border:1px solid grey">
+        Sorry, your browser does not support canvas.
+      </canvas>
+
+      <canvas id="myCanvasTextshadowBlur" width="300" height="150" style="border:1px solid grey">
+        Sorry, your browser does not support canvas.
+      </canvas>
+
+      <canvas id="myCanvasshadowOffsetX" width="300" height="150" style="border:1px solid grey">
+        Sorry, your browser does not support canvas.
+      </canvas>
+
+      <canvas id="myCanvasshadowOffsetY" width="300" height="150" style="border:1px solid grey">
+        Sorry, your browser does not support canvas.
+      </canvas>
+
+
+
+      <p>Image to use:</p>
+      <img id="titlelogo" src="title logo.png" alt="title logo" width="220" height="277">
+
+      <p>Canvas to fill:</p>
+      <canvas id="myCanvasDrawImage" width="250" height="300" style="border:1px solid #d3d3d3;"></canvas>
+
+      <p><button onclick="myCanvas()">Try it</button></p>
+
+
+
+      <canvas id="myCanvastranslate" width="300" height="150" style="border:1px solid grey">
+        Sorry, your browser does not support canvas.
+      </canvas>
+
+
+      <canvas id="myCanvasrotate" width="300" height="150" style="border:1px solid grey">
+        Sorry, your browser does not support canvas.
+      </canvas>
+
+
+      <canvas id="myCanvasscale" width="300" height="150" style="border:1px solid grey">
+        Sorry, your browser does not support canvas.
+      </canvas>
+
+      <canvas id="myCanvastransform" width="300" height="150" style="border:1px solid grey">
+        Sorry, your browser does not support canvas.
+      </canvas>
+
+
+      <canvas id="myCanvassetTransform" width="300" height="150" style="border:1px solid grey">
+        Sorry, your browser does not support canvas.
+      </canvas>
+
+
+
+
+
+
+
+      <canvas id="myCanvasclipPie" width="300" height="150" style="border:1px solid grey">
+        Sorry, your browser does not support canvas.
+      </canvas>
+
+      <canvas id="myCanvastriangleclip" width="300" height="150" style="border:1px solid grey">
+        Sorry, your browser does not support canvas.
+      </canvas>
+
+
+      <div style="display:none;">
+        <img id="magasalebanner" src="magasalebanner.png" alt="magasalebanner" width="220" height="77"
+          style="border:1px solid grey;">
+      </div>
+
+
+
+      <canvas id="myCanvascircularclip" width="300" height="150" style="border:1px solid grey">
+        Sorry, your browser does not support canvas.
+      </canvas>
+
+      <canvas id="myCanvasPath2Dclip" width="300" height="150" style="border:1px solid grey">
+        Sorry, your browser does not support canvas.
+      </canvas>
+
+      <canvas id="myCanvasPath2Dnoholeclip" width="300" height="150" style="border:1px solid grey">
+        Sorry, your browser does not support canvas.
+      </canvas>
+
+
+      <canvas id="myCanvassource-over" width="300" height="150" style="border:1px solid grey">
+        Sorry, your browser does not support canvas.
+      </canvas>
+
+      <canvas id="myCanvassource-out" width="300" height="150" style="border:1px solid grey">
+        Sorry, your browser does not support canvas.
+      </canvas>
+
+      <canvas id="myCanvasdestination-over" width="300" height="150" style="border:1px solid grey">
+        Sorry, your browser does not support canvas.
+      </canvas>
+
+      <canvas id="myCanvasdestination-atop" width="300" height="150" style="border:1px solid grey">
+        Sorry, your browser does not support canvas.
+      </canvas>
+
+
+
+      <canvas id="myCanvaslighter" width="300" height="150" style="border:1px solid grey">
+        Sorry, your browser does not support canvas.
+      </canvas>
+
+      <canvas id="myCanvascopy" width="300" height="150" style="border:1px solid grey">
+        Sorry, your browser does not support canvas.
+      </canvas>
+
+
+      <canvas id="myCanvasxor" width="300" height="150" style="border:1px solid grey">
+        Sorry, your browser does not support canvas.
+      </canvas>
+
+
+      <canvas id="myCanvasmultiply" width="300" height="150" style="border:1px solid grey">
+        Sorry, your browser does not support canvas.
+      </canvas>
+
+
+      <canvas id="myCanvasscreen" width="300" height="150" style="border:1px solid grey">
+        Sorry, your browser does not support canvas.
+      </canvas>
+
+
+      <canvas id="myCanvashue" width="300" height="150" style="border:1px solid grey">
+        Sorry, your browser does not support canvas.
+      </canvas>
+
+      <canvas id="myCanvasluminosity" width="300" height="150" style="border:1px solid grey">
+        Sorry, your browser does not support canvas.
+      </canvas>
+
+
+
+
+
+      <!-- <canvas id="canvasClock" width="400" height="400" style="background-color:#333"> -->
+      <canvas id="canvasClock" width="400" height="400" style="background-color:#280545">
+        Sorry, your browser does not support canvas.
+      </canvas>
+
+
+
+      <canvas id="myCanvasLineScatter" width="400" height="400" style="border:1px solid grey">
+        Sorry, your browser does not support canvas.
+      </canvas>
+
+
+      <div id="myPlotBar" style="width:100%;max-width:700px"></div>
+      <!-- this uses plotly js file that we added with script outside the body at top -->
+
+
+      <div id="myPlotPie" style="width:100%;max-width:700px"></div>
+
+
+      <div id="myPlotPieHole" style="width:100%;max-width:700px"></div>
+
+      <div id="myPlotScatter" style="width:100%;max-width:700px"></div>
+
+      <div id="myPlotLineGraphs" style="width:100%;max-width:700px"></div>
+
+      <div id="myPlotBubblePlots" style="width:100%;max-width:700px"></div>
+
+      <div id="myPlotSineReg" style="width:100%;max-width:700px"></div>
+
+      <div id="myPlotCosScatter" style="width:100%;max-width:700px"></div>
+
+      <div id="myPlotLinearGraphs" style="width:100%;max-width:700px"></div>
+
+      <div id="myPlotMultipleLines" style="width:100%;max-width:700px"></div>
+
+      <div id="myPlotEquation" style="width:100%;max-width:700px"></div>
+
+
+
+      <!-- chart.js -->
+      <!-- <canvas id="myChartBar" style="width:100%;height:30%;max-width:600px"></canvas> -->
+
+
+      <canvas id="myChartBar" style="width:100%;max-width:600px"></canvas>
+      <!-- don't set height then it will affect the view -->
+
+
+
+      <canvas id="myChartScatter" style="width:100%;max-width:600px"></canvas>
+
+      <canvas id="myChartLineGraphs" style="width:100%;max-width:600px"></canvas>
+
+      <canvas id="myChartMultipleLines" style="width:100%;max-width:600px"></canvas>
+
+      <canvas id="myChartLinearGraphs" style="width:100%;max-width:600px"></canvas>
+
+      <canvas id="myChartFunctionGraphs" style="width:100%;max-width:600px"></canvas>
+
+
+
+      <!-- google Chart -->
+
+      <div id="mygoogleChartBar" style="width:100%; max-width:600px; height:500px;"></div>
+
+      <div id="mygoogleChartPie" style="width:100%; max-width:600px; height:500px;"></div>
+
+      <div id="mygoogleChart3DPie" style="width:100%; max-width:600px; height:500px;"></div>
+
+      <div id="mygoogleChartLine" style="width:100%; max-width:600px; height:500px;"></div>
+
+      <div id="mygoogleChartScatter" style="width:100%; max-width:600px; height:500px;"></div>
+
+
+
+
+
+
+
+      <h2>D3.js Scatter-Plot</h2>
+
+      <svg id="myRandomPlot" style="width:500px;height:500px"></svg>
+
+
+
+
+      <h1>My First Google Map</h1>
+
+      <div id="googleMap" style="width:100%;height:400px;"></div>
+      <br>
+      <br>
+      <br>
+      <div id="googleMap1" style="width:100%;height:400px;"></div>
+      <!-- <div id="googleMap2" style="width:100%;height:400px;"></div>
+<div id="googleMap3" style="width:100%;height:400px;"></div>
+<div id="googleMap4" style="width:100%;height:400px;"></div> -->
+<br>
+<br>
+<br>
+
+<div id="map5" style="height: 500px; width: 100%;"></div>
+
+
+
+
+
+
+
+
+      <script>
+        var c = document.getElementById("myCanvasLine");
+        var ctx = c.getContext("2d");
+        ctx.moveTo(0, 0);
+        //   (x,y) //starting point (left topmost point)
+        ctx.lineTo(200, 100);
+        //(w,h)//etna niche chale jao
+
+        ctx.lineWidth = 10;//The lineWidth property defines the width of the line.It must be set before calling the stroke() method.
+        ctx.strokeStyle = "red";//The strokeStyle property defines the color of the line.It must be set before calling the stroke() method.
+        ctx.lineCap = "round";
+
+
+        //The lineCap property defines the cap style of the line ("butt", "round" or "square").The default is "butt".
+
+
+
+        ctx.stroke();
+
+        /*
+        var ctx = c.getContext("2d");
+        
+                        This line gets the drawing context for the canvas, which allows you to draw graphics on it, and assigns
+                        it to the variable ctx.
+                        c.getContext(contextType): The getContext method takes a single parameter, contextType, which specifies
+                        the type of context to return. In this case, "2d" indicates a two-dimensional rendering context.
+        
+        
+                        ctx.moveTo(0, 0);
+        
+                        This line sets the starting point for drawing by moving the "pen" to the coordinates (0, 0).
+                        ctx.moveTo(x, y): The moveTo method takes two parameters, x and y, which specify the new position of the
+                        pen in the canvas. (0, 0) is the top-left corner of the canvas.
+        
+        
+                        ctx.lineTo(200, 100);
+        
+                        This line creates a line from the current pen position (which is now at (0, 0)) to the coordinates (200,
+                        100).
+                        ctx.lineTo(x, y): The lineTo method takes two parameters, x and y, which specify the end point of the
+                        line. This draws a line from the last position of the pen to the new coordinates (200, 100).
+        
+        
+        
+                        ctx.stroke();
+        
+                        This line actually renders the path defined by the previous moveTo and lineTo commands on the canvas.
+                        ctx.stroke(): The stroke method has no parameters. It outlines the shape or path that has been defined
+                        by the previous drawing commands.
+                        Overall, this code draws a straight line from the top-left corner of the canvas (0, 0) to the point
+                        (200, 100).
+        */
+
+
+
+
+
+
+
+
+
+
+        var c = document.getElementById("myCanvasCircle");
+        var ctx = c.getContext("2d");
+        //                     Create a Drawing Object
+        // Secondly, you need a drawing object for the canvas.
+
+        // The getContext() method returns an object with tools (properties and methods) for drawing:
+
+        // const ctx = canvas.getContext("2d");
+
+
+
+
+
+
+
+
+        ctx.beginPath();//beginPath() - begins a path 
+        //Declares that we are about to draw a new path (without drawing)
+
+
+        ctx.arc(95, 50, 40, 0, 2 * Math.PI / 1.1);//(center(x,y),radius,startAngle ,endAngle ,true(antoclockwise)//default false , means clockwise
+
+        //  ctx.arc(95, 50, 40, 0, 2 * Math.PI/1.1 , true);
+
+        //  arc(100, 75, 50, 0 * Math.PI, 1.5 * Math.PI)//center
+
+        // arc(100, 75, 50, 0, 1.5 * Math.PI) //Start angle
+
+        //arc(100, 75, 50, 0 * Math.PI, 1.5 * Math.PI)//End angle
+
+        // arc(x, y, r, startangle, endangle ,counterclockwise) - creates an arc/curve. To create a circle with arc(): Set startangle to 0 and endangle to 2*Math.PI. The x- and y-coordinates define the center of the circle. r defines the radius of the circle
+
+        ctx.fillStyle = "red";
+
+        //Fill Circle with Gradient
+        var grad = ctx.createLinearGradient(0, 0, 280, 0);
+        grad.addColorStop(0, "red");
+        grad.addColorStop(1, "green");
+        // Fill circle with gradient
+        ctx.beginPath();
+        ctx.arc(120, 55, 35, 0, 2 * Math.PI);
+        ctx.fillStyle = grad;
+
+
+        ctx.fill();
+        ctx.lineWidth = 4;
+        ctx.strokeStyle = "blue";
+
+
+        ctx.stroke();
+
+        //you can't use multiple script in body tag but outside possible -->
+
+        //                     To draw a straight line on a canvas, use the following methods:
+
+        // moveTo(x, y) - defines the starting point of the line
+        // lineTo(x, y) - defines the ending point of the line
+        // To actually draw the line, you must use one of the "ink" methods, like stroke().
+
+
+
+
+        var c = document.getElementById("myCanvasText");
+        var ctx = c.getContext("2d");
+
+        // Fill Text with Gradient
+
+        var grad = ctx.createLinearGradient(0, 0, 280, 0);
+        grad.addColorStop(0, "green");
+        grad.addColorStop(1, "lightgreen");
+
+        // Fill text with gradient
+        ctx.font = "50px Arial";
+        ctx.fillStyle = grad;
+
+
+
+
+        ctx.font = "bold italic 30px Arial";//size style//The default value for this property is "10px sans serif"
+
+
+        ctx.textAlign = "left";//textAlign - defines the horizontal alignment of text//left right center//The default value for this property is "
+
+        ctx.textBaseline = "top";
+
+        //Center text both vertically and horizontally in the canvas:
+        ctx.textAlign = "center";
+        ctx.textBaseline = "middle";
+
+
+        //The textBaseline property defines the baseline (the vertical alignment) of text.
+
+        //                     "top"
+        // "hanging"
+        // "middle"
+        // "alphabetic" - this is default
+        // "ideographic"
+        // "bottom"
+
+        ctx.fillStyle = "purple";
+        ctx.fillText("Hello World", 10, 50);//(content, (x , y)coordinate of the start of the string , maxwidth)//start coordinate
+        //fillText() - draws "filled" text
+
+
+
+
+
+
+
+
+
+
+
+        var c = document.getElementById("myCanvasTextBaseline");
+        var ctx = c.getContext("2d");
+
+
+        // Create a line
+        ctx.strokeStyle = "black";
+        ctx.lineWidth = 2;
+        ctx.beginPath();
+        ctx.moveTo(0, 75);
+        ctx.lineTo(500, 75);
+        ctx.stroke();
+        ctx.closePath();
+
+        ctx.font = "20px Arial";
+        ctx.fillStyle = "purple";
+
+        ctx.textBaseline = "top";
+        ctx.fillText("top", 5, 75);
+
+        ctx.textBaseline = "hanging";
+        ctx.fillText("hanging", 40, 75);
+
+        ctx.textBaseline = "middle";
+        ctx.fillText("middle", 120, 75);
+
+        ctx.textBaseline = "alphabetic";
+        ctx.fillText("alphabetic", 190, 75);
+
+        ctx.textBaseline = "ideographic";
+        ctx.fillText("ideographic", 295, 75);
+
+        ctx.textBaseline = "bottom";
+        ctx.fillText("bottom", 410, 75);
+
+
+
+
+
+
+
+        var c = document.getElementById("myCanvastextAlign");
+        var ctx = c.getContext("2d");
+
+
+        // Create a line
+        ctx.strokeStyle = "black";
+        ctx.lineWidth = 2;
+        ctx.beginPath();
+        ctx.moveTo(250, 0);
+        ctx.lineTo(250, 250);
+        ctx.stroke();
+        ctx.closePath();
+
+        ctx.font = "20px Arial";
+        ctx.fillStyle = "purple";
+
+        ctx.textAlign = "center";
+        ctx.fillText("center", 250, 20);
+
+        ctx.textAlign = "start";
+        ctx.fillText("start", 250, 50);
+
+        ctx.textAlign = "end";
+        ctx.fillText("end", 250, 80);
+
+        ctx.textAlign = "left";
+        ctx.fillText("left", 250, 110);
+
+        ctx.textAlign = "right";
+        ctx.fillText("right", 250, 135);
+
+
+
+
+
+
+
+
+
+
+
+        var c = document.getElementById("myCanvasStrokeText");
+        var ctx = c.getContext("2d");
+        ctx.font = "30px Arial";//font - defines the font properties for the text
+        //   ctx.strokeStyle = "purple";
+        ctx.strokeText("Hello World", 10, 50);//stroketext only for border
+        //strokeText() - draws "outlined" text (no fill)
+
+
+
+
+
+
+
+        var c = document.getElementById("myCanvasLineGradient");
+        var ctx = c.getContext("2d");
+        // Create gradient
+        //A linear gradient changes color along a linear pattern (horizontally/vertically/diagonally).
+        //The gradient object requires two or more color stops.
+        //The addColorStop() method specifies the color stops, and its position along the gradient. The positions can be anywhere between 0 and 1.
+        var grd = ctx.createLinearGradient(0, 0, 200, 0);
+        // var grd = ctx.createLinearGradient(x0, y0, x1, y1);//(x0,y0)start point and (x1,y1) end point
+        //To use the gradient, assign it to the fillStyle or strokeStyle property, then draw the shape (rectangle, circle, shape, or text).
+
+        grd.addColorStop(0, "red");
+        grd.addColorStop(1, "white");
+        // Fill with gradient
+        ctx.fillStyle = grd;
+        //  ctx.fillStyle = "green";
+        ctx.fillRect(10, 10, 150, 80);
+
+        //Create a linear gradient with two color stops; a light blue color at the starting point of the gradient, and a dark blue color at the ending point. Then, fill the rectangle with the gradient:
+
+
+        // Create linear gradient
+        //Horizontal gradient
+        var grad = ctx.createLinearGradient(0, 0, 280, 0);
+
+        //Create a vertical linear gradient by varying the parameter values on the y-axis (change y2):
+        var grad = ctx.createLinearGradient(0, 0, 0, 130);
+
+        //A diagonal gradient is created by varying both the x- and y-axis parameters.
+        var grad = ctx.createLinearGradient(0, 0, 280, 130);
+
+        grad.addColorStop(0, "lightblue");//starting me light blue
+        // grad.addColorStop(0.5, "purple");
+        grad.addColorStop(1, "darkblue");//end me dark blue
+
+        // Fill rectangle with gradient
+        ctx.fillStyle = grad;
+        ctx.fillRect(10, 10, 280, 130);
+
+
+
+
+
+
+        // Finally, you can draw on the canvas.
+
+        // Set the fill-color to red with the fillStyle property:
+
+        // ctx.fillStyle = "red";
+        // The fillStyle property can be a color, a gradient, or a pattern. The default fillStyle is black.
+
+        // The fillRect(x, y, width, height) method draws the rectangle, filled with the fill style color, on the canvas:
+
+        // ctx.fillRect(0, 0, 150, 75);
+
+        //fillRect(x, y, width, height) - defines the start-point and the width and height of the rectangle
+
+
+
+
+
+
+
+
+
+
+
+
+        var c = document.getElementById("myCanvasCircularGradient");
+        var ctx = c.getContext("2d");
+
+        // Create gradient
+        var grd = ctx.createRadialGradient(75, 50, 5, 90, 60, 100);//The createRadialGradient() method is used to define a radial/circular gradient.
+        //createRadialGradient(x0, y0, r0, x1, y1, r1);
+        //start circle(x0, y0, r0) 
+        //end circle(x1, y1, r1)
+
+
+        //Here we set the radius of the end circle to a smaller number (100), and we see that the radial/circular gradient will be smaller:
+        // var grd =ctx.createRadialGradient(150,75,15,150,75,100);
+
+        grd.addColorStop(0, "red");//for start circle from centre
+        grad.addColorStop(0.3, "black");
+        grd.addColorStop(1, "white");// for the end circle.
+
+
+        // Create gradient
+        var grd = ctx.createRadialGradient(150, 75, 5, 120, 60, 100);
+        grd.addColorStop(0, "lightblue");
+        grd.addColorStop(0.3, "pink");
+        grd.addColorStop(1, "darkblue");
+
+
+        // Fill with gradient
+        ctx.fillStyle = grd;
+        ctx.fillRect(10, 10, 250, 100);
+
+
+
+
+        var canvas = document.getElementById("myCanvasStrokeStyle");
+        var ctx = canvas.getContext("2d");
+
+        // the filled rectangle
+
+        //ctx.fillStyle = "green";
+
+        //You can also add an alpha channel to both the fillStyle and the strokeStyle properties to create opacity.
+        ctx.fillStyle = "rgb(0 255 0 / 50%)";//50% for obacity
+
+        ctx.fillRect(10, 10, 100, 100);//Use fillRect() to draw a filled 100*100 pixels rectangle, starting in position (10,10).
+        ctx.clearRect(60, 35, 150, 50);// Then use clearRect() to clear a rectangular area in the canvas:
+
+
+
+        // the outline rectangle
+        ctx.strokeStyle = "blue";//The strokeStyle property defines the color of the outline.The strokeStyle property value can be a color (colorname, RGB, HEX, HSL), a gradient or a pattern.
+
+        //ctx.strokeStyle = "rgb(0 0 255 / 50%)";
+
+        ctx.lineWidth = 5;
+        ctx.strokeRect(10, 10, 100, 100);//Set the outline-color to "blue" and draw an outlined rectangle with the strokeRect() method:
+        //Use strokeRect() to draw a stroked 150*100 pixels rectangle, starting in position (10,10):
+        ctx.clearRect(60, 35, 150, 30);//works for clearing strokeRect
+
+
+
+
+        /*
+        
+        // Create linear gradient
+        const grad=ctx.createLinearGradient(0,0, 280,0);
+        grad.addColorStop(0, "lightblue");
+        grad.addColorStop(1, "darkblue");
+        
+        // Fill outlined rectangle with gradient
+        ctx.lineWidth = 10;
+        ctx.strokeStyle = grad;
+        ctx.strokeRect(10,10,280,130);
+        
+        */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        var canvas = document.getElementById("myCanvasShapes");
+        var ctx = canvas.getContext("2d");
+
+        ctx.beginPath();
+
+        // Set start-point
+        ctx.moveTo(20, 20);
+
+        // Set sub-points
+        ctx.lineTo(100, 20);
+        ctx.lineTo(175, 100);
+        ctx.lineTo(20, 100);
+
+        // Set end-point
+        ctx.lineTo(20, 20);
+
+        // Stroke it (do the drawing)
+        ctx.stroke();
+
+
+
+
+
+
+        var canvas = document.getElementById("myCanvasShapesAd");
+        var ctx = canvas.getContext("2d");
+
+        ctx.beginPath();
+
+        // Define a rectangle
+        ctx.moveTo(20, 20);
+        ctx.lineTo(180, 20);
+        ctx.lineTo(180, 100);
+        ctx.lineTo(20, 100);
+        ctx.lineTo(20, 20);
+
+        // Define a triangle
+        ctx.moveTo(100, 20);
+        ctx.lineTo(180, 100);
+        ctx.lineTo(20, 100);
+        ctx.lineTo(100, 20);
+
+        ctx.strokeStyle = "violet";
+        ctx.stroke();
+
+
+
+
+
+        var canvas = document.getElementById("myCanvasRect");
+        var ctx = canvas.getContext("2d");
+
+        ctx.rect(10, 10, 150, 80);//Use rect() to define a 150*100 pixels rectangle, starting in position (10,10).
+        ctx.stroke();
+
+
+
+
+
+
+        var canvas = document.getElementById("myCanvas3Rect");
+        var ctx = canvas.getContext("2d");
+
+        // Red rectangle
+        ctx.beginPath();
+        ctx.lineWidth = "6";
+        ctx.strokeStyle = "red";
+        ctx.rect(5, 5, 290, 140);
+        ctx.stroke();
+
+        // Green rectangle
+        ctx.beginPath();
+        ctx.lineWidth = "4";
+        ctx.strokeStyle = "green";
+        ctx.rect(30, 30, 50, 50);
+        ctx.stroke();
+
+        // Blue rectangle
+        ctx.beginPath();
+        ctx.lineWidth = "10";
+        ctx.strokeStyle = "blue";
+        ctx.rect(50, 50, 150, 80);
+        ctx.stroke();
+
+
+
+
+
+
+        var canvas = document.getElementById("myCanvasquadraticCurves");
+        var ctx = canvas.getContext("2d");
+
+        //This quadratic Bezier curve begins at the point specified by moveTo(): (10, 100). The control point is placed at (250, 170). The curve ends at (230, 20):
+        ctx.beginPath();
+        ctx.moveTo(10, 100);//This quadratic Bezier curve begins at the point specified by moveTo(): (10, 100)
+        ctx.quadraticCurveTo(250, 170, 230, 20);//The control point is placed at (250, 170). The curve ends at (230, 20):
+        //ctx.quadraticCurveTo(cpx, cpy, x, y);
+        ctx.stroke();
+
+
+
+
+
+
+
+        var canvas = document.getElementById("myCanvasCurves");
+        var ctx = canvas.getContext("2d");
+        //bezierCurve is for 3D 
+        //This cubic Bezier curve begins at the point specified by moveTo(): (20, 20). The first control point is placed at (110, 150). The second control point is placed at (180, 10). The curve ends at (210, 140):
+        ctx.beginPath();
+        ctx.moveTo(20, 20);
+        ctx.bezierCurveTo(110, 150, 180, 10, 210, 140);
+        //ctx.bezierCurveTo(cpx1, cpy1, cpx2, cpy2 , x,y )
+
+
+        ctx.stroke();
+
+
+
+
+        var canvas = document.getElementById("myCanvasshadowColor");
+        var ctx = canvas.getContext("2d");
+        // Shadow
+        ctx.shadowColor = "lightblue";
+        ctx.shadowOffsetX = 10;
+        ctx.shadowOffsetY = 10;
+
+        // Filled rectangle
+        ctx.fillStyle = "blue";
+        ctx.fillRect(20, 20, 100, 100);
+
+        // Stroked rectangle
+        ctx.lineWidth = 4;
+        ctx.strokeStyle = "blue";
+        ctx.strokeRect(170, 20, 100, 100);
+
+
+
+
+
+
+        var canvas = document.getElementById("myCanvasshadowBlur");
+        var ctx = canvas.getContext("2d");
+
+        // Shadow
+        ctx.shadowColor = "lightblue";
+        ctx.shadowBlur = 8;//The default value is 0 (no blur).
+        ctx.shadowOffsetX = 10;
+        ctx.shadowOffsetY = 10;
+
+        // Filled rectangle
+        ctx.fillStyle = "blue";
+        ctx.fillRect(20, 20, 100, 100);
+
+        // Stroked rectangle
+        ctx.lineWidth = 4;
+        ctx.strokeStyle = "blue";
+        ctx.strokeRect(170, 20, 100, 100);
+
+
+
+
+
+
+
+
+
+        var canvas = document.getElementById("myCanvasTextshadow");
+        var ctx = canvas.getContext("2d");
+
+
+        // Shadow
+        ctx.shadowColor = "lightblue";
+        ctx.shadowOffsetX = 5;
+        ctx.shadowOffsetY = 5;
+
+        ctx.font = "50px Arial";
+
+        // Filled text
+        ctx.fillStyle = "purple";
+        ctx.fillText("Hello World", 10, 60);
+
+        // Stroked text
+        ctx.strokeStyle = "purple";
+        ctx.strokeText("Hello World", 10, 120);
+
+
+
+
+
+        var canvas = document.getElementById("myCanvasTextshadowBlur");
+        var ctx = canvas.getContext("2d");
+
+        // Shadow
+        ctx.shadowColor = "lightblue";
+        ctx.shadowBlur = 4;//Filled and stroked text with a shadowBlur property set to 4:
+        ctx.shadowOffsetX = 5;
+        ctx.shadowOffsetY = 5;
+
+        ctx.font = "50px Arial";
+
+        // Filled text
+        ctx.fillStyle = "purple";
+        ctx.fillText("Hello World", 10, 60);
+
+        // Stroked text
+        ctx.strokeStyle = "purple";
+        ctx.strokeText("Hello World", 10, 120);
+
+
+
+
+
+
+
+
+
+        var canvas = document.getElementById("myCanvasshadowOffsetX");//The shadowOffsetX property defines the horizontal distance of the shadow from the shape.
+        //shadowOffsetX - defines the distance that shadows will be offset horizontally
+
+        var ctx = canvas.getContext("2d");
+
+        // Shadowcolor
+        ctx.shadowColor = "lightblue";
+
+        ctx.fillStyle = "blue";
+
+        // rectangle 1
+        ctx.shadowOffsetX = 5;
+        ctx.fillRect(20, 20, 100, 100);
+
+        // rectangle 2
+        ctx.shadowOffsetX = 15;
+        ctx.fillRect(170, 20, 100, 100);
+
+        // rectangle 3
+        ctx.shadowOffsetX = -10;
+        ctx.fillRect(320, 20, 100, 100);
+
+        // Positive values move the shadow to the right, and negative values moves the shadow to the left.
+
+        // The default value is 0 (no horizontal offset distance).
+
+
+
+
+
+
+
+        var canvas = document.getElementById("myCanvasshadowOffsetY");//shadowOffsetY - defines the distance that shadows will be offset vertically
+        var ctx = canvas.getContext("2d");
+
+        // Shadowcolor
+        ctx.shadowColor = "lightblue";
+
+        ctx.fillStyle = "blue";
+
+        // rectangle 1
+        ctx.shadowOffsetY = 5;
+        ctx.fillRect(20, 20, 100, 100);
+
+        // rectangle 2
+        ctx.shadowOffsetY = 15;
+        ctx.fillRect(170, 20, 100, 100);
+
+        // rectangle 3
+        ctx.shadowOffsetY = -10;
+        ctx.fillRect(320, 20, 100, 100);
+
+
+
+
+
+
+        //                 The drawImage() method draws an image onto the canvas.
+
+        // The drawImage() method can be used with three different syntaxes:
+
+        // drawImage(image, dx, dy)//Draw image in position (10, 10) on the canvas:
+        // drawImage(image, dx, dy, dwidth, dheight)
+        // drawImage(image, sx, sy, swidth, sheight, dx, dy, dwidth, dheight)
+
+
+        var canvas = document.getElementById("myCanvasDrawImage");
+        var ctxi = canvas.getContext("2d");
+        var image = document.getElementById("titlelogo");
+
+        image.addEventListener("load", (e) => {
+          ctxi.drawImage(image, 10, 10);//Draw image in position (10, 10) on the canvas://not fit to the container //effect of this and below both will be shown if both active//it is cutout hence background will be seen 
+
+
+
+          ctxi.drawImage(image, 200, 130, 600, 60, 10, 10, 350, 160);//it will show its existence according to the syntax
+          //ctx.drawImage(image, sx, sy, swidth, sheight, dx, dy, dwidth, dheight);
+
+
+          ctxi.drawImage(image, 10, 10, 190, 190);//Draw image in position (10, 10) on the canvas, with a width and height of 80 pixels:
+
+
+          //ctx.drawImage(image, 90, 130, 50, 60, 10, 10, 150, 160);//according to this it has selected white part
+          //Here we clip the source image from position (90, 130)//starting coordinate , above part will be gone, it's just like zooming the selected part, with a width of 50 and a height of 60 ,it means us point se etna aage ka part select hoga fir given width chahe kuchh bhi ho vo compact hoga par selected part pura show karega, and then position the clipped part on the canvas in position (10, 10), with a width and height of 150 and 160 pixels (so the clipped source image will also be scaled/stretched:
+
+
+          //all are present and lowest one will be at top but others will also be seen
+        });
+
+
+
+
+
+        function myCanvas() {
+          var c = document.getElementById("myCanvasDrawImage");
+          var ctx = c.getContext("2d");
+          var img = document.getElementById("titlelogo");
+          ctx.drawImage(img, 10, 10);//not adjust the height and width of imge to fit in the container
+
+        }
+
+
+
+
+
+
+
+        //HTML Canvas Transformations
+        // With transformations we can translate the origin to a different position, rotate and scale it.
+
+        // The six methods for transformations are:
+
+        // translate() - moves elements on the canvas to a new point in the grid
+        // rotate() - rotates elements on the canvas clockwise or counter-clockwise
+        // scale() - scales elements on the canvas up or down
+        // transform() - multiplies the current transformation with the arguments described
+        // resetTransform() - resets the the current transformation to the identity matrix
+        // setTransform() - resets the the current transformation to the identity matrix, and then runs a transformation described by the arguments
+
+
+
+
+        // First, draw one rectangle in position (10,10), then set translate() to (70,70) (This will be the new start point). Then draw another rectangle in position (10,10). Notice that the second rectangle now starts in position (80,80) (70+10, 70+10). Then set translate() to (80,-65) (This will be the new start point). Then draw a third rectangle in position (10,10). Notice that the third rectangle now starts in position (160,15) (80+80, 80-65). Notice that each time you call translate(), it builds on the previous start point:
+
+        var canvas = document.getElementById("myCanvastranslate");
+        var ctx = canvas.getContext("2d");
+
+        ctx.fillStyle = "red";
+        ctx.fillRect(10, 10, 100, 50);
+
+        ctx.translate(70, 70);
+
+        ctx.fillStyle = "blue";
+        ctx.fillRect(10, 10, 100, 50);
+
+        ctx.translate(80, -65);
+
+        ctx.fillStyle = "yellow";
+        ctx.fillRect(10, 10, 100, 50);
+
+
+
+
+
+        //Here we add one more rectangle. Both the rectangles will be rotated by 20 degrees:
+        var canvas = document.getElementById("myCanvasrotate");
+        var ctx = canvas.getContext("2d");
+
+        ctx.rotate((Math.PI / 180) * 20);
+        ctx.fillStyle = "red";
+        ctx.fillRect(50, 10, 100, 50);
+        ctx.strokeStyle = "blue";
+        ctx.strokeRect(70, 30, 100, 50);
+
+
+
+        var canvas = document.getElementById("myCanvasscale");
+        var ctx = canvas.getContext("2d");
+
+        ctx.strokeRect(5, 5, 25, 25);//at start black
+        ctx.scale(2, 2);//Draw a rectangle. Scale to 200%, then draw a new rectangle:
+        ctx.strokeStyle = "blue";
+        ctx.strokeRect(5, 5, 25, 25);//blue colour
+
+
+        ctx.strokeRect(100, 25, 25, 25);//black//if above will be activwe then this will be blue
+        ctx.scale(0.5, 0.5);//pahle ka aadha
+        ctx.strokeStyle = "red";
+        //ctx.strokeRect(150, 25, 25, 25);//yellow
+        ctx.strokeRect(185, 40, 25, 25);//yellow
+
+        ctx.strokeRect(65, 35, 25, 25);//red if above is active
+        ctx.scale(2, 3);
+        ctx.strokeStyle = "green";
+        ctx.strokeRect(35, 15, 25, 25);
+
+
+
+        var canvas = document.getElementById("myCanvastransform");
+        var ctx = canvas.getContext("2d");
+
+        //Draw a yellow rectangle, run new transformation matrix with transform(). Draw a red rectangle, run new transformation matrix, then draw a blue rectangle. Notice that each time you call transform(), it builds on the previous transformation matrix:
+        ctx.fillStyle = "yellow";
+        ctx.fillRect(10, 10, 200, 100)
+        ctx.transform(1, 0.5, -0.5, 1, 30, 10);
+        // ctx.transform(a, b, c, d, e, f);
+        // a 	Horizontal scaling
+        // b	Horizontal skewing
+        // c	Vertically skewing
+        // d	Vertically scaling
+        // e	Horizontal moving
+        // f	Vertically moving
+
+
+        ctx.fillStyle = "red";
+        ctx.fillRect(10, 10, 200, 100);
+        ctx.transform(1, 0.5, -0.5, 1, 30, 10);
+
+        ctx.fillStyle = "blue";
+        ctx.fillRect(10, 10, 200, 100);
+
+
+        //The resetTransform() method resets the current transformation to the identity matrix.
+
+        // This is equal to calling: ctx.setTransform(1,0,0,1,0,0).
+        // ctx.resetTransform();
+
+        var canvas = document.getElementById("myCanvassetTransform");
+        var ctx = canvas.getContext("2d");
+
+        ctx.fillStyle = "yellow";
+        ctx.fillRect(10, 10, 200, 100)
+
+        ctx.setTransform(1, 0.5, -0.5, 1, 30, 10);
+        ctx.fillStyle = "red";
+        ctx.fillRect(10, 10, 200, 100);
+
+        ctx.setTransform(1, 0.5, -0.5, 1, 30, 10);
+        ctx.fillStyle = "blue";
+        ctx.fillStyle = "pink";
+        ctx.fillRect(10, 10, 200, 100);
+
+
+
+
+
+
+
+
+        //HTML Canvas Clipping
+        //The clip() method sets or gets the current clipping region. The clipping region is the area of the canvas that will be visible after the clip() method is called. The clip() method takes two arguments: the first is the x-coordinate of the top-left corner of the clipping region,and the second is the y-coordinate of the top-left corner of the clipping region.
+
+        //The clip() method turns the current path into the current clipping region.
+
+        // When a region is clipped, future drawing is only visible inside the clipped region.
+
+        // fillrule:	Is a point inside or outside the clipping region? Possible values: nonzero|evenodd
+        // path:	A path to use as the clipping region
+
+        var canvas = document.getElementById("myCanvasclipPie");
+        var ctx = canvas.getContext("2d");
+        // First, create a circular clipping region. Then draw two rectangles; only those parts that lies inside the clipping region are visible:
+
+        // Create a circular clipping region
+        ctx.beginPath();
+        ctx.arc(100, 75, 70, 0, Math.PI * 2);
+        ctx.clip();//clip the cts acc to the arc defined above
+
+        // Draw two rectangles
+        ctx.fillStyle = "blue";
+        ctx.fillRect(0, 0, 300, 150);
+        ctx.fillStyle = "red";
+        ctx.fillRect(0, 0, 90, 90);
+
+
+
+        var canvas = document.getElementById("myCanvastriangleclip");
+        var ctx = canvas.getContext("2d");
+        // First, create a triangle-shaped clipping region. Then draw two rectangles; only those parts that lies inside the clipping region are visible:
+
+        // Create a triangle-shaped clipping region
+        ctx.beginPath();
+        ctx.moveTo(100, 20);
+        ctx.lineTo(180, 100);
+        ctx.lineTo(20, 100);
+        ctx.lineTo(100, 20);
+        ctx.clip();//only inside of triangle is seen
+
+        // Draw two rectangles
+        ctx.fillStyle = "blue";
+        ctx.fillRect(0, 0, 300, 150);
+        ctx.fillStyle = "red";
+        ctx.fillRect(0, 0, 90, 90);
+
+
+
+
+
+
+        var canvas = document.getElementById("myCanvascircularclip");
+        var ctx1 = canvas.getContext("2d");
+        var image1 = document.getElementById("magasalebanner");
+        //First, create a circular clipping region. Then draw an image onto the canvas; again - only those parts that lies inside the clipping region are visible:
+        image1.addEventListener("load", (e) => {
+          // Create a circular clipping region
+          ctx1.beginPath();
+          //   ctx1.arc(100, 45, 75, 0, Math.PI * 2);
+          ctx1.arc(90, 90, 60, 0, Math.PI * 2);
+          ctx1.clip();
+          // Draw image onto canvas
+          //ctx.drawImage(image1, 0, 0);//covers whole screen
+          ctx1.drawImage(image1, 20, 0, 180, 150);
+        });
+
+
+
+        var canvas = document.getElementById("myCanvasPath2Dclip");
+        var ctx = canvas.getContext("2d");
+        // First, we save two rectangles to a Path2D() object, this will be the clipping region. The "evenodd" rule creates a hole where the clipping rectangles intersect: If we had used the default "nonzero" rule, there would be no hole:
+
+        // Create clipping path (two rectangles)
+        var r = new Path2D();
+        r.rect(80, 10, 45, 130);
+        r.rect(40, 50, 120, 50);
+        ctx.clip(r, "evenodd");//fillrule is r and evenodd is path //overlap will also vanished
+
+        // Draw a rectangle
+        ctx.fillStyle = "red";
+        ctx.fillRect(0, 0, 300, 150);
+
+
+
+
+
+        var canvas = document.getElementById("myCanvasPath2Dnoholeclip");
+        var ctx = canvas.getContext("2d");
+        //Same example as above, but with the "nonzero" rule (does not create a hole where the clipping rectangles intersect):
+
+        // Create clipping path (two rectangles)
+        var rN = new Path2D();
+        rN.rect(80, 10, 45, 130);
+        rN.rect(40, 50, 120, 50);
+        ctx.clip(rN, "nonzero");//coinciding will exist
+
+        // Draw a rectangle
+        ctx.fillStyle = "red";
+        ctx.fillRect(0, 0, 300, 150);
+
+
+
+
+        // The globalCompositeOperation Property
+
+        // The globalCompositeOperation property sets the type of compositing operation to apply when drawing new shapes. In the previous chapters new drawings have been placed on top of each other. We can decide what to do with new shades with the globalCompositeOperation property.
+
+        //The "source-over" value is default. It will draw new shapes on top of the existing content.
+
+        //Set globalCompositeOperation property to "source-over". Then draw two overlapping rectangles:
+
+
+        // The globalCompositeOperation property can have the following values:
+
+        // Value	Description
+        // source-over	Default. Draws new shapes on top of the existing content
+        // source-in	Draws new shapes only where both the new shape and the existing content overlap. Everything else is made transparent
+        // source-out	Draws new shapes only where it does not overlap the existing content
+        // source-atop	Draws new shapes only where it does overlap the existing content
+        // destination-over	Draws new shapes behind the existing content
+        // destination-in	Keeps the existing content where both the new shape and existing content overlap. Everything else is made transparent
+        // destination-out	Keeps the existing content where it does not overlap the new shape
+        // destination-atop	Keeps the existing content where it overlaps the new shape. The new shape is drawn behind the existing content
+        // lighter	Result in a brighter color where both shapes overlap
+        // copy	Shows only the new shape
+        // xor	Shapes are transparent where both overlap and drawn normal everywhere else
+        // multiply	Multiplies the pixels of the top layer with the pixels of the bottom layer. A darker picture is the result
+        // screen	Invert the pixels, then multiply, and invert again. A lighter picture is the result (opposite of "multiply")
+        // overlay	A combination of multiply and screen. Dark parts of base layer is darker, and light parts is lighter
+        // darken	Keeps the darkest pixels of both layers
+        // lighten	Keeps the lightest pixels of both layers
+        // color-dodge	Divides the bottom layer by the inverted top layer
+        // color-burn	Divides the inverted bottom layer by the top layer, and then inverts the result
+        // hard-light	Like "overlay", but instead with the top layer and bottom layer swapped
+        // soft-light	A softer version of "hard-light"
+        // difference	Subtracts the bottom layer from the top layer - or the other way round - to always get a positive value
+        // exclusion	Like "difference", but with lower contrast
+        // hue	Adopts the hue of the top layer and preserves the luma and chroma of the bottom layer
+        // saturation	Adopts the chroma of the top layer and preserves the luma and hue of the bottom layer
+        // color	Adopts the hue and chroma of the top layer and preserves the luma of the bottom layer
+        // luminosity	Adopts the luma of the top layer and preserves the hue and chroma of the bottom layer
+
+
+
+
+
+
+        var canvas = document.getElementById("myCanvassource-over");
+        var ctx = canvas.getContext("2d");
+
+        ctx.globalCompositeOperation = "source-over";
+
+        // Draw two overlapping rectangles
+        ctx.fillStyle = "blue";
+        ctx.fillRect(10, 10, 100, 100);
+        ctx.fillStyle = "red";
+        ctx.fillRect(40, 40, 100, 100);
+
+
+
+        // The "source-out" Value
+        // The "source-out" value will draw new shapes only where it does not overlap the existing content.
+
+        // Example
+        // Set globalCompositeOperation property to "source-out". Then draw two overlapping rectangles:
+
+
+        var canvas = document.getElementById("myCanvassource-out");
+        var ctx = canvas.getContext("2d");
+        ctx.globalCompositeOperation = "source-out";
+        // Draw two overlapping rectangles
+        ctx.fillStyle = "blue";
+        ctx.fillRect(10, 10, 100, 100);
+        ctx.fillStyle = "red";
+        ctx.fillRect(40, 40, 100, 100);
+
+
+
+        // The "destination-over" Value
+        // The "destination-over" value will draw new shapes behind the existing content.//new means lower syntax in code
+
+        // Example
+        // Set globalCompositeOperation property to "destination-over". Then draw two overlapping rectangles:
+
+        var canvas = document.getElementById("myCanvasdestination-over");
+        var ctx = canvas.getContext("2d");
+
+
+        ctx.globalCompositeOperation = "destination-over";
+
+        // Draw two overlapping rectangles
+        ctx.fillStyle = "blue";
+        ctx.fillRect(10, 10, 100, 100);
+        ctx.fillStyle = "red";
+        ctx.fillRect(40, 40, 100, 100);
+
+
+
+        var canvas = document.getElementById("myCanvasdestination-atop");
+        var ctx = canvas.getContext("2d");
+
+
+        ctx.globalCompositeOperation = "destination-atop";
+
+        // Draw two overlapping rectangles
+        ctx.fillStyle = "blue";
+        ctx.fillRect(10, 10, 100, 100);
+        ctx.fillStyle = "red";
+        ctx.fillRect(40, 40, 100, 100);
+
+
+
+        // The "lighter" Value
+        // The "lighter" value will result in a brighter color where both shapes overlap.
+
+        // Example
+        // Set globalCompositeOperation property to "lighter". Then draw two overlapping rectangles:
+
+        var canvas = document.getElementById("myCanvaslighter");
+        var ctx = canvas.getContext("2d");
+
+        ctx.globalCompositeOperation = "lighter";
+
+        // Draw two overlapping rectangles
+        ctx.fillStyle = "blue";
+        ctx.fillRect(10, 10, 100, 100);
+        ctx.fillStyle = "red";
+        ctx.fillRect(40, 40, 100, 100);
+
+
+
+
+        // The "copy" Value
+        // The "copy" value will result in that only the new shape is shown.
+
+        // Example
+        // Set globalCompositeOperation property to "copy". Then draw two overlapping rectangles:
+
+        var canvas = document.getElementById("myCanvascopy");
+        var ctx = canvas.getContext("2d");
+
+        ctx.globalCompositeOperation = "copy";
+
+        // Draw two overlapping rectangles
+        ctx.fillStyle = "blue";
+        ctx.fillRect(10, 10, 100, 100);
+        ctx.fillStyle = "red";
+        ctx.fillRect(40, 40, 100, 100);
+
+
+
+        // The "xor" Value
+        // The "xor" value will result in that shapes are transparent where both overlap, and drawn normal everywhere else.
+
+        // Example
+        // Set globalCompositeOperation property to "xor". Then draw two overlapping rectangles:
+
+        var canvas = document.getElementById("myCanvasxor");
+        var ctx = canvas.getContext("2d");
+
+        ctx.globalCompositeOperation = "xor";
+
+        // Draw two overlapping rectangles
+        ctx.fillStyle = "blue";
+        ctx.fillRect(10, 10, 100, 100);
+        ctx.fillStyle = "red";
+        ctx.fillRect(40, 40, 100, 100);
+
+
+
+
+
+
+        // The "multiply" Value
+        // The "multiply" value will result in a darker picture. Multiplies the pixels of the top layer with the pixels of the bottom layer.
+
+        // Example
+        // Set globalCompositeOperation property to "multiply". Then draw two overlapping rectangles:
+        var canvas = document.getElementById("myCanvasmultiply");
+        var ctx = canvas.getContext("2d");
+
+        ctx.globalCompositeOperation = "multiply";
+        ctx.globalCompositeOperation = "darken";
+
+        // Draw two overlapping rectangles
+        ctx.fillStyle = "blue";
+        ctx.fillRect(10, 10, 100, 100);
+        ctx.fillStyle = "red";
+        ctx.fillRect(40, 40, 100, 100);
+
+
+
+        // The "screen" Value
+        // The "screen" value will result in a lighter picture. Invert the pixels, then multiply, and inverted again (opposite of "multiply").
+
+        // Example
+        // Set globalCompositeOperation property to "screen". Then draw two overlapping rectangles:
+
+        var canvas = document.getElementById("myCanvasscreen");
+        var ctx = canvas.getContext("2d");
+
+        ctx.globalCompositeOperation = "screen";
+        ctx.globalCompositeOperation = "lighten";
+
+        // Draw two overlapping rectangles
+        ctx.fillStyle = "blue";
+        ctx.fillRect(10, 10, 100, 100);
+        ctx.fillStyle = "red";
+        ctx.fillRect(40, 40, 100, 100);
+
+
+
+
+        // The "hue" Value
+        // The "hue" value adopts the hue of the top layer and preserves the luma and chroma of the bottom layer.
+
+        // Example
+        // Set globalCompositeOperation property to "hue". Then draw two overlapping rectangles:
+
+        var canvas = document.getElementById("myCanvashue");
+        var ctx = canvas.getContext("2d");
+
+        ctx.globalCompositeOperation = "hue";//pichhe wala jaida heighlight hoga
+
+        // Draw two overlapping rectangles
+        ctx.fillStyle = "blue";
+        ctx.fillRect(10, 10, 100, 100);
+        ctx.fillStyle = "red";
+        ctx.fillRect(40, 40, 100, 100);
+
+
+
+
+        var canvas = document.getElementById("myCanvasluminosity");
+        var ctx = canvas.getContext("2d");
+
+        ctx.globalCompositeOperation = "luminosity";//aage wala jaida heighlight hoga
+
+        // Draw two overlapping rectangles
+        ctx.fillStyle = "blue";
+        ctx.fillRect(10, 10, 100, 100);
+        ctx.fillStyle = "red";
+        ctx.fillRect(40, 40, 100, 100);
+
+
+
+
+
+
+
+
+
+
+
+        //CanvaClock
+
+        // In these chapters we will build an analog clock using HTML canvas.
+
+        // Create an HTML canvas:
+        var canvas = document.getElementById("canvasClock");
+        var ctx = canvas.getContext("2d");
+        var radius = canvas.height / 2;
+        ctx.translate(radius, radius);//Remap the (0,0) position (of the drawing object) to the center of the canvas://centre par start point //yaha width and height square ka h issliye exact center milega , pointer will be here now at center
+        radius = radius * 0.90//Reduce the clock radius (to 90%) to draw the clock well inside the canvas://thod chhota , center pata karne ke baad radius kam karna h
+
+        setInterval(drawClock, 1000);//step 1 ,black part
+
+        // drawClock()//it is asked in setinterval hence it repaints every second
+        function drawClock() {//step 2
+          drawFace(ctx, radius);//step 1 ,black part//step 2
+          drawNumbers(ctx, radius);//step 3
+          drawTime(ctx, radius);
+        }
+
+        function drawFace(ctx, radius) {//step 2
+          const grad = ctx.createRadialGradient(0, 0, radius * 0.95, 0, 0, radius * 1.05);//0,0 means as it is already shifted to center hence thar will be the center coordinate //radius*1.05 is thickness
+
+          //for outer bigger circle
+          //   grad.addColorStop(0, '#333');
+          grad.addColorStop(0, 'blue');
+          grad.addColorStop(0.5, 'white');
+          //   grad.addColorStop(1, '#333');
+          grad.addColorStop(1, 'blue');
+
+
+          ctx.beginPath();
+          ctx.arc(0, 0, radius, 0, 2 * Math.PI);//step 1 ,black part
+          ctx.fillStyle = 'white';//step 1 ,black part
+          ctx.fill();//step 1 ,black part
+
+
+          //for center smaller circle //step 2
+          ctx.strokeStyle = grad;
+          ctx.lineWidth = radius * 0.1;
+          ctx.stroke();
+
+          ctx.beginPath();
+          ctx.arc(0, 0, radius * 0.1, 0, 2 * Math.PI);//for smaller circle arc
+          //   ctx.fillStyle = '#333';//grey
+          ctx.fillStyle = 'black';
+          ctx.fill();
+        }
+
+        function drawNumbers(ctx, radius) {//step 3
+          ctx.font = radius * 0.15 + "px arial";//Set the font size (of the drawing object) to 15% of the radius:
+
+          //Set the text alignment to the middle and the center of the print position:
+          ctx.textBaseline = "middle";//horizontally
+          ctx.textAlign = "center";//vertically
+
+
+          //Calculate the print position (for 12 numbers) to 85% of the radius, rotated (PI/6) for each number:
+          for (let num = 1; num < 13; num++) {
+            // for(let num = 1; num < 2; num++){
+            let ang = num * Math.PI / 6;//(360/12=30 deg)==1/6 PI
+
+            //ctx is about outer circle boundy 
+            ctx.rotate(ang);////starter pointer is rotated from center which //ye text ko rotate karega otherwise circle par kaise andar ki our latke rahenge //outer par rotate hoga
+            ctx.translate(0, -radius * 0.85);//thoda boundary ke bahar se andar aayenge
+            ctx.rotate(-ang);//ander aane ke baad khud ko seedha karo apne position par
+            ctx.fillText(num.toString(), 0, 0);//enter no. //no. 1 will be printed first
+
+
+            ctx.rotate(ang);//ab angle anticlockwise se wapas apne position aa jayega jo 12 ki hoti h means starter at 12 position 
+            ctx.translate(0, radius * 0.85);//jo ander laya tha usse wapas bahar kar do taki second iteration me fir ander aaye
+            ctx.rotate(-ang);//jo text ko rotate kiya tha wapas use apni middle center position par aa jaye
+          }
+        }
+
+
+        function drawTime(ctx, radius) {
+          const now = new Date();
+          let hour = now.getHours();
+          let minute = now.getMinutes();
+          let second = now.getSeconds();
+
+          //hour
+          hour = hour % 12;//for converting the format from 24 hours to 12 hours
+
+          //Calculate the angle of the hour hand,( //calculating the hour position with respect to time //hour exact no. par nahi hota vo bhi shift karta h) and draw it a length (50% of radius), and a width (7% of radius):
+          hour = (hour * Math.PI / 6) +//as 30 degree seperation for 1 hour
+            (minute * Math.PI / (6 * 60)) +//think (30 deg /60 min) * minute => ((PI/6)*min)/60
+            (second * Math.PI / (3600 * 6));//((PI/6)/3600 sec in i hour)*sec =>((PI/6)/3600)*sec
+
+          drawHand(ctx, hour, radius * 0.5, radius * 0.07);//ctx at center at start when in the function //radius*0.07 is thickness
+
+
+          //minute
+          minute = (minute * Math.PI / 30) + (second * Math.PI / (30 * 60));//minute hand kaha hogi (2 PI /60 * min)=> (PI*min/30) + (2 PI /60 sec in 1 min * sec ) //don't think 3600 sec in 60 min , stupid
+          drawHand(ctx, minute, radius * 0.74, radius * 0.04);
+
+
+
+          // second
+          second = (second * Math.PI / 30);// 2PI/60 * sec
+          drawHand(ctx, second, radius * 0.9, radius * 0.02);
+
+        }
+
+
+
+
+        function drawHand(ctx, pos, length, width) {
+          ctx.beginPath();
+          ctx.lineWidth = width;
+          ctx.lineCap = "round";//at ends
+          ctx.moveTo(0, 0);//at each call start from center
+          ctx.rotate(pos);//which hand (hour , minute or second with angle is send in calling of drawHand)
+          ctx.lineTo(0, -length);//as outwar ja rahe h hence negetative
+          ctx.stroke();//ab line bana do 
+
+          ctx.rotate(-pos);//wapas usko pahle position par la do toh fir set interval starting position ke time set karega
+
+        }
+
+
+
+
+        //JavaScript Graphic Libraries
+        // JavaScript libraries to use for both Artificial Intelligence graphs and other charts:
+
+        // Plotly.js
+        // Chart.js
+        // Google Chart
+
+
+
+
+
+        // HTML Canvas is perfect for Scatter Plots
+
+        // HTML Canvas is perfect for Line Graphs
+
+        // HTML Canvas is perfect for combining Scatter and Lines
+
+
+
+
+        var canvas = document.getElementById("myCanvasLineScatter");
+        var ctxl = canvas.getContext("2d");
+        ctxl.fillStyle = "#FF0000";
+        // ctxl.fillStyle = "green";
+        canvas.height = canvas.width;//for square box
+        ctxl.transform(1, 0, 0, -1, 0, canvas.height)
+
+        var xMax = canvas.height;//as square hence interchange not matters
+        var yMax = canvas.width;
+        var slope = 1.2;//for line graph
+        var intercept = 70;//for line graph
+
+        var xArray = [50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150];
+        var yArray = [7, 8, 8, 9, 9, 9, 10, 11, 14, 14, 15];
+
+        // Plot Scatter
+        ctxl.fillStyle = "red";//dot dot
+        for (let i = 0; i < xArray.length - 1; i++) {
+          var x = xArray[i] * xMax / 150;//150 is highest x value , it means width(xmax) ko 150 ke acc barabar tukdo me batna h , beech ka gap for total no. of x values, fir jo bhi no. hoga vo apna position gap ke according aa jaiga
+          var y = yArray[i] * yMax / 15;//height (yMax ko 15 tukdo me baato , fir given value ani position le lega)
+          ctxl.beginPath();//same we did for making circle
+          ctxl.ellipse(x, y, 3, 3, 0, 0, Math.PI * 2);
+          // ctxl.ellipse(X coordinate , Y coordinate, Horizontal radius ,Vertical radius ,Rotation of the ellipse (in radians) ,Start angle (in radians) ,End angle (in radians) ,Whether the ellipse is drawn in a clockwise direction (false) or anti-clockwise direction (true));
+
+          //instead of ellipse circle arc and then fill will also works
+          ctxl.fill();
+
+
+          //for loop will print ecah points
+        }
+
+
+
+
+        // Plot Line
+        ctxl.moveTo(0, intercept);// var intercept = 70;//y ki value hum khud se 70 kar rahe h matlab line y axis ko 70 px niche intersect karigi
+        ctxl.lineTo(xMax, f(xMax));//last point only connected to 
+        ctxl.strokeStyle = "black";
+        ctxl.stroke();
+
+        // Line Function<br>
+        function f(x) {
+          return x * slope + intercept;//y = mx+c
+        }
+
+
+
+
+
+
+
+        //Plotly.js
+
+        //https://plotly.com/
+        // Refer this link to draw statistics
+
+        // Plotly.js is a charting library that comes with over 40 chart types, 3D charts, statistical graphs, and SVG maps.
+
+        //                 Horizontal and Vertical Bar Charts
+        // Pie and Donut Charts
+        // Line Charts
+        // Scatter and Bubble Plots
+        // Equation Plots
+        // 3D Charts
+        // Statistical Graphs
+        // SVG Maps
+        // and more ...
+
+
+
+        var xArray = ["Italy", "France", "Spain", "USA", "Argentina", "Sudha"];
+        var yArray = [55, 49, 44, 24, 15, 39];
+
+        var data = [{
+          x: xArray,//for vertical
+          y: yArray,//for vertical
+
+          x: yArray,//for horizontal 
+          y: xArray,//for horizontal 
+
+          type: "bar",
+          orientation: "v",//vertical
+
+          orientation: "h",//Horizontal
+
+          marker: { color: "rgba(10,100,20,0.9)" }//,//as it is style hence property marker contains another object with property color
+
+          // layout : {title:"Runnig to win"}, //not show its effect
+          // title:"Runnig to win" //it's also not working
+
+        }];//here we created object array
+
+        var layout = { title: "Runnig to win" };
+
+        Plotly.newPlot("myPlotBar", data, layout);
+
+        //Plotly.newPlot("myPlot", data);
+
+        //as per the imported file it is captured diredctly //here myplot is ID of canva where graph has to be made  //data is the data to be presented on the bar graph //layout decides title and it is out of canva for now
+
+
+
+
+
+
+        // To display a pie instead of bars, change x and y to labels and values, and change the type to "pie":
+
+        var data = [{ labels: xArray, values: yArray, type: "pie" }]; //it decides color by itself
+
+        Plotly.newPlot("myPlotPie", data, layout);
+
+
+
+
+        //Donut Charts
+        //To display a donut instead of a pie, add a hole:
+        var data = [{ labels: xArray, values: yArray, type: "pie", hole: .4 }]; //it decides color by itself //hole take radius  between 0 and 1
+
+        Plotly.newPlot("myPlotPieHole", data, layout);//you can remove layout if you want
+
+        Plotly.newPlot("myPlotPieHole", data);//no title
+
+
+
+
+        //Scatter Plots
+
+        var xArray = [50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150];
+        var yArray = [7, 8, 8, 9, 9, 9, 10, 11, 14, 14, 15];
+
+        // Define Data
+        var data = [{
+          x: xArray,
+          y: yArray,
+
+          //if mode not present then scatters will be connected with line
+          mode: "markers",
+          //mode:"line",//default value of mode
+          type: "scatter"
+        }];
+
+        // Define Layout
+        var layout = {
+          xaxis: { range: [40, 160], title: "Square Meters" },//40 se pahle ka gayab
+          yaxis: { range: [5, 16], title: "Price in Millions" },
+          title: "House Prices vs. Size"
+        };
+
+        Plotly.newPlot("myPlotScatter", data, layout);
+
+
+
+
+        //Line Graphs from above
+        //To display a line graph instead of a scatter plot, change the type to "line":
+        // Define Data
+        var data = [{
+          x: xArray,
+          y: yArray,
+          mode: "line",//default value of mode
+          type: "scatter"
+        }];
+        //layout pahle wala
+        Plotly.newPlot("myPlotLineGraphs", data, layout);
+
+
+
+
+        //Bubble Plots
+
+        // Bubble Plots are Scatter Plots whose markers have variable color, size, and symbols.
+
+        // It is a type of 3-dimensional chart with only two axes (x and y) where the size of the bubble communicates the third dimention.
+
+        //you have control over colors and size line etc
+
+
+        var xArray = [1, 2, 3, 4];
+        var yArray = [10, 20, 30, 40];
+
+        var trace1 = {
+          x: xArray,
+          y: yArray,
+          mode: 'markers',
+          marker: {
+            color: ['red', 'green', 'blue', 'orange'],
+            size: [20, 30, 40, 50]// the size of the bubble communicates the third dimention
+          }
+        };
+
+        var trace2 = {
+          x: [1, 2, 3, 4],
+          y: [25, 30, 45, 60],//new trace and value 
+          mode: 'markers',
+          mode: 'line',
+          marker: {
+            // color: 'rgb(31, 119, 180)',
+            color: ['black', 'pink', 'lightblue', 'violet'],
+            size: 18,
+            symbol: ['circle', 'square', 'diamond', 'cross']
+          },
+        };
+
+        var data = [trace1];//shows trace 1 only
+        var data = [trace1, trace2];
+
+        var layout = {
+          xaxis: { title: "Square Meters" },//40 se pahle ka gayab
+          yaxis: { title: "Price in Millions" },
+          title: "Plotting Bubbles"
+        };
+
+        Plotly.newPlot('myPlotBubblePlots', data, layout);
+
+
+
+
+
+
+
+
+        //Math.sin(x)
+        // Source Code
+
+        var exp = "Math.sin(x)";
+
+        // Generate values
+        var xValues = [];
+        var yValues = [];
+        for (let x = 0; x <= 10; x += 0.1) {
+          xValues.push(x);
+          yValues.push(eval(exp));//eval manipulates the js in string 
+        }
+
+        // Display using Plotly 
+        var data = [{ x: xValues, y: yValues, mode: "lines" }];
+        var layout = { title: "y = " + exp };
+
+        Plotly.newPlot("myPlotSineReg", data, layout);
+
+
+        // To display scatters instead, change mode to markers:
+        var exp = "Math.cos(x)";
+        // Generate values
+        var xValues = [];
+        var yValues = [];
+        for (let x = 0; x <= 10; x += 0.1) {
+          xValues.push(x);
+          yValues.push(eval(exp));//eval manipulates the js in string //if it is not called agin then this eval will also be according to last sine graph
+        }
+        var layout = { title: "y = " + exp };
+        var data = [{ x: xValues, y: yValues, mode: "markers" }];
+        Plotly.newPlot("myPlotCosScatter", data, layout);
+
+
+
+
+
+
+        //Linear Graphs
+        var exp = "x + 17";
+
+        // Generate values
+        var xValues = [];
+        var yValues = [];
+        for (let x = 0; x <= 10; x += 1) {
+          yValues.push(eval(exp));
+          xValues.push(x);
+        }
+
+        // Define Data
+        var data = [{
+          x: xValues,
+          y: yValues,
+          mode: "lines"
+        }];
+
+        // Define Layout
+        var layout = { title: "y = " + exp };
+
+        // Display using Plotly
+        Plotly.newPlot("myPlotLinearGraphs", data, layout);
+
+
+
+
+
+
+
+
+        //Multiple Lines
+
+
+        var exp1 = "x";
+        var exp2 = "1.5*x";
+        var exp3 = "1.5*x + 7";
+
+        // Generate values
+        var x1Values = [];
+        var x2Values = [];
+        var x3Values = [];
+
+
+        var y1Values = [];
+        var y2Values = [];
+        var y3Values = [];
+
+        for (let x = 0; x <= 10; x += 1) {
+          x1Values.push(x);
+          x2Values.push(x);
+          x3Values.push(x);
+
+          y1Values.push(eval(exp1));
+          y2Values.push(eval(exp2));
+          y3Values.push(eval(exp3));
+        }
+
+        // Define Data
+        var data = [
+          { x: x1Values, y: y1Values, mode: "lines" },
+          { x: x2Values, y: y2Values, mode: "lines" },
+          { x: x3Values, y: y3Values, mode: "lines" }
+        ];
+
+        // Define Layout
+        var layout = { title: "[y=" + exp1 + "] [y=" + exp2 + "] [y=" + exp3 + "]" };
+
+        // Display using Plotly
+        Plotly.newPlot("myPlotMultipleLines", data, layout);
+
+
+
+
+        // Plotting Equations
+        // Plotting a simple equation like y = x^2:
+        var x = Array.from({ length: 100 }, (_, i) => i / 10);
+        var y = x.map(x => x * x);
+        var data = [{ x, y, type: 'scatter', mode: 'lines' }];
+        var layout = { title: "x^2" };
+        Plotly.newPlot("myPlotEquation", data, layout);
+
+
+
+
+
+
+
+        //Chart.js
+
+        // Chart.js is an free JavaScript library for making HTML-based charts. It is one of the simplest visualization libraries for JavaScript, and comes with the many built-in chart types:
+
+        // Scatter Plot
+        // Line Chart
+        // Bar Chart
+        // Pie Chart
+        // Donut Chart
+        // Bubble Chart
+        // Area Chart
+        // Radar Chart
+        // Mixed Chart
+
+
+        var xValues1 = ["Italy", "France", "Spain", "USA", "Argentina", "Sudha"];
+
+        var yValues1 = [55, 49, 44, 24, 15, 39];
+
+        var barColors = ["red", "green", "blue", "orange", "brown", "black"];
+        var barColors = ["red"];//if all same
+        var barColors = "red";//if all same
+
+        //Color Shades:
+        var barColors = [
+          "rgba(0,0,255,1.0)",
+          "rgba(0,0,255,0.8)",
+          "rgba(0,0,255,0.6)",
+          "rgba(0,0,255,0.4)",
+          "rgba(0,0,255,0.2)",
+          "rgba(0,0,255,0.1)",
+        ];
+
+        // var myChartObj = document.getElementById("myChartBar");
+        // var myChart = new Chart(myChartObj, { //the call it
+
+
+
+        new Chart("myChartBar", {
+          //mychartBar is id
+          type: "bar",
+
+          //  type: "horizontalBar",//horizontal bar not works
+
+          type: "line",
+
+          type: "pie",//not give topmost undefined 
+
+          type: "doughnut",
+
+
+          data: {
+            labels: xValues1,
+            datasets: [{
+              backgroundColor: barColors,
+              data: yValues1
+              // borderWidth:1,
+            }]
+          },
+          // options: {...}
+
+
+          options: { //ye kaam hi nahi kar raha kuchh
+
+            //  legend: { display: false },
+            //   responsive: true,
+            //   maintainAspectRatio:false,//ye lamba lamba chart de dega
+            //   maintainAspectRatio:true,
+            title: {
+              display: true,
+              text: "Winning Shanaya"
+            }
+          }
+
+        });
+
+
+
+        var xyValues = [
+          { x: 50, y: 7 },
+          { x: 60, y: 8 },
+          { x: 70, y: 8 },
+          { x: 80, y: 9 },
+          { x: 90, y: 9 },
+          { x: 100, y: 9 },
+          { x: 110, y: 10 },
+          { x: 120, y: 11 },
+          { x: 130, y: 14 },
+          { x: 140, y: 14 },
+          { x: 150, y: 15 }
+        ];
+
+        // var xValues2 = xyValues.map(function(i) { return i.x; });
+        // var yValues2 = xyValues.map(function(i) { return i.y; });
+
+        new Chart("myChartScatter", {
+          type: "scatter",
+          data: {
+            datasets: [{
+              pointRadius: 4,
+              pointBackgroundColor: "rgba(0,0,255,1)",
+              data: xyValues
+            }]
+          },
+          //   options:{...}
+          options: {
+            legend: { display: false },
+            scales: {
+              xAxes: [{ ticks: { min: 40, max: 160 } }],
+              yAxes: [{ ticks: { min: 6, max: 16 } }],
+            }
+          }
+        });
+
+
+
+
+
+        var xValues = [50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150];
+        var yValues = [7, 8, 8, 9, 9, 9, 10, 11, 14, 14, 15];
+
+        new Chart("myChartLineGraphs", {
+          type: "line",
+          data: {
+            labels: xValues,
+            datasets: [{
+              fill: false,
+              lineTension: 0,
+              backgroundColor: "rgba(0,0,255,1.0)",
+              borderColor: "rgba(0,0,255,0.1)",
+              data: yValues
+            }]
+          },
+          options: {
+            legend: { display: false },
+            scales: {
+              yAxes: [{ ticks: { min: 6, max: 16 } }],
+            }
+          }
+        });
+
+
+
+
+
+        var xValues = [100, 200, 300, 400, 500, 600, 700, 800, 900, 1000];
+
+        new Chart("myChartMultipleLines", {
+          type: "line",
+          data: {
+            labels: xValues,
+            datasets: [
+              {
+                data: [860, 1140, 1060, 1060, 1070, 1110, 1330, 2210, 7830, 2478],
+                borderColor: "red",
+                fill: false
+              },
+              {
+                data: [1600, 1700, 1700, 1900, 2000, 2700, 4000, 5000, 6000, 7000],
+                borderColor: "green",
+                fill: false
+              },
+              {
+                data: [300, 700, 2000, 5000, 6000, 4000, 2000, 1000, 200, 100],
+                borderColor: "blue",
+                fill: false
+              }
+            ]
+          },
+          options: {
+            legend: { display: false }
+          }
+        });
+
+
+
+
+
+
+
+        //Linear Graphs
+        var xValues = [];
+        var yValues = [];
+
+        generateData("x * 2 + 7", 0, 10, 0.5);//call function defined at lower
+
+        new Chart("myChartLinearGraphs", {
+          type: "line",
+          data: {
+            labels: xValues,//from lower function
+            datasets: [{
+              fill: false,
+              pointRadius: 1,//note the radius of point
+              borderColor: "rgba(255,0,0,0.5)",
+              data: yValues
+            }]
+          },
+          options: {
+            legend: { display: false },
+            title: {
+              display: true,
+              text: "y = x * 2 + 7",
+              fontSize: 16
+            }
+          }
+        });
+        function generateData(value, i1, i2, step = 1) {
+          for (let x = i1; x <= i2; x += step) {
+            xValues.push(x);
+            yValues.push(eval(value));
+          }
+        }
+
+
+
+
+
+        var xValues = [];
+        var yValues = [];
+
+        generateData("Math.sin(x)", 0, 10, 0.5);
+
+        new Chart("myChartFunctionGraphs", {
+          type: "line",
+          data: {
+            labels: xValues,//from lower function
+            datasets: [{
+              fill: false,
+              pointRadius: 1,//note the radius of point
+              borderColor: "rgba(5,280,300,0.5)",
+              data: yValues
+            }]
+          },
+          options: {
+            legend: { display: false },
+            title: {
+              display: true,
+              text: "Math.sin(x)",
+              fontSize: 36
+            }
+          }
+        });
+
+
+
+
+
+        //Google Chart
+
+        // From simple line charts to complex hierarchical tree maps, the Google Chart gallery provides a large number of ready-to-use chart types:
+
+        // Scatter Chart
+        // Line Chart
+        // Bar / Column Chart
+        // Area Chart
+        // Pie Chart
+        // Donut Chart
+        // Org Chart
+        // Map / Geo Chart
+
+
+
+        //Bar Charts
+        google.charts.load('current', { 'packages': ['corechart'] });
+        google.charts.setOnLoadCallback(drawChartBar);
+
+        function drawChartBar() {
+
+          // Set Data
+          var data = google.visualization.arrayToDataTable([
+            ['Contry', 'Mhl'],
+            ['Italy', 55],
+            ['France', 49],
+            ['Spain', 44],
+            ['USA', 24],
+            ['Argentina', 15]
+          ]);
+
+          // Set Options
+          var options = {
+            title: 'World Wide Shanaya Work'
+          };
+
+          // Draw
+          var chart = new google.visualization.BarChart(document.getElementById('mygoogleChartBar'));
+          chart.draw(data, options);
+
+        }
+
+
+
+
+        //Pie Charts
+
+        // To convert a Bar Chart to a Pie chart, just replace:
+
+        // google.visualization.BarChart
+
+        // with:
+
+        // google.visualization.PieChart
+
+
+        google.charts.load('current', { 'packages': ['corechart'] });
+        google.charts.setOnLoadCallback(drawChartPie);
+
+        function drawChartPie() {
+
+          // Set Data
+          var data = google.visualization.arrayToDataTable([
+            ['Contry', 'Mhl'],
+            ['Italy', 54.8],
+            ['France', 48.6],
+            ['Spain', 44.4],
+            ['USA', 23.9],
+            ['Argentina', 14.5]
+          ]);
+
+          // Set Options
+          var options = {
+            title: 'World Wide Shanaya ',
+            //   is3D:true //valid but no need
+
+          };
+
+          // Draw
+          var chart = new google.visualization.PieChart(document.getElementById('mygoogleChartPie'));
+          chart.draw(data, options);
+
+        }
+
+
+
+
+
+
+        //3D Pie
+
+        google.charts.load('current', { 'packages': ['corechart'] });
+        google.charts.setOnLoadCallback(drawChart3DPie);
+
+        function drawChart3DPie() {
+
+          // Set Data
+          var data = google.visualization.arrayToDataTable([
+            ['Contry', 'Mhl'],
+            ['Italy', 54.8],
+            ['France', 48.6],
+            ['Spain', 44.4],
+            ['USA', 23.9],
+            ['Argentina', 14.5]
+          ]);
+
+          // Set Options
+          var options = {
+            title: 'World Wide Shanaya',
+            is3D: true
+          };
+
+          // Draw
+          var chart = new google.visualization.PieChart(document.getElementById('mygoogleChart3DPie'));
+          chart.draw(data, options);
+
+        }
+
+
+
+
+
+
+        //Line Graph
+        google.charts.load('current', { packages: ['corechart'] });
+        google.charts.setOnLoadCallback(drawChartLine);
+        function drawChartLine() {
+          // Set Data
+          var data = google.visualization.arrayToDataTable([
+            ['Price', 'Size'],
+            [50, 7], [60, 8], [70, 8], [80, 9], [90, 9], [100, 9],
+            [110, 10], [120, 11], [130, 14], [140, 14], [150, 15]
+          ]);
+          // Set Options
+          var options = {
+            title: 'House Prices vs Size',
+            hAxis: { title: 'Square Meters' },
+            vAxis: { title: 'Price in Millions' },
+            legend: 'none'
+          };
+          // Draw Chart
+          var chart = new google.visualization.LineChart(document.getElementById('mygoogleChartLine'));
+          chart.draw(data, options);
+        }
+
+
+
+
+
+        //Scatter Plots
+
+        google.charts.load('current', { packages: ['corechart'] });
+        google.charts.setOnLoadCallback(drawChartScatter);
+
+        function drawChartScatter() {
+
+          // Set Data
+          var data = google.visualization.arrayToDataTable([
+            ['Price', 'Size'],
+            [50, 7], [60, 8], [70, 8], [80, 9], [90, 9],
+            [100, 9], [110, 10], [120, 11],
+            [130, 14], [140, 14], [150, 15]
+          ]);
+
+          // Set Options
+          var options = {
+            title: 'House Prices vs. Size',
+            hAxis: { title: 'Square Meters' },
+            vAxis: { title: 'Price in Millions' },
+            legend: 'none'
+          };
+
+          // Draw
+          var chart = new google.visualization.ScatterChart(document.getElementById('mygoogleChartScatter'));
+          chart.draw(data, options);
+
+        }
+
+
+
+
+
+
+        // D3.js
+
+        // D3.js is a JavaScript library for manipulating HTML data.
+
+        // D3.js is easy to use.
+
+        // This script selects the body element and appends a paragraph with the text "Hello World!":
+
+        d3.select("body").append("p").text("<h1>" + "Hello World!" + "</h1>");//tags not manipulated
+        // d3.select("body").append("p").innerHTML("<h1>Hello World!</h1>");//not works
+
+
+        //Scatter Plot
+
+        // Set Dimensions of svg tag
+        var xSize = 500;
+        var ySize = 500;
+        var margin = 40;
+        var xMax = xSize - margin * 2;
+        var yMax = ySize - margin * 2;
+
+        // Create Random Points
+        var numPoints = 100;
+        var data = [];
+        for (let i = 0; i < numPoints; i++) {
+          data.push([Math.random() * xMax, Math.random() * yMax]);//coordinate of point is pushed in empty array
+        }
+
+        // Append SVG Object to the Page
+        var svg = d3.select("#myRandomPlot").append("svg").append("g").attr("transform", "translate(" + margin + "," + margin + ")");
+        //transform attreibte me translate value h => transform : translate(x,y)
+
+        // X Axis
+        var x = d3.scaleLinear()
+          .domain([0, 500])//along x axis
+          .range([0, xMax]);//along anywhere in y axis
+
+        svg.append("g")
+          .attr("transform", "translate(0," + yMax + ")")//along anywhere in y axis
+          .call(d3.axisBottom(x));
+
+        // Y Axis
+        var y = d3.scaleLinear()
+          .domain([0, 500])
+          .range([yMax, 0]);//uppar se niche
+
+        svg.append("g")
+          .call(d3.axisLeft(y));//
+
+        // Dots
+        svg.append('g')
+          .selectAll("dot")
+          .data(data).enter()
+          .append("circle")
+          .attr("cx", function (d) { return d[0] })//center coordinate along x of circle
+          .attr("cy", function (d) { return d[1] })
+          .attr("r", 3)//radius is 3 px
+          .style("fill", "#66FF00");
+
+
+
+
+
+
+
+
+
+
+
+        //Google Maps
+
+        // Google Maps API
+        // This tutorial is about the Google Maps API (Application Programming Interface).
+
+        // An API is a set of methods and tools that can be used for building software applications.
+
+
+        // Free Google API Key
+        // Google allows a website to call any Google API for free, thousands of times a day.
+
+        // Go to https://developers.google.com/maps/documentation/javascript/get-api-key to learn how to get an API key.
+
+        // Google Maps expects to find the API key in the key parameter when loading an API:
+
+
+
+
+        function myMap() {
+
+          var myCenter = { lat: 26.778621124, lng: 80.966389999 }; //now my center will be defined
+
+
+          var mapProp = {//The mapProp variable defines the properties for the map.
+
+            //  center: { lat:26.778621124,  lng: 80.966389999 },
+
+            center: new google.maps.LatLng(26.778589610487682, 80.96641310706816),//it specify latitude and longitude //The center property specifies where to center the map (using latitude and longitude coordinates).
+
+
+            // zoom:5, //The zoom property specifies the zoom level for the map (try to experiment with the zoom level).
+
+
+            zoom: 0,//shows world map
+            zoom: 5,//shows India
+            zoom: 10,//shows lucknow
+            zoom: 15,//shows locality
+            zoom: 20,//shows home
+          };
+
+          var mapProp1 = {
+            center: new google.maps.LatLng(26.7786255955196, 80.96640067947467),
+            zoom: 0,//shows world map
+            zoom: 5,//shows India
+            zoom: 4,//shows India
+
+          };
+
+
+          var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);//creates a new map inside the <div> element with id="googleMap", using the parameters that are passed (mapProp).
+
+          //Multiple Maps
+          // var map1 = new google.maps.Map(document.getElementById("googleMap1"), mapOptions1);
+          var map1 = new google.maps.Map(document.getElementById("googleMap1"), mapProp1);
+
+
+          // var map2 = new google.maps.Map(document.getElementById("googleMap2"), mapOptions2);
+          // var map2 = new google.maps.Map(document.getElementById("googleMap2"), mapProp);
+
+
+          // var map3 = new google.maps.Map(document.getElementById("googleMap3"), mapOptions3);
+          // var map3 = new google.maps.Map(document.getElementById("googleMap3"), mapProp);
+
+
+          // var map4 = new google.maps.Map(document.getElementById("googleMap4"), mapOptions4);
+          //var map4 = new google.maps.Map(document.getElementById("googleMap4"), mapProp);
+
+
+
+          // Google Maps - Add a Marker
+          // The Marker constructor creates a marker. Note that the position property must be set for the marker to display.
+
+          // Add the marker to the map by using the setMap() method:
+
+
+          var myCenter = { lat: 26.778621124, lng: 80.966389999 }; //it works if here also
+
+          var marker = new google.maps.Marker({
+            // position: myCenter ,//here my center will be not defined hence use directly mapProp.center
+            //  position: mapProp.center ,//it not works
+            // myCenter :{ lat:26.778621124,  lng: 80.966389999 },//not work here , it should be outside
+            position: myCenter,
+
+
+
+
+
+
+
+
+            //Google Maps - Overlays
+
+
+            // Overlays are objects on the map that are bound to latitude/longitude coordinates.
+
+            // Google Maps has several types of overlays:
+
+            // Marker - Single locations on a map. Markers can also display custom icon images
+
+            // Polyline - Series of straight lines on a map
+
+            // Polygon - Series of straight lines on a map, and the shape is "closed"
+
+            // Circle and Rectangle
+
+            // Info Windows - Displays content within a popup balloon on top of a map
+
+            // Custom overlays
+
+
+
+
+            /*
+            
+            
+                            // Google Maps - Add a Marker
+                            // The Marker constructor creates a marker. Note that the position property must be set for the marker to display.
+            
+                            // Add the marker to the map by using the setMap() method:
+            
+                            var marker = new google.maps.Marker({ 
+                              position: myCenter ,
+                    //Google Maps - Animate the Marker
+                    // The animate() method animates the marker along a path. The path is defined by a series of LatLng points. The animation is performed along the shortest path between the current position and the target position.
+                    // The animate() method is a method of the Marker class.
+                    animation:google.maps.Animation.BOUNCE
+            
+            
+                            });
+            
+                            marker.setMap(map);
+            
+            
+            */
+
+
+
+
+
+
+
+
+
+
+            //Google Maps - Animate the Marker
+            // The animate() method animates the marker along a path. The path is defined by a series of LatLng points. The animation is performed along the shortest path between the current position and the target position.
+            // The animate() method is a method of the Marker class.
+            animation: google.maps.Animation.BOUNCE,
+            // animation: google.maps.Animation.DROP ,
+
+            title: "Shanaya" //it works on clickint he bounce
+
+
+          });
+          marker.setMap(map);//setup to map but it is lower than map1
+          //marker set only one map at a time
+          marker.setMap(map1);//setup to map 1
+
+
+
+
+          // Google Maps - Icon Instead of Marker
+          // var iconlogo= "<img src='logo_enhanced.png' style={width:30;}"//not works
+          var iconlogo = 'logo_enhanced.png'//works but size not set
+
+
+          const svgMarker = {
+            path: "M-1.547 12l6.563-6.609-1.406-1.406-5.156 5.203-2.063-2.109-1.406 1.406zM0 0q2.906 0 4.945 2.039t2.039 4.945q0 1.453-0.727 3.328t-1.758 3.516-2.039 3.070-1.711 2.273l-0.75 0.797q-0.281-0.328-0.75-0.867t-1.688-2.156-2.133-3.141-1.664-3.445-0.75-3.375q0-2.906 2.039-4.945t4.945-2.039z",
+            fillColor: "violet",
+            fillColor: "#4B0082",
+            fillOpacity: 0.6,
+            strokeWeight: 0,
+            rotation: 0,
+            scale: 2,
+            anchor: new google.maps.Point(0, 20),
+          };
+
+
+
+
+          // Each marker is labeled with a single alphabetical character.
+          var labels = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";//can set any string
+          let labelIndex = 0;
+
+
+
+
+
+          // Data for the markers consisting of a name, a LatLng and a zIndex for the
+          // order in which these markers should display on top of each other.
+          const beaches = [
+            ["Bondi Beach", -33.890542, 151.274856, 4],
+            ["Coogee Beach", -33.923036, 151.259052, 5],
+            ["Cronulla Beach", -34.028249, 151.157507, 3],
+            ["Manly Beach", -33.80010128657071, 151.28747820854187, 2],
+            ["Maroubra Beach", -33.950198, 151.259302, 1],
+          ];
+
+
+
+          var image = {
+            // url: "https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png",//works
+            // url: "logo_enhanced.png",//not work
+            //img: "logo_enhanced.png",//not works
+            //  icon: "logo_enhanced.png",//not works
+            //  src: "logo_enhanced.png",//not works
+            src: "title logo.png",//not works
+            // url: "http://127.0.0.1:5500/index2.html",//not works
+            // This marker is 20 pixels wide by 32 pixels high.
+            size: new google.maps.Size(20, 32),//set it in marker
+            // The origin for this image is (0, 0).
+            origin: new google.maps.Point(0, 0),
+            // The anchor for this image is the base of the flagpole at (0, 32).
+            anchor: new google.maps.Point(0, 32),
+          };
+
+
+
+          var marker = new google.maps.Marker({
+            position: myCenter,
+            icon: 'title logo.png',//it works now set the size not proper
+
+            icon: 'logo_enhanced.png', //it works now set the size not proper
+            size: 30, //not works
+            size: new google.maps.Size(20, 32),//not works
+
+            icon: iconlogo,
+
+            icon: svgMarker,
+            // icon: image,
+
+
+
+
+            animation: google.maps.Animation.BOUNCE,
+            // animation: google.maps.Animation.DROP ,
+            title: "Shanaya", //it works on clickint he bounce
+            // width:30 ,//not works
+            // scale: 0.2,//not work
+            label: labels[labelIndex++ % labels.length],
+
+          });
+
+          marker.setMap(map);
+
+
+
+
+
+          /*
+                    (g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})({
+              key: "YOUR_API_KEY",
+              v: "weekly",
+              // Use the 'v' parameter to indicate the version to use (weekly, beta, alpha, etc.).
+              // Add other bootstrap parameters as needed, using camel case.
+            });
+          
+          
+          
+          
+          
+          
+          
+          // Initialize and add the map
+          let map;
+          
+          async function initMap() {
+            // The location of Uluru
+            const position = { lat: -25.344, lng: 131.031 };
+            // Request needed libraries.
+            //@ts-ignore
+            const { Map } = await google.maps.importLibrary("maps");
+            const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
+          
+            // The map, centered at Uluru
+            map = new Map(document.getElementById("map"), {
+              zoom: 4,
+              center: position,
+              mapId: "DEMO_MAP_ID",
+            });
+          
+            // The marker, positioned at Uluru
+            const marker = new AdvancedMarkerElement({
+              map: map,
+              position: position,
+              title: "Uluru",
+            });
+          }
+          
+          initMap();//the Map and AdvancedMarkerView libraries are loaded when the initMap() function is called.
+          
+          
+          
+          
+          
+          // The location of Uluru
+          const position = { lat: -25.344, lng: 131.031 };
+          // Request needed libraries.
+          //@ts-ignore
+          const { Map } = await google.maps.importLibrary("maps");
+          const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
+          
+          // The map, centered at Uluru
+          map = new Map(document.getElementById("map"), {
+            zoom: 4,
+            center: position,
+            mapId: "DEMO_MAP_ID",
+          });
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          */   //consider this later on
+
+
+          // Google Maps - Polyline
+
+          // A Polyline is a line that is drawn through a series of coordinates in an ordered sequence.
+
+          // A polyline supports the following properties:
+
+          // path - specifies several latitude/longitude coordinates for the line
+          // strokeColor - specifies a hexadecimal color for the line (format: "#FFFFFF")
+          // strokeOpacity - specifies the opacity of the line (a value between 0.0 and 1.0)
+          // strokeWeight - specifies the weight of the line's stroke in pixels
+          // editable - defines whether the line is editable by users (true/false)
+
+
+
+          // Create a polyline with the coordinates of the cities
+          var polyline = new google.maps.Polyline({//straight line path
+            path: [//path - specifies several latitude/longitude coordinates for the line
+              { lat: 26.778621124, lng: 80.966389999 },
+              { lat: 26.778054184047228, lng: 80.964541 },
+              // { lat: 26.81495041027763, lng: 81.01778333983634 },
+              { lat: 26.788890269695923, lng: 80.97339570527514 },
+
+            ],
+            strokeColor: "#FF0000",//strokeColor - specifies a hexadecimal color for the line (format: "#FFFFFF")
+            strokeOpacity: 2.8,
+            strokeWeight: 4,//strokeWeight - specifies the weight of the line's stroke in pixels
+            editable: false,//editable - defines whether the line is editable by users (true/false)
+            editable: true//editable - defines whether the line is editable by users (true/false)//it let you to drag the end point anywhere
+
+
+          });
+          // Add the polyline to the map
+          polyline.setMap(map);
+          // Add a click event listener to the polyline
+          // google.maps.event.addListener(polyline, 'click', function() {
+          // google.maps.event.addListener(polyline, 'load', function() {
+          //   alert("You clicked on the polyline");
+          //   });
+
+
+
+
+
+
+
+
+
+          var lucknow = {
+           lat: 26.778621124,
+            lng: 80.966389999 
+          };
+        
+          var delhi = {
+            lat:28.556360444039644,
+            lng: 77.10018760556251
+          };
+          var mumbai = {
+            lat:19.098917327206063,
+            lng: 72.87550757065179
+          };
+          var bangalore = {
+            lat: 13.199138799019412,
+            lng: 77.70693551534525
+          };
+       
+          // Create a marker for each city
+          var markerB = new google.maps.Marker({
+            position: bangalore,
+            map: map,
+            title: 'Bangalore',
+            icon: 'https://maps.google.com/mapfiles/kml/shapes/circle.png',
+            animation: google.maps.Animation.DROP
+          });
+          var markerL = new google.maps.Marker({
+            position: lucknow,
+            map: map,
+            title: 'lucknow',
+            // icon: 'https://maps.google.com/mapfiles/kml/shapes/circle.png',//this icon creates error, hence use another url
+           // url: 'https://maps.gstatic.com/mapfiles/place_api/icons/v2/shopping_pinlet.svg',//undefined
+            icon: 'https://maps.gstatic.com/mapfiles/place_api/icons/v2/shopping_pinlet.svg',//works but size not set
+            icon: "shanayafashionicon.png",
+        
+            // size:
+            // {
+            //   width: 20,
+            //   height: 20
+            //   },//not works
+            // size: new google.maps.Size(20, 32),
+
+
+            animation: google.maps.Animation.DROP//is icon ko drop karo starting me
+
+          });
+          var markerD = new google.maps.Marker({
+            position: delhi,
+            map: map,
+            title: 'delhi',
+            icon: 'title logo_icon.png',
+            animation: google.maps.Animation.DROP
+          });
+          var markerM = new google.maps.Marker({
+            position: mumbai,
+            map: map,
+            title: 'mumbai',
+            icon: 'logo_enhanced_icon.png',
+            animation: google.maps.Animation.DROP
+          });
+
+
+
+            var myTrip = [lucknow,delhi,mumbai,bangalore];
+
+            var flightPath = new google.maps.Polyline({
+              path: myTrip,
+              strokeColor: "red",
+              strokeOpacity: 0.8,
+              strokeWeight: 2
+
+            });
+
+            flightPath.setMap(map1);
+
+
+            markerL.setMap(map1);//add marker to all location
+           markerD.setMap(map1);//add marker to all location
+            markerM.setMap(map1);//add marker to all location
+          //  markerB.setMap(map1);//add marker to all location
+
+
+
+           
+
+
+
+
+
+
+
+
+            // Google Maps - Polygon
+
+//             A Polygon is similar to a Polyline in that it consists of a series of coordinates in an ordered sequence. However, polygons are designed to define regions within a closed loop.
+
+// Polygons are made of straight lines, and the shape is "closed" (all the lines connect up).
+
+//A polygon supports the same property 
+
+
+            var triangleCoords = [
+            { lat: 26.778621124, lng: 80.966389999 },
+              { lat: 26.778054184047228, lng: 80.964541 },
+              // { lat: 26.81495041027763, lng: 81.01778333983634 },
+              { lat: 26.788890269695923, lng: 80.97339570527514 },
+              ];
+
+              var b = new google.maps.Polygon({
+                paths: triangleCoords,
+                strokeColor: "green",
+                strokeOpacity: 0.8,
+                strokeWeight: 2,
+              });
+              b.setMap(map);
+
+
+
+
+
+
+
+//Google Maps - Circle
+
+
+// A circle supports the following properties:
+
+// center - specifies the google.maps.LatLng of the center of the circle
+// radius - specifies the radius of the circle, in meters
+// strokeColor - specifies a hexadecimal color for the line around the circle (format: "#FFFFFF")
+// strokeOpacity - specifies the opacity of the stroke color (a value between 0.0 and 1.0)
+// strokeWeight - specifies the weight of the line's stroke in pixels
+// fillColor - specifies a hexadecimal color for the area within the circle (format: "#FFFFFF")
+// fillOpacity - specifies the opacity of the fill color (a value between 0.0 and 1.0)
+// editable - defines whether the circle is editable by users (true/false)
+
+
+
+var myCityCenter = new google.maps.Circle({
+  center:mumbai,
+  radius:20000, //now whole mumbai city will be circled as per radius
+  strokeColor:"#0000FF",
+  strokeOpacity:0.8,
+  strokeWeight:2,
+  fillColor:"#0000FF",
+  fillOpacity:0.4
+});
+myCityCenter.setMap(map1);
+
+
+
+
+
+
+//Google Maps - InfoWindow
+// An InfoWindow is a popup window that can be opened on a map to display information about a particular location. It can be opened on a Marker, a Polygon, a Polyline, or a Circle.
+// The InfoWindow has the following properties:
+// content - specifies the content of the InfoWindow (HTML or text)
+// position - specifies the position of the InfoWindow (google.maps.LatLng)
+// maxWidth - specifies the maximum width of the InfoWindow (in pixels)
+// pixelOffset - specifies the offset of the InfoWindow from the marker (in pixels)
+// zIndex - specifies the z-index of the InfoWindow (a value between 0 and 100
+// disableAutoPan - defines whether the map should automatically pan to the InfoWindow (true/false)
+// closeBoxURL - specifies the URL of the close box (a string)
+// closeBoxMargin - specifies the margin of the close box (in pixels)
+// closeBoxPixelOffset - specifies the offset of the close box from the InfoWindow (in pixels
+// infoWindowAnchor - specifies the anchor of the InfoWindow (a value between 0 and 1)
+
+//example
+var infowindow = new google.maps.InfoWindow({
+  content: "<b>Hello World! Welcome to Shanaya Trust Coorporation</b>",
+
+  // maxWidth: 200,
+  // pixelOffset: new google.maps.Size(-4, 0),
+  // zIndex: 1000,
+
+  // disableAutoPan: false,
+  // closeBoxURL: "",
+  // closeBoxMargin: "-2px",
+  // closeBoxPixelOffset: new google.maps.Size(-22, -22),
+  // infoWindowAnchor: new google.maps.Point(22, 0)
+  });
+
+
+  //adding event mouseover to pop up the infowindow
+
+  // google.maps.event.addListener( myCityCenter, 'mouseover', function() {
+  //   infowindow.open(map1,  myCityCenter);
+  //   });//it will not show effect here due to myCityCenter is used instead of marker name
+
+
+ // infowindow.open(map1,markerL);////it will  show effect here , it should not be outside the function  //here 
+
+
+  // infowindow.open(map, myCityCenter);//not work , marker name should be mention and map is the var containing lat and log
+
+
+  // google.maps.event.addListener( markerM, 'mouseover', function() {
+  google.maps.event.addListener( markerL, 'mouseover', function() {
+    infowindow.open(map1, markerL);//note : map1 is not id
+    });//it will show effect here due to markerL but not for markerM because marker 1 has no marker icon
+
+    //it is also done below but with click
+
+
+
+
+  //infowindow.close();
+
+
+
+
+//Google Maps Events
+//google.maps.event.addListener(marker, 'click', function() {}
+
+
+//Click The Marker to Zoom
+// Zoom to 9 when clicking on marker
+
+function zoomAgain(){google.maps.event.addListener(markerL,'click',function() {
+  map1.setZoom(9);
+  map1.setCenter(markerL.getPosition());
+
+  // google.maps.event.addListener(markerL,'click',function() {
+  //   map1.setZoom(9);
+  // map1.setCenter(markerL.getPosition());
+  // });
+
+  
+
+  //backwas
+  //document.addeventlistener also not works 
+//  google.maps.event.addListener(markerL,'click',function() {
+//     var pos = map1.getZoom();
+//     {pos.setZoom(9);}
+//   map1.setCenter(markerL.getPosition());
+//   });
+
+
+
+
+
+
+});
+}
+
+var pos = map1.getZoom();
+if(true){
+  //google.maps.event.removeListener(zoomAgain);
+// google.maps.event.addListener(markerL,'click',zoomAgain);//runs only once //required when we want to loop the function
+zoomAgain()//works
+
+
+
+}
+// google.maps.event.addListener(markerL,'click',zoomAgain);
+
+
+// //google.maps.event.removeListener(zoomAgain);
+// google.maps.event.addListener(markerL,'click',zoomAgain);
+
+
+
+
+
+
+
+
+//for each click on marker to zoom 9 on every click
+ 
+
+
+
+
+
+
+// addListener() event handler. That method takes an object, an event to listen for, and a function to call when the specified event occurs.
+
+
+
+
+
+
+
+
+// Pan Back to Marker
+// Here, we save the zoom changes and pan the map back after 3 seconds:
+
+// Example
+google.maps.event.addListener(markerM,'click',function() {
+  var pos = map1.getZoom();
+  map1.setZoom(9);
+  map1.setCenter(markerM.getPosition());
+  window.setTimeout(function() {map1.setZoom(pos);},3000);//apne aap pahle position me jaiga
+});
+
+
+
+
+
+
+
+//Open an InfoWindow When Clicking on The Marker
+// Click on the marker to show an infowindow with some text:
+
+google.maps.event.addListener(markerL, 'click', function() {
+  infowindow.open(map1,markerL);//already set with hover above
+});
+
+
+
+
+
+
+
+
+// Set Markers and Open InfoWindow for Each Marker
+
+// The placeMarker() function places a marker where the user has clicked, and shows an infowindow with the latitudes and longitudes of the marker
+
+function placeMarker(location) {
+  var marker = new google.maps.Marker({
+    // position: location,
+    map: map1
+  });
+  google.maps.event.addListener(map1, 'click', function() {
+    var contentString = '<div><strong>Marker:</strong> lat: ' + marker.getPosition.lat() + '<br>lng: ' + marker.getPosition().lng() + '</div';
+      var infowindow = new google.maps.InfoWindow({
+        content: contentString
+        });
+        infowindow.open(map1,marker);
+        });
+        };
+
+
+
+
+        // Example
+google.maps.event.addListener(map1, 'click', function(event) {
+  placeMarker(map1, event.latLng);//track latlng of where it is clicked
+});
+
+
+
+function placeMarker(map, location) {
+  var marker = new google.maps.Marker({
+    position: location,//it tracks which lat log is selected 
+    map: map1,
+    map: map //no need to assign map1 as map parameter takes map1 value here
+  });
+  var infowindow = new google.maps.InfoWindow({
+    content: 'Latitude: ' + location.lat() +//location = google.maps.event.latLng
+    '<br>Longitude: ' + location.lng()
+  });
+
+  infowindow.open(map,marker);//here map is the value passed in parameter that is map1 and marker is the position of click and put the mark at the selected point
+
+  // infowindow.open(map1,markerL);
+  // infowindow.open(map1,markerD);
+  // infowindow.open(map1,markerM);
+  // infowindow.open(map1,markerB);
+
+}
+
+
+//Now it will put marker at every point it clicks and show info containing logitude and latitude 
+
+
+
+
+
+
+
+
+// Google Maps - The Default Controls
+
+// When showing a standard Google map, it comes with the default control set:
+
+// Zoom - displays a slider or "+/-" buttons to control the zoom level of the map
+// Pan - displays a pan control for panning the map
+// MapType - lets the user toggle between map types (roadmap and satellite)
+// Street View - displays a Pegman icon which can be dragged to the map to enable Street View
+
+
+
+
+// ←	Move left
+// →	Move right
+// ↑	Move up
+// ↓	Move down
+// +	Zoom in
+// -	Zoom out
+// Home	Jump left by 75%
+// End	Jump right by 75%
+// Page Up	Jump up by 75%
+// Page Down	Jump down by 75%
+
+
+
+// Google Maps - More Controls
+// In addition to the default controls, Google Maps also has:
+
+// Scale - displays a map scale element
+// Rotate - displays a small circular icon which allows you to rotate maps
+// Overview Map - displays a thumbnail overview map reflecting the current map viewport within a wider area
+
+//NOTE:
+
+// You can specify which controls to show when creating the map (inside MapOptions) or by calling setOptions() to change the map's options.
+
+// You can also use the map's getOptions() method to get the current options of the map
+// Google Maps - Custom Controls
+
+
+
+// Google Maps - Disabling The Default Controls
+// You may instead wish to turn off the default controls.
+
+// To do so, set the Map's disableDefaultUI property (within the Map options object) to true:
+
+
+
+// Example
+var mapOptions ={
+  zoom: 18,  
+          center: { //necessary to inclued in object property to view the map but here it is disableDefaultUI
+           lat: 26.778621124,
+            lng: 80.966389999 ,
+            disableDefaultUI: true,//default working here but we have set disable and it is not disabled because it is in center object , it should be outside 
+
+            // disableDefaultUI: false
+
+          },
+          disableDefaultUI: true,//now it works as property is outside center
+};//object //this not working here
+    var map5 = new google.maps.Map(document.getElementById('map5'),
+    //  {  
+    //         // zoom: 8,  
+    //         zoom: 18,  
+    //         center: myCenter  
+    //     }); 
+          mapOptions);  
+   
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  
+var mapOptionsOnControl = {  
+      panControl: true,  
+      panControl: false, 
+      
+      
+      zoomControl: true,  //Note: If you modify a control, always enable the control first (set it to true).
+      zoomControlOptions: {
+    style: google.maps.ZoomControlStyle.SMALL,//large and default also available ////as per lower details outside this function
+    style: google.maps.ZoomControlStyle.LARGE,
+    style: google.maps.ZoomControlStyle.DEFAULT,
+
+
+    position: google.maps.ControlPosition.TOP_LEFT //position shifted
+
+},//as per lower details outside this function
+
+
+
+      mapTypeControl: true,  
+      mapTypeControlOptions: {
+  style: google.maps.MapTypeControlStyle.DROPDOWN_MENU,
+  // style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
+  // style: google.maps.MapTypeControlStyle.DEFAULT,
+
+
+  //You will learn about map type later downward
+
+  // mapTypeIds: ['roadmap', 'satellite', 'hybrid', 'terrain'],
+  // mapTypeIds: ['roadmap', 'satellite'],
+  mapTypeIds: ['satellite'],
+
+  //change maptype to satellite
+  // mapTypeIds: ['terrain'],
+
+
+  //ROADMAP (normal, default 2D map) SATELLITE (photographic map) HYBRID (photographic map + roads and city names) TERRAIN (map with mountains, rivers, etc.)
+  
+},
+
+position: google.maps.ControlPosition.TOP_CENTER,
+
+
+
+
+
+      scaleControl: true,  
+      streetViewControl: true,  
+      overviewMapControl: true,  
+      rotateControl: true,  
+      center: {  lat: 26.778621124,
+        lng: 80.966389999  }, // Example coordinates  
+      zoom:18, // Example zoom level 
+      
+      
+      mapTypeId: google.maps.MapTypeId.HYBRID, //it works
+
+      // or  by calling the map's setMapTypeId() method:
+
+      // map.setMapTypeId(google.maps.MapTypeId.HYBRID); //it should be outside property object of map
+
+
+    };  
+
+  
+    var map5 = new google.maps.Map(document.getElementById('map5'), mapOptionsOnControl); 
+    map5.setMapTypeId(google.maps.MapTypeId.HYBRID); //it works
+
+    // map5.setMapTypeId(google.maps.MapTypeId.SATELLITE); //it works //not useful as it do't show nearby places and landmarks , it only show the image
+
+    map5.setTilt(45);//it works for enabling
+
+    map5.setTilt(0);//it works for disabling
+
+
+
+//     Google Maps - Modifying Controls
+// Several of the map controls are configurable.
+
+// The controls can be modified by specifying control options fields.
+
+// For example, options for modifying a Zoom control are specified in the zoomControlOptions field. The zoomControlOptions field may contain:
+
+// google.maps.ZoomControlStyle.SMALL - displays a mini-zoom control (only + and - buttons)
+// google.maps.ZoomControlStyle.LARGE - displays the standard zoom slider control
+// google.maps.ZoomControlStyle.DEFAULT - picks the best zoom control based on device and map size
+
+
+
+
+// Another configurable control is the MapType control.
+
+// Options for modifying a control are specified in the mapTypeControlOptions field. The mapTypeControlOptions field may contain::
+
+// google.maps.MapTypeControlStyle.HORIZONTAL_BAR - display one button for each map type
+// google.maps.MapTypeControlStyle.DROPDOWN_MENU - select map type via a dropdown menu
+// google.maps.MapTypeControlStyle.DEFAULT - displays the "default" behavior (depends on screen size)
+
+
+
+
+//You can also position a control, with the ControlPosition property:
+
+
+
+
+
+// The following map types are supported in Google Maps API:
+
+// ROADMAP (normal, default 2D map)
+// SATELLITE (photographic map)
+// HYBRID (photographic map + roads and city names)
+// TERRAIN (map with mountains, rivers, etc.)
+
+
+// The map type is specified either within the Map properties object, with the mapTypeId property:
+
+
+
+
+
+
+
+
+
+
+// Google Maps - 45° Perspective View
+
+
+
+// The map types SATELLITE and HYBRID support a 45° perspective imagery view for certain locations (only at high zoom levels).
+
+// If you zoom into a location with 45° imagery view, the map will automatically alter the perspective view. In addition, the map will add:
+
+// A compass wheel around the Pan control, allowing you to rotate the image
+// A Rotate control between the Pan and Zoom controls, allowing you to rotate the image 90°
+// A toggle control for displaying the 45° perspective view, under the Satellite control/label
+// Note: Zooming out from a map with 45° imagery will revert each of these changes, and the original map is displayed.
+
+
+//code in var mapOptions
+// mapTypeId:google.maps.MapTypeId.HYBRID
+// Tip: To enable 45° perspective view at a later point, call setTilt(45).
+//calling setTilt(45) syntax
+// map.setTilt(45)
+
+
+
+
+
+
+
+// Google Maps - Disable 45° Perspective View - setTilt(0)
+// You can disable 45° perspective view by calling setTilt(0) on the Map object:
+
+// Example
+// map.setTilt(0);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          }
+
+
+
+
+
+
+
+
+
+
+
+
+      </script>
+
+      <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAEppBCT7byedXfRux_uW8Nb19cDGjUDE&callback=myMap"></script> -->
+      <!-- it connects  -->
+
+      <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAGupIrZrA7Ks0XaDnQBdAXT19suAB2aVc&callback=myMap"></script>
+      <!-- it also connects and callback function must be defined  -->
+        <!-- or onload in script
+          window.onload = myMap;
+          -->
+
+
+      <!-- <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap"></script> -->
+      <!-- //it not connect as key not given -->
+
+
+
+
+
+
+<!-- or directly write in script tag-->
+ 
+<!-- // Load the Google Maps script with your API key  
+function loadScript() {  
+  var script = document.createElement('script');  
+  script.src = 'https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap';  
+  script.async = true;  
+  document.body.appendChild(script);  
+}  
+
+// Call loadScript when the window loads  
+window.onload = loadScript; -->
+
+
+
+
+
+
+
+
+<!-- https://console.cloud.google.com/google/maps-apis/build -->
+ <!-- this link teach you all about google map -->
+
+
+</body>
+
+</html>

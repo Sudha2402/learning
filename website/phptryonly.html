@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<!-- <!DOCTYPE json_demo_db_post> -->
+<!-- Usually this error is caused when your server returns HTML (which typically begins with <DOCTYPE html> or <html> ) instead of JSON. Valid JSON cannot begin with a < character, so the JSON parser knows immediately the data isn't valid JSON and produces one of the error messages mentioned above. -->
+<html>
+
+<head>
+    <title>php try only</title>
+
+</head>
+
+<body>
+    <h1>php try only</h1>
+
+    <!-- <?php       ?> -->
+
+    <a href="demo_json.php?name=Sudha">demo_json.php?name=Sudha
+    </a>
+
+
+    <script>
+        /*
+        var myObjServer = { name: "Sudha", age: 31, city: "New York" };
+        var myJSON = JSON.stringify(myObjServer);
+        window.location = "demo_json.php?x=" + myJSON; //it will escape the main window and open demo_json.php //http://localhost:3000/demo_json.php?x={%22name%22:%22Sudha%22,%22age%22:31,%22city%22:%22New%20York%22}
+    */
+        document.write("<br><br><p id = 'myObjDataPHP'> myObjDataPHP</p>");
+
+        // document.write("<br><br><p id ='myObjData'> myObjData</p>");
+        /*
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.onload = function () {
+                var myObjClient = JSON.parse(this.responseText);
+                document.getElementById("myObjDataPHP").innerHTML += "<br>" + myObjClient.name;
+            }
+            xmlhttp.open("GET", "demo_file.php");
+            xmlhttp.send();
+        */
+
+        var limit = { "limit": 5 };
+        var dbParam = JSON.stringify(limit);
+
+
+        xmlhttp = new XMLHttpRequest();
+        xmlhttp.onload = function () {
+            document.getElementById("myObjDataPHP").innerHTML = this.responseText;
+            // const myObj = JSON.parse(this.responseText);
+            // let textd = "";
+            // for (let xd in myObj) {
+            // textd += myObj[xd].PROGRAM_NAME + "<br>";
+            // }
+            // document.getElementById("myObjData").innerHTML += "<br><br>textd" + textd;
+        }
+        xmlhttp.open("GET", "json_demo_db.php?x=" + dbParam);//only this gets executed because x is parameter passed , need to learn about parameters
+        xmlhttp.send();
+
+        // Use the Data//not able to get this
+        // Example
+        /*
+         var xmlhttp = new XMLHttpRequest();
+         xmlhttp.onload = function () {
+             const myObj = JSON.parse(this.responseText);
+             let text = "";
+             for (let x in myObj) {
+                 // text += myObj[x].PROGRAM_NAME + "<br>";
+                 text += myObj[x].STUDENT_REF_ID + "<br>";
+                 // myObj[x] is [object Object]
+                 // text += x.PROGRAM_NAME + "<br>";
+                 // text += myObj + "<br>";
+                 // text += x + "<br>";
+             }
+             document.getElementById("myObjData").innerHTML =text;
+             // document.getElementById("myObjData").innerHTML += "<br>myObj:" + myObj;
+         }
+         xmlhttp.open("GET", "json_demo_db.php?x=" + dbParam , true);
+         xmlhttp.send();
+     */
+        /*
+                var dbParam = JSON.stringify({ "limit": 5 });
+                var xmlhttp = new XMLHttpRequest();
+                xmlhttp.onload = function () {
+                    console.log(typeof this.responseText);
+                    // document.getElementById("myObjDataPHP").innerHTML += this.responseText;//Array json string
+                    // document.getElementById("myObjDataPHP").innerHTML += text;
+                    console.log(typeof this.responseText);//string
+                    // var myObj =JSON.parse(this.responseText);
+        
+                    var objparse = this.responseText;
+                    console.log(typeof objparse);
+                    // var myObj =JSON.parse(objparse);
+                    try {
+                        var myObj = JSON.parse(objparse);
+                    }
+                    catch (error) {
+                        console.log('Error parsing JSON:', error, objparse);
+                    }
+                    // You're receiving HTML (or XML) back from the server, but the dataType: json is telling jQuery to parse as JSON. Check the "Network" tab in Chrome dev tools to see contents of the server's response.
+        
+                    console.log(typeof myObj);//object
+        
+                    document.getElementById("myObjDataPHP").innerHTML += myObj;//[object Object],[object Object],[object Object],[object Object],[object Object]
+                    let text = "";
+                    for (let xd in myObj) {
+                        text += myObj[xd].PROGRAM_NAME + "<br>";
+                    }
+                    document.getElementById("myObjDataPHP").innerHTML += text;
+                    //Computer Science
+                    // Mathematics
+                    // Biology
+                    // Chemistry
+                    // Physics
+                }
+                xmlhttp.open("POST", "json_demo_db_post.php");
+                xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+                // xmlhttp.setRequestHeader("Content-type", "multipart/form-data");
+                xmlhttp.send("x=" + dbParam);
+        
+        
+        
+                //         Warning: Missing boundary in multipart/form-data POST data in Unknown on line 0
+        
+                // Warning: Undefined array key "x" in C:\Sudhadocuments\website\json_demo_db_post.php on line 4
+        
+                // Fatal error: Uncaught Error: Attempt to modify property "limit" on null in C:\Sudhadocuments\website\json_demo_db_post.php:7 Stack trace: #0 {main} thrown in C:\Sudhadocuments\website\json_demo_db_post.php on line 7
+        
+        */
+
+
+
+
+        /*
+        
+                //Make an HTML table with data received as JSON:
+                document.write("<br><p id = 'myObjJSONHTML'>myObjJSONHTML</p>");
+                var dbParam = JSON.stringify({ table: "program", limit: 3 });
+                var xmlhttp = new XMLHttpRequest();
+                xmlhttp.onload = function () {
+                    var myObj = JSON.parse(this.responseText);
+                    let text = "<table border='1'>"
+                    for (let x in myObj) {
+                        text += "<tr><td>" + myObj[x].PROGRAM_NAME + "</td></tr>";
+                    }
+                    text += "</table>"
+                    document.getElementById("myObjJSONHTML").innerHTML = text;
+                }
+                xmlhttp.open("POST", "json_demo_html_tableINBuild.php");
+                xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+                xmlhttp.send("x=" + dbParam);
+        */
+
+        // Dynamic HTML Table
+        document.write('<br><h2>Make a table based on the value of a drop down menu.</h2><select id="myselect" onchange="change_myselect(this.value)"><option value="">Choose an option:</option><option value="orders">Orders</option><option value="parts">Parts</option><option value="supplier">Supplier</option></select><p id="demoDynamicHTMLTable">demoDynamicHTMLTable</p>');
+
+        function change_myselect(sel) {
+            const dbParam = JSON.stringify({ table: sel, limit: 20 });
+            const xmlhttp = new XMLHttpRequest();
+            xmlhttp.onload = function () {
+                myObj = JSON.parse(this.responseText);
+                text = "<table border='1'><thead>  <tr><th>pid</th><th>pname</th><th>color</th><th>sid</th><th>quantity</th><th>sname</th><th>city</th></tr></thead>  "
+                for (x in myObj) {
+                    // text += "<tr><td>" + myObj[x].pid + "</td></tr>";
+                    text += "<tr><td class='undefinethen'>" + myObj[x].pid + "</td><td>" + myObj[x].pname + "</td><td>" + myObj[x].color + "</td><td>" + myObj[x].sid + "</td><td>" + myObj[x].quantity + "</td><td>" + myObj[x].sname + "</td><td>" + myObj[x].city + "</td></tr>";
+                }
+
+                text += "</table>"
+                document.getElementById("demoDynamicHTMLTable").innerHTML = text;
+            }
+            xmlhttp.open("POST", "json_demo_html_tableINBuild.php", true);
+            xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            xmlhttp.send("x=" + dbParam);
+        }
+
+        
+        //HTML Drop Down List
+        // Make an HTML drop down list with data received as JSON:
+        var dbParam = JSON.stringify({ table: "parts", limit: 20 });
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onload = function () {
+            const myObj = JSON.parse(this.responseText);
+            let text = "<select>"
+            for (let x in myObj) {
+                text += "<option>" + myObj[x].pid + "</option>";
+            }
+            text += "</select>"
+            document.getElementById("demoDynamicHTMLTable").innerHTML += text;
+        }
+
+        xmlhttp.open("POST", "json_demo_html_tableINBuild.php", true);
+        xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        xmlhttp.send("x=" + dbParam);
+
+        //JSONP
+        document.write('<br><br><p id="demoJSONP">demoJSONP</p>');
+        function myFunc(myObj) {
+            document.getElementById("demoJSONP").innerHTML += "<br>myObj.name :" + myObj.name;//myObj.name :Suhana
+}
+
+
+document.write('<br><button onclick="clickButton()">A script tag with a src attribute is created and placed in the document.</button><p id="demoDynamicScript">demoDynamicScript</p>');
+function clickButton() { //here script is created seperately for passing the php file, here in this script we are using the function to create script and call myFunc from here 
+        let s = document.createElement("script");//script tag is created for body element ... it would be above , not with the document.write
+        s.src = "demo_jsonp.php";//I don't know why no php is executing
+        document.body.appendChild(s);
+
+        function myFunc(myObj) {
+            document.getElementById("demoDynamicScript").innerHTML += "<br>myObj.name" + myObj.name;
+            // whatever passed in main php file will be passed here as parameter
+        }
+    }
+</script>
+</body>
+<script>
+    //JSONP database
+    document.write('<br><br><p id="jsonp_demo_db">jsonp_demo_db</p>');
+    var obj = { table: "program", limit: 4 };
+    var sD = document.createElement("script");
+    sD.src = "jsonp_demo_db.php?x=" + JSON.stringify(obj);
+    document.body.appendChild(sD);
+
+    function myFuncD(myObj) {
+        let txt = "";
+        for (let x in myObj) {
+            txt += myObj[x].PROGRAM_NAME + "<br>";
+        }
+        document.getElementById("jsonp_demo_db").innerHTML = "<br>txt :" + txt;
+    }
+
+    //Callback
+    document.write('<br><br><p id="jsonp_demo_dbCallback">jsonp_demo_dbCallback</p>');
+var sCallback =document.createElement
+("script");
+sCallback.src = "demo_jsonp2.php?callback=myDisplayFunction";
+document.body.appendChild(sCallback);
+function myDisplayFunction(myObj) { document.getElementById("jsonp_demo_dbCallback").innerHTML = myObj + "<br> myObj.status :" + myObj.status+"<br> myObj.message :" + myObj.message+ "<br> myObj.data :" + myObj.data+ "<br> myObj.data.item1 :" + myObj.data.item1;
+ }
+    </script>
+
+
+
+    <script src="demo_jsonp.php">
+    document.write('<br><br>demo_jsonp.php is called');</script>
+
+
+</html>
