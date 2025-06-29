@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Fetch API</title>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
+    <!-- This src is necessary to use $ predefined on $(function () {}  -->
+
+</head>
+
+<body>
+    <h1>Fetch API</h1>
+    <p id="demo">Fetch a file to change this text.</p>
+
+    <div class="wrapper">
+        <div class="profile">
+            <table id="userdata" border="2">
+                <thead>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Email Address</th>
+                    <th>City</th>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    
+    <div id="myData"></div>
+    
+</body>
+<script>
+    //The Fetch API provides a JavaScript interface for making HTTP requests and processing the responses.
+
+    // Fetch is the modern replacement for XMLHttpRequest: unlike XMLHttpRequest, which uses callbacks, Fetch is promise-based and is integrated with features of the modern web such as service workers and Cross-Origin Resource Sharing (CORS).
+
+    // With the Fetch API, you make a request by calling fetch(), which is available as a global function in both window and worker contexts. You pass it a Request object or a string containing the URL to fetch, along with an optional argument to configure the request.
+
+    // The fetch() function returns a Promise which is fulfilled with a Response object representing the server's response. You can then check the request status and extract the body of the response in various formats, including text and JSON, by calling the appropriate method on the response.
+
+    // Here's a minimal function that uses fetch() to retrieve some JSON data from a server:
+
+    getData();
+    async function getData() {
+        //   const url = "https://example.org/products.json";
+        const url = "tryingJSON.json";
+        try {
+            const response = await fetch(url);
+            if (!response.ok) {
+                //The fetch() function will reject the promise on some errors, but not if the server responds with an error status like 404: so we also check the response status and throw if it is not OK.Otherwise, we fetch the response body content as JSON by calling the json() method of Response, and log one of its values. Note that like fetch() itself, json() is asynchronous, as are all the other methods to access the response body content.
+                throw new Error(`Response status: ${response.status}`);
+            }
+            const json = await response.json();
+            console.log(json);
+            // document.write(json);//[object Object]
+            // document.write(JSON.stringify(json));
+            // {"products":[{"id":1,"name":"Product 1","description":"Description for product 1","price":29.99,"category":"Electronics","stock":100,"image_url":"title logo.png"},{"id":2,"name":"Product 2","description":"Description for product 2","price":49.99,"category":"Home Appliances","stock":50,"image_url":"title logo.png"}]}
+
+        } catch (error) {
+            console.error(error.message);
+        }
+    }
+
+    // OUTPUT
+    /*
+        Object
+    products
+    : 
+    Array(2)
+    0
+    : 
+    category
+    : 
+    "Electronics"
+    description
+    : 
+    "Description for product 1"
+    id
+    : 
+    1
+    image_url
+    : 
+    "title logo.png"
+    name
+    : 
+    "Product 1"
+    price
+    : 
+    29.99
+    stock
+    : 
+    100
+    [[Prototype]]
+    : 
+    Object
+    1
+    : 
+    category
+    : 
+    "Home Appliances"
+    description
+    : 
+    "Description for product 2"
+    id
+    : 
+    2
+    image_url
+    : 
+    "title logo.png"
+    name
+    : 
+    "Product 2"
+    price
+    : 
+    49.99
+    stock
+    : 
+    50
+    [[Prototype]]
+    : 
+    Object
+    length
+    : 
+    2
+    [[Prototype]]
+    : 
+    Array(0)
+    [[Prototype]]
+    : 
+    Object
+    
+    */
+
+    /*
+    The contents of "https://example.org/products.json" would typically be a JSON formatted file that contains data about various products. The structure may include an array of product objects, with each object containing details such as:
+    
+    - id: A unique identifier for the product
+    - name: The name of the product
+    - description: A brief description of the product
+    - price: The price of the product
+    - category: The category to which the product belongs
+    - stock: The quantity available in stock
+    - image_url: A URL link to an image of the product
+    
+    An example structure might look like this:
+    
+    {
+      "products": [
+        {
+          "id": 1,
+          "name": "Product 1",
+          "description": "Description for product 1",
+          "price": 29.99,
+          "category": "Electronics",
+          "stock": 100,
+          "image_url": "https://example.org/images/product1.jpg"
+        },
+        {
+          "id": 2,
+          "name": "Product 2",
+          "description": "Description for product 2",
+          "price": 49.99,
+          "category": "Home Appliances",
+          "stock": 50,
+          "image_url": "https://example.org/images/product2.jpg"
+        }
+      ]
+    } 
+    
+    */
+
+
+
+    fetchJSON("tryingJSON.json");
+    async function fetchJSON(request) {
+        try {
+            const response5 = await fetch(request);
+            // Checking headers
+            const contentType = response5.headers.get("content-type");
+            if (!contentType || !contentType.includes("application/json")) {
+                throw new TypeError("Oops, we haven't got JSON!");
+            }
+            if (!response5.ok) {
+                throw new Error(`Response status: ${response5.status}`);
+            }
+            // Otherwise, we can read the body as JSON
+            const data = await response5.json();//object//fetch the response body content as JSON by calling the json() method of Response
+            console.log(data);
+            // document.write(data);//[object Object] 
+            // document.write(JSON.stringify(data));//OUTPUT
+            // Object
+            // products: Array(2)0: {id: 1, name: 'Product 1', description: 'Description for product 1', price: 29.99, category: 'Electronics', …}1: {id: 2, name: 'Product 2', description: 'Description for product 2', price: 49.99, category: 'Home Appliances', …}length: 2
+        } catch (error) {
+            console.error("Error:", error);
+            console.error(error.message);
+        }
+    }
+
+
+
+    requestTry();
+    async function requestTry() {
+        const request7 = new Request("tryingJSON.json", {
+            method: "POST",
+            body: JSON.stringify({ username: "Sudha" }),
+        });
+        const request8 = request7.clone();
+        const response7 = await fetch(request7);
+        console.log(response7.status);//200
+        //  await is only valid in async functions and the top level bodies of modules
+        const response8 = await fetch(request8);
+        console.log(response8.status);//200
+    }
+
+
+
+
+
+    let file = "fetch_info.txt"
+    fetch(file)
+        .then(x => x.text())
+        .then(y => document.getElementById("demo").innerHTML = y);//[object Response]
+
+    // OR
+    getText("fetch_info.txt");//getText function is being called
+    async function getText(file) {
+        let myObject = await fetch(file);
+        let myText = await myObject.text();
+        document.getElementById("demo").innerHTML += "<br><br>" + myText;
+    }
+
+
+
+    fetch('data.json')
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (data) {
+            appendData(data);
+        })
+        .catch(function (err) {
+            console.log('error: ' + err);
+        });
+    function appendData(data) {
+        let mainContainer = document.getElementById("myData");
+        for (let i = 0; i < data.length; i++) {
+            let div = document.createElement("div");
+            div.innerHTML = 'Name: ' + data[i].firstName + ' ' + data[i].lastName;
+            mainContainer.appendChild(div);
+        }
+    }
+
+</script>
+
+<script>
+
+    $(function () {
+        // var people = [];//no need
+        $.getJSON('people.json', function (data) {
+            $.each(data.person, function (i, f) {
+                var tblRow = "<tr>" + "<td>" + f.firstName + "</td>" +
+                    "<td>" + f.lastName + "</td>" + "<td>" + f.job + "</td>" + "<td>" + f.roll + "</td>" + "</tr>"
+                $(tblRow).appendTo("#userdata tbody");
+            });
+        });
+    });
+
+
+
+    // ajax/test.json is folder directory , means ajax is folder name and test.json is file name in it. To create this directory just create new file and paste "ajax/test.json" directly and it will create folder with file
+    $.getJSON("ajax/test.json", function (data) {
+        var items = [];
+        $.each(data, function (key, val) {
+            items.push("<li id='" + key + "'>" + val + "</li>");
+        });
+
+        $("<ul/>", {
+            "class": "my-new-list",
+            html: items.join("")
+        }).appendTo("body");
+    });
+
+
+
+
+
+
+
+</script>
+
+</html>

@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="description" content="ecommerce site">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="Sudha">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <!-- https://fonts.google.com/icons?selected=Material+Symbols+Outlined:menu:FILL@0;wght@400;GRAD@0;opsz@24&icon.size=24&icon.color=%23e8eaed   useful for icons  -->
+
+    <title> Shanaya Bazaar</title>
+
+    <link rel="stylesheet" href="/style2.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+CU:wght@100..400&display=swap" rel="stylesheet">
+
+
+</head>
+<script src="script.js"></script>
+<!--
+<script>
+    kids.style.transform = "translateX(0px)";
+    leftscroll.addEventListener(
+        "click", () => {
+            if (kids.style.transform = "translateX(0px)") {
+                kids.style.transform = "translateX(-10px)";
+            }
+            else {
+                kids.style.transform = "translateX(0px)";
+            }
+        }
+
+    )
+
+    function next() {
+        window.history.go(1);
+    }
+
+    function previous() {
+        window.history.go(-1);
+    }
+
+
+
+
+    let index = 0;
+    const images = document.querySelectorAll('.image-container img');
+
+    function showImage(index) {
+        images.forEach((img, i) => {
+            if (i === index) {
+                img.classList.add('visible');
+            } else {
+                img.classList.remove('visible');
+            }
+        });
+    }
+
+    function nextImage() {
+        index++;
+        if (index >= images.length) {
+            index = 0;
+        }
+        showImage(index);
+    }
+
+    function previousImage() {
+        index--;
+        if (index < 0) {
+            index = images.length - 1;
+        }
+        showImage(index);
+    }
+</script>-->
+
+
+<body>
+    <div class=""> <!--for header to be scrolled upto footer-->
+        <header class="header">
+
+            <div class="headertitle">
+                <img class="titlelogo" src="title logo.png" alt="title logo">
+
+
+
+                <h3>Buy with intention, live with purpose</h3>
+
+            </div>
+
+
+            <div class="menuitems">
+                <a href="index2.html" class="topmenu underlineremover">Home</a>
+                <a href="about.html" class="topmenu underlineremover">About</a>
+                <a href="contact.html" class="topmenu  underlineremover">Contact</a>
+                <a href="need.html" class="topmenu underlineremover">Needs</a>
+                <a href="help.html" class="topmenu underlineremover">Help</a>
+                <!-- <a href="login.html" class="topmenu underlineremover">Login</a> -->
+                <a href="animatedLogin.html" class="topmenu underlineremover">Login</a>
+            </div>
+
+
+
+            <div class="headerinputs">
+
+                <img src="logo_enhanced.png" alt="" id="shanayabazaar">
+                <div class="optioninputbox">
+                    <select class="boxstyling">
+                        <option value="allCategory">All</option>
+                        <option value="women">Women</option>
+                        <option value="men">Men</option>
+                        <option value="kids">Kids</option>
+                    </select>
+                    <div class="searchbox boxstyling">
+                        <input type="text" placeholder="Search..." class="">
+                        <button class="search"><i class="fa fa-search"></i></button>
+                    </div>
+
+                </div>
+
+
+
+
+
+
+            </div>
+            <div class="mahalootdesclaimer">
+                <p id="offline1"></p>
+                <div class="mahalootscrollingsection">
+
+
+                    <p>Welcome to Maha loot, your go-to destination for all things fabulous! Step into a world of style
+                        and
+                        savings with our wide range of products. Shop now and stand a chance to win big - one lucky
+                        customer
+                        walks away with a Rs 1001 coupon every day! Don't miss out on this exciting opportunity to shop
+                        and
+                        win with Maha loot. Start browsing now and treat yourself to something special!</p>
+                </div>
+            </div>
+        </header>
+        <div class="progressbar"> </div>
+
+        <div id="Welcome">
+            <p> Welcome ......... to Shanaya Bazaar. </p>
+            <i class="fa fa-shopping-cart"></i>
+            <i class="fa fa-user" aria-hidden="true"></i>
+
+
+
+
+
+        </div>
+        <div class="mobilepopover">
+            <div class="popover" onmouseover="stopOpacity()">
+                <button type="cuttab" class="cuttab" onclick="cutbutton()">&#10006;</button>
+                <a href="index2.html"><img src="magasalebanner.png" alt="banner"></a>
+            </div>
+        </div>
+
+
+
+        <main class="bannersection">
+            <div class="banner">
+                <a href="about.html"><img src="magasalebanner.png" alt="banner" class="bannerphoto mobilebanner"></a>
+                <!-- <a href="about.html"><img src="magasalebanner.png" alt="banner" class="bannerphoto mobilebanner"></a>-->
+
+                <a href="about.html"><img src="banner2.png" alt="banner" class="bannerphoto mobilebanner"></a>
+                <a href="about.html"><img src="banner3.png" alt="banner" class="bannerphoto mobilebanner"></a>
+                <a href="about.html"><img src="banner4.png" alt="banner" class="bannerphoto mobilebanner"></a>
+                <a href="about.html"><img src="/banner5.png" alt="banner" class="bannerphoto mobilebanner"></a>
+                <a href="about.html"><img src="/banner6.png" alt="banner" class="bannerphoto mobilebanner"></a>
+            </div>
+        </main>
+
+
+
+
+        <section class="gridcontainer mobileresponsehidden">
+            <h1>Top Products</h1>
+            <div class="productsection">
+                <div class="productsection1">
+                    <h4>Most popular</h4>
+                    <a href="/Hair Spa Cap Steamer For Women Beauty Products.html"> <img
+                            src="/Hair cap steamer/Hair-Care-Thermal-Head-Spa-Cap-1653281007.jpg" alt="hair cap steamer"
+                            class="gridbigimg"></a>
+                    <a href="/Hair Spa Cap Steamer For Women Beauty Products.html"> <img
+                            src="/Hair cap steamer/Hair-Care-Thermal-Head-Spa-Cap2-1653281008.jpg"
+                            alt="hair cap steamer" class="gridsmallimg"></a>
+                    <a href="/Hair Spa Cap Steamer For Women Beauty Products.html"> <img
+                            src="Hair cap steamer/Hair-Care-Thermal-Head-Spa-Cap5-1653281008.jpg" alt="hair cap steamer"
+                            class="gridsmallimg"></a>
+                    <a href="/Hair Spa Cap Steamer For Women Beauty Products.html"> <img
+                            src="/Hair cap steamer/Hair-Care-Thermal-Head-Spa-Cap3-1653281008.jpg"
+                            alt="hair cap steamer" class="gridsmallimg"></a>
+                </div>
+                <div class="productsection2a">
+                    <h4>New arrivals</h4>
+                    <div class="smallgrid">
+
+                        <div>
+                            <a href="/Hair Spa Cap Steamer For Women Beauty Products.html"> <img
+                                    src="/Hair cap steamer/Hair-Care-Thermal-Head-Spa-Cap6-1653281009.jpg"
+                                    alt="hair cap steamer" class="smallsquareimg
+                                "></a>
+                        </div>
+
+                        <div>
+                            <a href="/Hair Spa Cap Steamer For Women Beauty Products.html"> <img
+                                    src="/Hair cap steamer/Hair-Care-Thermal-Head-Spa-Cap6-1653281009.jpg"
+                                    alt="hair cap steamer" class="smallsquareimg
+                            "></a>
+                        </div>
+
+                        <div>
+
+                            <a href="/Hair Spa Cap Steamer For Women Beauty Products.html"> <img
+                                    src="/Hair cap steamer/Hair-Care-Thermal-Head-Spa-Cap6-1653281009.jpg"
+                                    alt="hair cap steamer" class="smallsquareimg"></a>
+                        </div>
+                        <div>
+                            <a href="/Hair Spa Cap Steamer For Women Beauty Products.html"> <img
+                                    src="/Hair cap steamer/Hair-Care-Thermal-Head-Spa-Cap6-1653281009.jpg"
+                                    alt="hair cap steamer" class="smallsquareimg"></a>
+                        </div>
+                    </div>
+
+
+
+                </div>
+                <div class="productsection2b">
+                    <span class="gridrow grid">
+                        <div class="gridrowimagecontaianer">
+                            <a href="/Hair Spa Cap Steamer For Women Beauty Products.html"> <img
+                                    src="/Hair cap steamer/Hair-Care-Thermal-Head-Spa-Cap8-1653281009.jpg"
+                                    alt="hair cap steamer" class="gridrowimage"></a>
+                        </div>
+
+                        <div>
+                            <h4>New this week</h4>
+                        </div>
+
+
+                    </span>
+
+                </div>
+
+
+                <div class="productsection3a">
+
+                    <div class="gridrow grid">
+                        <a href="/Hair Spa Cap Steamer For Women Beauty Products.html"> <img
+                                src="/Hair cap steamer/Hair-Care-Thermal-Head-Spa-Cap2-1653281008.jpg"
+                                alt="hair cap steamer" class="gridrowimage"></a>
+                        <h4>affordable products for the day</h4>
+                    </div>
+
+                </div>
+                <div class="productsection3b">
+                    <h4>Deals on best seller</h4>
+
+
+                    <a href="/Hair Spa Cap Steamer For Women Beauty Products.html"> <img
+                            src="/Hair cap steamer/Hair-Care-Thermal-Head-Spa-Cap2-1653281008.jpg"
+                            alt="hair cap steamer" class="gridsquareimage">
+                    </a>
+
+
+
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+            </div>
+
+        </section>
+
+
+
+
+
+        <div class="categoryoptions">
+            <h4>Women</h4>
+            <div id="women">
+
+                <div class="slideproduct">
+                    <div class="completeproductbox">
+                        <div class="productbox">
+                            <a href="Hair Spa Cap Steamer For Women Beauty Products.html" class="underlineremover"><img
+                                    src="/Hair cap steamer/Hair-Care-Thermal-Head-Spa-Cap-1653281007.jpg"
+                                    alt="Hair Spa Cap Steamer For Women Beauty Products" class="productimagesize">
+                                <h4>Rs. 499</h4>
+                                <h5>Hair Spa Cap Steamer For Women Beauty Products</h5>
+
+                            </a>
+
+                        </div>
+
+                    </div>
+                    <div class="completeproductbox">
+                        <div class="productbox">
+                            <a href="Hair Spa Cap Steamer For Women Beauty Products.html" class="underlineremover"><img
+                                    src="/Hair cap steamer/Hair-Care-Thermal-Head-Spa-Cap-1653281007.jpg"
+                                    alt="Hair Spa Cap Steamer For Women Beauty Products" class="productimagesize">
+                                <h4>Rs. 499</h4>
+                                <h5>Hair Spa Cap Steamer For Women Beauty Products</h5>
+
+                            </a>
+
+                        </div>
+
+                    </div>
+                    <div class="completeproductbox">
+                        <div class="productbox">
+                            <a href="Hair Spa Cap Steamer For Women Beauty Products.html" class="underlineremover"><img
+                                    src="/Hair cap steamer/Hair-Care-Thermal-Head-Spa-Cap-1653281007.jpg"
+                                    alt="Hair Spa Cap Steamer For Women Beauty Products" class="productimagesize">
+                                <h4>Rs. 499</h4>
+                                <h5>Hair Spa Cap Steamer For Women Beauty Products</h5>
+
+                            </a>
+
+                        </div>
+
+                    </div>
+                    <div class="completeproductbox">
+                        <div class="productbox">
+                            <a href="Hair Spa Cap Steamer For Women Beauty Products.html" class="underlineremover"><img
+                                    src="/Hair cap steamer/Hair-Care-Thermal-Head-Spa-Cap-1653281007.jpg"
+                                    alt="Hair Spa Cap Steamer For Women Beauty Products" class="productimagesize">
+                                <h4>Rs. 499</h4>
+                                <h5>Hair Spa Cap Steamer For Women Beauty Products</h5>
+
+                            </a>
+
+                        </div>
+
+                    </div>
+                    <div class="completeproductbox">
+                        <div class="productbox">
+                            <a href="Hair Spa Cap Steamer For Women Beauty Products.html" class="underlineremover"><img
+                                    src="/Hair cap steamer/Hair-Care-Thermal-Head-Spa-Cap-1653281007.jpg"
+                                    alt="Hair Spa Cap Steamer For Women Beauty Products" class="productimagesize">
+                                <h4>Rs. 499</h4>
+                                <h5>Hair Spa Cap Steamer For Women Beauty Products</h5>
+
+                            </a>
+
+                        </div>
+
+                    </div>
+                    <div class="completeproductbox">
+                        <div class="productbox">
+                            <a href="Hair Spa Cap Steamer For Women Beauty Products.html" class="underlineremover"><img
+                                    src="/Hair cap steamer/Hair-Care-Thermal-Head-Spa-Cap-1653281007.jpg"
+                                    alt="Hair Spa Cap Steamer For Women Beauty Products" class="productimagesize">
+                                <h4>Rs. 499</h4>
+                                <h5>Hair Spa Cap Steamer For Women Beauty Products</h5>
+
+                            </a>
+
+                        </div>
+
+                    </div>
+                    <div class="completeproductbox">
+                        <div class="productbox">
+                            <a href="Hair Spa Cap Steamer For Women Beauty Products.html" class="underlineremover"><img
+                                    src="/Hair cap steamer/Hair-Care-Thermal-Head-Spa-Cap-1653281007.jpg"
+                                    alt="Hair Spa Cap Steamer For Women Beauty Products" class="productimagesize">
+                                <h4>Rs. 499</h4>
+                                <h5>Hair Spa Cap Steamer For Women Beauty Products</h5>
+
+                            </a>
+
+                        </div>
+
+                    </div>
+                    <div class="completeproductbox">
+                        <div class="productbox">
+                            <a href="Hair Spa Cap Steamer For Women Beauty Products.html" class="underlineremover"><img
+                                    src="/Hair cap steamer/Hair-Care-Thermal-Head-Spa-Cap-1653281007.jpg"
+                                    alt="Hair Spa Cap Steamer For Women Beauty Products" class="productimagesize">
+                                <h4>Rs. 499</h4>
+                                <h5>Hair Spa Cap Steamer For Women Beauty Products</h5>
+
+                            </a>
+
+                        </div>
+
+                    </div>
+                    <div class="completeproductbox">
+                        <div class="productbox">
+                            <a href="Hair Spa Cap Steamer For Women Beauty Products.html" class="underlineremover"><img
+                                    src="/Hair cap steamer/Hair-Care-Thermal-Head-Spa-Cap-1653281007.jpg"
+                                    alt="Hair Spa Cap Steamer For Women Beauty Products" class="productimagesize">
+                                <h4>Rs. 499</h4>
+                                <h5>Hair Spa Cap Steamer For Women Beauty Products</h5>
+
+                            </a>
+
+                        </div>
+
+                    </div>
+                    <div class="completeproductbox">
+                        <div class="productbox">
+                            <a href="Hair Spa Cap Steamer For Women Beauty Products.html" class="underlineremover"><img
+                                    src="/Hair cap steamer/Hair-Care-Thermal-Head-Spa-Cap-1653281007.jpg"
+                                    alt="Hair Spa Cap Steamer For Women Beauty Products" class="productimagesize">
+                                <h4>Rs. 499</h4>
+                                <h5>Hair Spa Cap Steamer For Women Beauty Products</h5>
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+            </div>
+
+
+
+
+        </div>
+        <div class="categoryoptions">
+            <h4>Men</h4>
+            <div id="men">
+
+                <a href="Hair Spa Cap Steamer For Women Beauty Products.html" class="underlineremover">
+                    <div class="completeproductbox">
+                        <div class="productheighlight">
+
+                            <h4>Rs. 499</h4>
+                            <h5>Hair Spa Cap Steamer For Women Beauty Products</h5>
+                        </div>
+                    </div>
+                </a>
+                <a href="Hair Spa Cap Steamer For Women Beauty Products.html" class="underlineremover">
+                    <div class="completeproductbox">
+                        <div class="productheighlight">
+
+                            <h4>Rs. 499</h4>
+                            <h5>Hair Spa Cap Steamer For Women Beauty Products</h5>
+                        </div>
+                    </div>
+                </a>
+                <a href="Hair Spa Cap Steamer For Women Beauty Products.html" class="underlineremover">
+                    <div class="completeproductbox">
+                        <div class="productheighlight">
+
+                            <h4>Rs. 499</h4>
+                            <h5>Hair Spa Cap Steamer For Women Beauty Products</h5>
+                        </div>
+                    </div>
+                </a>
+                <a href="Hair Spa Cap Steamer For Women Beauty Products.html" class="underlineremover">
+                    <div class="completeproductbox">
+                        <div class="productheighlight">
+
+                            <h4>Rs. 499</h4>
+                            <h5>Hair Spa Cap Steamer For Women Beauty Products</h5>
+                        </div>
+                    </div>
+                </a>
+                <a href="Hair Spa Cap Steamer For Women Beauty Products.html" class="underlineremover">
+                    <div class="completeproductbox">
+                        <div class="productheighlight">
+
+                            <h4>Rs. 499</h4>
+                            <h5>Hair Spa Cap Steamer For Women Beauty Products</h5>
+                        </div>
+                    </div>
+                </a>
+                <a href="Hair Spa Cap Steamer For Women Beauty Products.html" class="underlineremover">
+                    <div class="completeproductbox">
+                        <div class="productheighlight">
+
+                            <h4>Rs. 499</h4>
+                            <h5>Hair Spa Cap Steamer For Women Beauty Products</h5>
+                        </div>
+                    </div>
+                </a>
+
+
+
+
+
+            </div>
+        </div>
+        <div class="categoryoptions">
+            <h4>Kids</h4>
+            <div class="completeonecategory">
+                <div id="kids">
+                    <button type="leftscroll" class="leftscroll">&lt;</button>
+                    <button type="rightscroll" class="rightscroll">&gt;</button>
+
+                    <a href="Hair Spa Cap Steamer For Women Beauty Products.html" class="underlineremover">
+                        <div class="completeproductbox">
+                            <div class="productheighlight">
+
+                                <h4>Rs. 499</h4>
+                                <h5>Hair Spa Cap Steamer For Women Beauty Products</h5>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="Hair Spa Cap Steamer For Women Beauty Products.html" class="underlineremover">
+                        <div class="completeproductbox">
+                            <div class="productheighlight">
+
+                                <h4>Rs. 499</h4>
+                                <h5>Hair Spa Cap Steamer For Women Beauty Products</h5>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="Hair Spa Cap Steamer For Women Beauty Products.html" class="underlineremover">
+                        <div class="completeproductbox">
+                            <div class="productheighlight">
+
+                                <h4>Rs. 499</h4>
+                                <h5>Hair Spa Cap Steamer For Women Beauty Products</h5>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="Hair Spa Cap Steamer For Women Beauty Products.html" class="underlineremover">
+                        <div class="completeproductbox">
+                            <div class="productheighlight">
+
+                                <h4>Rs. 499</h4>
+                                <h5>Hair Spa Cap Steamer For Women Beauty Products</h5>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="Hair Spa Cap Steamer For Women Beauty Products.html" class="underlineremover">
+                        <div class="completeproductbox">
+                            <div class="productheighlight">
+
+                                <h4>Rs. 499</h4>
+                                <h5>Hair Spa Cap Steamer For Women Beauty Products</h5>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="Hair Spa Cap Steamer For Women Beauty Products.html" class="underlineremover">
+                        <div class="completeproductbox">
+                            <div class="productheighlight">
+
+                                <h4>Rs. 499</h4>
+                                <h5>Hair Spa Cap Steamer For Women Beauty Products</h5>
+                            </div>
+                        </div>
+                    </a>
+
+
+
+
+
+                </div>
+            </div>
+
+        </div>
+
+        <h3>Beauty & Personal Care</h3>
+        <div class="categoryoptionsbox">
+            <div class="responsivegrid ">
+                <div class="productsection1container mobileresponsegrid">
+
+
+                    <div class="productsection1">
+                        <h4>Most popular</h4>
+                        <a href="/Hair Spa Cap Steamer For Women Beauty Products.html"> <img
+                                src="/Hair cap steamer/Hair-Care-Thermal-Head-Spa-Cap-1653281007.jpg"
+                                alt="hair cap steamer" class="gridbigimg"></a>
+                        <a href="/Hair Spa Cap Steamer For Women Beauty Products.html"> <img
+                                src="/Hair cap steamer/Hair-Care-Thermal-Head-Spa-Cap2-1653281008.jpg"
+                                alt="hair cap steamer" class="gridsmallimg"></a>
+                        <a href="/Hair Spa Cap Steamer For Women Beauty Products.html"> <img
+                                src="Hair cap steamer/Hair-Care-Thermal-Head-Spa-Cap5-1653281008.jpg"
+                                alt="hair cap steamer" class="gridsmallimg"></a>
+                        <a href="/Hair Spa Cap Steamer For Women Beauty Products.html"> <img
+                                src="/Hair cap steamer/Hair-Care-Thermal-Head-Spa-Cap3-1653281008.jpg"
+                                alt="hair cap steamer" class="gridsmallimg"></a>
+                    </div>
+                </div>
+                <div class="productsection2">
+
+
+                    <div class="productsection2a">
+                        <h4>New arrivals</h4>
+                        <div class="smallgrid">
+
+                            <div>
+                                <a href="/Hair Spa Cap Steamer For Women Beauty Products.html"> <img
+                                        src="/Hair cap steamer/Hair-Care-Thermal-Head-Spa-Cap6-1653281009.jpg"
+                                        alt="hair cap steamer" class="smallsquareimg
+                                "></a>
+                            </div>
+
+                            <div>
+                                <a href="/Hair Spa Cap Steamer For Women Beauty Products.html"> <img
+                                        src="/Hair cap steamer/Hair-Care-Thermal-Head-Spa-Cap6-1653281009.jpg"
+                                        alt="hair cap steamer" class="smallsquareimg
+                            "></a>
+                            </div>
+
+                            <div>
+
+                                <a href="/Hair Spa Cap Steamer For Women Beauty Products.html"> <img
+                                        src="/Hair cap steamer/Hair-Care-Thermal-Head-Spa-Cap6-1653281009.jpg"
+                                        alt="hair cap steamer" class="smallsquareimg"></a>
+                            </div>
+                            <div>
+                                <a href="/Hair Spa Cap Steamer For Women Beauty Products.html"> <img
+                                        src="/Hair cap steamer/Hair-Care-Thermal-Head-Spa-Cap6-1653281009.jpg"
+                                        alt="hair cap steamer" class="smallsquareimg"></a>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                    <div class="productsection2b">
+                        <span class="gridrow grid">
+                            <div class="gridrowimagecontaianer">
+                                <a href="/Hair Spa Cap Steamer For Women Beauty Products.html"> <img
+                                        src="/Hair cap steamer/Hair-Care-Thermal-Head-Spa-Cap8-1653281009.jpg"
+                                        alt="hair cap steamer" class="gridrowimage"></a>
+                            </div>
+
+                            <div>
+                                <h4>New this week</h4>
+                            </div>
+
+
+                        </span>
+
+                    </div>
+                </div>
+                <div class="productsection3">
+
+
+                    <div class="productsection3a">
+
+                        <div class="gridrow grid">
+                            <a href="/Hair Spa Cap Steamer For Women Beauty Products.html"> <img
+                                    src="/Hair cap steamer/Hair-Care-Thermal-Head-Spa-Cap2-1653281008.jpg"
+                                    alt="hair cap steamer" class="gridrowimage"></a>
+                            <h4>affordable products for the day</h4>
+                        </div>
+
+                    </div>
+                    <div class="productsection3b">
+                        <h4>Deals on best seller</h4>
+
+
+                        <a href="/Hair Spa Cap Steamer For Women Beauty Products.html"> <img
+                                src="/Hair cap steamer/Hair-Care-Thermal-Head-Spa-Cap2-1653281008.jpg"
+                                alt="hair cap steamer" class="gridsquareimage">
+                        </a>
+
+
+
+                    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+                </div>
+            </div>
+
+
+            <div class="categoryoptionslist">
+                <a href="Hair Spa Cap Steamer For Women Beauty Products.html" class="underliner"
+                    style="color: #000000;">Hair Spa Cap Steamer For Women Beauty Products</a>
+            </div>
+        </div>
+
+        <div class="shanayabazaarvideo" sty>
+            <h1>How Shanaya Bazaar adds values in your life</h1>
+            <h5>Experience the transformational impact of Shanaya Bazaar on your life! Discover how it adds value and enhances your daily experiences in ways you never imagined. Watch the video now!</h5>
+            <video src="/shanayabazaarvideo.mp4" controls>error
+            </video>
+        </div>
+
+
+        <div>
+            <h3>Ready for maha loot of the day</h3>
+            <h4>first 5 lucky customers 90% off on given products</h4>
+            <h5>Hurry up</h5>
+            <h6>Must be logged in</h6>
+
+            <div id="mahaloot">
+                <div class="slideproduct">
+                    <div class="completeproductbox">
+                        <div class="productbox">
+                            <a href="Hair Spa Cap Steamer For Women Beauty Products.html" class="underlineremover"><img
+                                    src="/Hair cap steamer/Hair-Care-Thermal-Head-Spa-Cap-1653281007.jpg"
+                                    alt="Hair Spa Cap Steamer For Women Beauty Products" class="productimagesize">
+                                <h4>Rs. 499</h4>
+                                <h5>Hair Spa Cap Steamer For Women Beauty Products</h5>
+
+                            </a>
+
+                        </div>
+
+                    </div>
+                    <div class="completeproductbox">
+                        <div class="productbox">
+                            <a href="Hair Spa Cap Steamer For Women Beauty Products.html" class="underlineremover"><img
+                                    src="/Hair cap steamer/Hair-Care-Thermal-Head-Spa-Cap-1653281007.jpg"
+                                    alt="Hair Spa Cap Steamer For Women Beauty Products" class="productimagesize">
+                                <h4>Rs. 499</h4>
+                                <h5>Hair Spa Cap Steamer For Women Beauty Products</h5>
+
+                            </a>
+
+                        </div>
+
+                    </div>
+                    <div class="completeproductbox">
+                        <div class="productbox">
+                            <a href="Hair Spa Cap Steamer For Women Beauty Products.html" class="underlineremover"><img
+                                    src="/Hair cap steamer/Hair-Care-Thermal-Head-Spa-Cap-1653281007.jpg"
+                                    alt="Hair Spa Cap Steamer For Women Beauty Products" class="productimagesize">
+                                <h4>Rs. 499</h4>
+                                <h5>Hair Spa Cap Steamer For Women Beauty Products</h5>
+
+                            </a>
+
+                        </div>
+
+                    </div>
+                    <div class="completeproductbox">
+                        <div class="productbox">
+                            <a href="Hair Spa Cap Steamer For Women Beauty Products.html" class="underlineremover"><img
+                                    src="/Hair cap steamer/Hair-Care-Thermal-Head-Spa-Cap-1653281007.jpg"
+                                    alt="Hair Spa Cap Steamer For Women Beauty Products" class="productimagesize">
+                                <h4>Rs. 499</h4>
+                                <h5>Hair Spa Cap Steamer For Women Beauty Products</h5>
+
+                            </a>
+
+                        </div>
+
+                    </div>
+                    <div class="completeproductbox">
+                        <div class="productbox">
+                            <a href="Hair Spa Cap Steamer For Women Beauty Products.html" class="underlineremover"><img
+                                    src="/Hair cap steamer/Hair-Care-Thermal-Head-Spa-Cap-1653281007.jpg"
+                                    alt="Hair Spa Cap Steamer For Women Beauty Products" class="productimagesize">
+                                <h4>Rs. 499</h4>
+                                <h5>Hair Spa Cap Steamer For Women Beauty Products</h5>
+
+                            </a>
+
+                        </div>
+
+                    </div>
+                    <div class="completeproductbox">
+                        <div class="productbox">
+                            <a href="Hair Spa Cap Steamer For Women Beauty Products.html" class="underlineremover"><img
+                                    src="/Hair cap steamer/Hair-Care-Thermal-Head-Spa-Cap-1653281007.jpg"
+                                    alt="Hair Spa Cap Steamer For Women Beauty Products" class="productimagesize">
+                                <h4>Rs. 499</h4>
+                                <h5>Hair Spa Cap Steamer For Women Beauty Products</h5>
+
+                            </a>
+
+                        </div>
+
+                    </div>
+                    <div class="completeproductbox">
+                        <div class="productbox">
+                            <a href="Hair Spa Cap Steamer For Women Beauty Products.html" class="underlineremover"><img
+                                    src="/Hair cap steamer/Hair-Care-Thermal-Head-Spa-Cap-1653281007.jpg"
+                                    alt="Hair Spa Cap Steamer For Women Beauty Products" class="productimagesize">
+                                <h4>Rs. 499</h4>
+                                <h5>Hair Spa Cap Steamer For Women Beauty Products</h5>
+
+                            </a>
+
+                        </div>
+
+                    </div>
+                    <div class="completeproductbox">
+                        <div class="productbox">
+                            <a href="Hair Spa Cap Steamer For Women Beauty Products.html" class="underlineremover"><img
+                                    src="/Hair cap steamer/Hair-Care-Thermal-Head-Spa-Cap-1653281007.jpg"
+                                    alt="Hair Spa Cap Steamer For Women Beauty Products" class="productimagesize">
+                                <h4>Rs. 499</h4>
+                                <h5>Hair Spa Cap Steamer For Women Beauty Products</h5>
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <br>
+    <div>
+        <h1>GeeksforGeeks</h1>
+        <h3>Forward and Back Button in html-2</h3>
+        <button onclick="next()" id="forward">
+            Forward
+        </button>
+        <button onClick="previous()" id="backward">
+            Back
+        </button>
+    </div>
+    <div class="image-container">
+        <img src="banner1.png" class="visible">
+        <img src="banner2.png">
+        <img src="banner3.png">
+        <!-- Add more images as needed -->
+    </div>
+
+    <button onclick="previousImage()">Previous</button>
+    <button onclick="nextImage()">Next</button>
+    <br>
+    <footer>
+        <div id="footer">
+
+            <!--   <section id="">
+            <div>
+                <h3>Here is Why to Follow?</h3>
+                <a href="https://youtube.com/@heysudhahere?feature=shared" class="underlineremover"><img src="youtube.png" width="50"
+                        alt="youtube logo"></img> Connect
+                    to our youtube channel for more information</a>
+                <p>You can find multiple review videos for enquiry and self satisfaction and tension free before
+                    placing
+                    order
+                </p>
+
+            </div>
+            <div>
+                <a href="https://www.instagram.com/hey_sudha24_here/" class="underlineremover"><img src="/instagram.png" alt="instagram logo"
+                        width="30"></img>Click here
+                    to connect to instagram for updates</a>
+                <p>Follow us on instagram for updates and new products</p>
+                <p>here You can find multiple lastest products at bumper discount for a lucky candidate</p>
+
+
+            </div>
+
+        </section>
+        -->
+            <section id="footer1">
+                <div>
+                    <h1>Our Products</h1>
+                    <p>Our products are made with love and care. We have a wide
+                        range of products
+                    </p>
+
+
+                    <a href="index2.html" class="underlineremover">
+                        <p><img src="/title logo.png" alt="instagram logo" width="30"></img>Click here to get the
+                            best
+                            deal of the day</p>
+                        <h3>
+                            <i class="fa fa-home"></i> Ready for maha loot of the day
+                        </h3>
+                    </a>
+
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                    <a href="#"><i class="fa fa-linkedin"></i></a>
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+
+
+                </div>
+            </section>
+            <section id="footer2">
+                <h2>Follow Us</h2>
+                <a href="https://www.facebook.com/" class="underlineremover"><img src="facebook.png" alt="
+                " width="50" height="50"></a>
+                <a href="https://www.instagram.com/" class="underlineremover"><img src="/instagram.png" alt="
+                    " width="50" height="50"></a>
+                <a href="https://www.twitter.com/" class="underlineremover"><img src="twitter.png" alt="
+                        " width="50" height="50"></a>
+                <a href="https://www.youtube.com/" class="underlineremover"><img src="youtube.png" alt="
+                            " width="80" height="50"></a>
+
+                <div>
+                    <h2>Address</h2>
+                    <p>Address: Revtapur, Vijaynagar Chauraha, Nilmatha, Lucknow
+                    </p>
+                    <p>Phone: ..........</p>
+                    <p>Email: <a href="https://mail.google.com/mail/u/0/#sent?compose=new"
+                            class="underlineremover">sudhakumarichauhan24@gmail.com</a>
+                    </p>
+                </div>
+            </section>
+
+
+        </div>
+
+
+    </footer>
+
+
+</body>
+
+</html>
