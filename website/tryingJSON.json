@@ -1,0 +1,24 @@
+{
+    "products": [
+      {
+        "id": 1,
+        "name": "Product 1",
+        "description": "Description for product 1",
+        "price": 29.99,
+        "category": "Electronics",
+        "stock": 100,
+        "image_url": "title logo.png"
+      },
+      {
+        "id": 2,
+        "name": "Product 2",
+        "description": "Description for product 2",
+        "price": 49.99,
+        "category": "Home Appliances",
+        "stock": 50,
+        "image_url": "title logo.png"
+      }
+    ]
+}
+
+
