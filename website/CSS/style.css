@@ -1,0 +1,13 @@
+body{
+    background-color: rebeccapurple;
+    /* background-image: url(/html/IMG_20230722_141627_150.jpg); */
+
+  }
+#first{
+    background-color: honeydew;
+    color: crimson;
+  }
+.bg-blue{
+    background-color: aquamarine;
+  }
+  

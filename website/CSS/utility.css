@@ -1,0 +1,31 @@
+ .flex-all-center{
+    display: flex; 
+    justify-content: center; 
+    align-content: center; 
+ }
+ @keyframes slider {
+   20% {
+     margin-left: 0px;
+   }
+
+   40% {
+     margin-left: calc(-600px * 1);
+   }
+
+   60% {
+     margin-left: calc(-600px * 2);
+   }
+
+   80% {
+     margin-left: calc(-600px * 3);
+   }
+ }
+ .scroll{
+    height: 15vh;
+    font-weight: bolder;
+    transform: translate(91vw);
+    z-index: 2;
+    position: absolute;
+    margin: 2.5% 0%;
+ }
+ 
