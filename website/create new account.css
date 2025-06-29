@@ -1,0 +1,80 @@
+.labelInputGrid {
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* align-items: center; */
+    /* justify-content: center; */
+
+
+
+    display: grid;
+    /* grid-template-columns: 1fr 1fr; */
+    grid-template-columns: 20vw 50vw;
+    justify-content: center;
+    /* justify is helpful to keep it at center */
+    column-gap: normal;
+    row-gap: 10px;
+
+
+
+
+
+
+}
+
+
+body {
+
+    text-align: center;
+    background-color: #f5ebff;
+    background-color: #ffebef;
+    /* background-color:			#d0f4ff; */
+    /* background-color:		#e1faff; */
+
+
+    /* background-image: url(magasalebanner.png);
+    background-size: contain;
+/* filter: blur(50%); */
+    /* filter: contrast(100); */
+    /* filter: grayscale(100);
+
+    background-repeat: no-repeat;
+    background-blend-mode: darken;
+    backdrop-filter: 0;
+    background-clip: border-box; */
+
+
+}
+
+input,
+label {
+    padding: 5px;
+    /* justify-self: start; */
+}
+
+label {
+    justify-self: start;
+}
+
+.additionalDetail {
+    display: grid;
+    justify-items: left;
+
+
+
+}
+
+.detailGrid {
+
+
+    display: grid;
+    grid-template-columns: 20vw 50vw;
+    justify-content: center;
+    column-gap: normal;
+    row-gap: 10px;
+    margin-bottom: 5vh;
+
+}
+
+details {
+    margin-left: 4vw;
+}

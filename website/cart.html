@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My Cart</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- the bootstrap file to apply all layout just by putting the class name -->
+
+
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" rel="stylesheet" />
+
+
+    <link href="cartStyle.css" rel="stylesheet">
+</head>
+
+
+<body>
+
+    <section>
+
+        <div class="container">
+
+            <h2 class="px-5 p-2">My shopping cart</h2> 
+            <!-- this class is for links stylesheet to be used and it bring  distance in left -->
+             <!-- px shows padding along x from left  -->
+             <!-- p2 shows padding along y from top  -->
+
+            <div class="cart">
+                <div>
+
+                    <div class="cart-item">
+                        <div class="row">
+                            <!-- thie row class has general meaning defined by created , not predefined class -->
+                            <div class="center-item">
+                                <!-- used to keen image and title in flex hrozontally -->
+                                 <!-- center-item shows inline flex hozizontal -->
+                                <img src="/Hair cap steamer/Hair-Care-Thermal-Head-Spa-Cap-1653281007.jpg" alt="">
+                                <h5>Hair-Care-Thermal-Head-Spa-Cap</h5>
+                            </div>
+
+
+                            <!-- below + , - and price in horizontal flex  -->
+                            <div class="center-item">
+                                 <!-- center-item shows inline flex hozizontal  and take space as much required by it's component-->
+
+                                 <!-- for creating number +,- -->
+                                <div class="input-group">
+                                    <!-- input-group keep the number slider horizontal , you can also use center-item here in place of input-group -->
+                                    <button id="phone-minus" class="btn"><i
+                                            class="fas fa-minus"></i></button>
+                                            <!-- phone-minus is used to apply js on it -->
+
+
+                                    <input id="phone-number" type="number" min="0" class="form-control text-center"
+                                        value="1">
+                                        <!-- form-control used to apply css on it and id is used to apply javascript-->
+                                    <button id="phone-plus" class="btn"><i class="fas fa-plus"></i></button>
+
+                                </div>
+
+
+
+
+                                <h5>&#8377; <span id="phone-total">600</span> </h5>
+
+                                <!-- this image is short image of product only -->
+                                <img src="/Hair cap steamer/Hair-Care-Thermal-Head-Spa-Cap2-1653281008.jpg" alt=""
+                                    class="remove-item">
+                                    <!-- remove-item is used to add css -->
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="cart-item">
+                        <div class="row">
+                            <!-- thie row class has general meaning defined by created , not predefined class -->
+                            <div class="center-item">
+                                <!-- used to keen image and title in flex hrozontally -->
+                                 <!-- center-item shows inline flex hozizontal -->
+                                <img src="/Hair cap steamer/Hair-Care-Thermal-Head-Spa-Cap6-1653281009.jpg" alt="">
+                                <h5>Hair-Care-Thermal-Head-Spa-Cap</h5>
+                            </div>
+
+
+                            <!-- below + , - and price in horizontal flex  -->
+                            <div class="center-item">
+                                 <!-- center-item shows inline flex hozizontal  and take space as much required by it's component-->
+
+                                 <!-- for creating number +,- -->
+                                <div class="input-group">
+                                    <!-- input-group keep the number slider horizontal , you can also use center-item here in place of input-group -->
+                                    <button id="phone-minus" class="btn"><i
+                                            class="fas fa-minus"></i></button>
+                                            <!-- phone-minus is used to apply js on it -->
+
+
+                                    <input id="phone-number" type="number" min="0" class="form-control text-center"
+                                        value="1">
+                                        <!-- form-control used to apply css on it and id is used to apply javascript-->
+                                    <button id="phone-plus" class="btn"><i class="fas fa-plus"></i></button>
+
+                                </div>
+
+
+
+
+                                <h5>&#8377; <span id="phone-total">600</span> </h5>
+
+                                <!-- this image is short image of product only -->
+                                <img src="/Hair cap steamer/Hair-Care-Thermal-Head-Spa-Cap2-1653281008.jpg" alt=""
+                                    class="remove-item">
+                                    <!-- remove-item is used to add css -->
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+                    <div class="cart-item">
+                        <div class="row">
+                            <div class="  center-item mx-auto">
+                                <img src="Hair cap steamer/Hair-Care-Thermal-Head-Spa-Cap4-1653281008.jpg" alt="">
+                                <h5>iPhone 11 Silicone Case - Black( $59 )</h5>
+                            </div>
+                            <div class="col-md-5 center-item">
+                                <div class="input-group">
+                                    <button id="case-minus" class="btn btn-default"><i
+                                            class="fas fa-minus"></i></button>
+                                    <input id="case-number" type="number" min="0" class="form-control text-center"
+                                        value="1">
+                                    <button id="case-plus" class="btn btn-default"><i class="fas fa-plus"></i></button>
+
+                                </div>
+                                <h5>&#8377; <span id="case-total">600</span> </h5>
+                                <img src="Hair cap steamer/Hair-Care-Thermal-Head-Spa-Cap-1653281007.jpg" alt=""
+                                    class="remove-item">
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <!-- this is for billing -->
+                    <div class="cart-item">
+                        <div class="row">
+                            <!-- row is used for horizontal flex and can be replaced with center-item, both works same -->
+
+                            <div class="col-6">
+                                <!-- col 6 decides the colspan of this -->
+                                <h5>Subtotal: </h5>
+                                <h5>Delivery:</h5>
+                                <h5>Total:</h5>
+                            </div>
+
+                            <div class="col-6 status">
+                                <!-- status for css to align text right -->
+                                <h5>&#8377;<span id="sub-total">1,800</span></h5>
+                                <h5>&#8377;<span id="tax-amount">0</span></h5>
+                                <h5>&#8377;<span id="total-price">1,800</span></h5>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    
+                    <div class="pb-5 pt-2 ">
+                        <!-- it is used for alighning the button in padding bottom , pt means padding top -->
+                        <button type="button" class="btn btn-success check-out">Check Out</button>
+                        <!-- btn-success is used from bootstrap for button effect on hover and color white-->
+                         <!-- check-out is used for applying css and float right -->
+                    </div>
+                </div>
+            </div>
+            <!-- this div for product item inner border -->
+        </div>
+        <!-- this div for black outer border -->
+    </section>
+    <!-- for whole body with -->
+
+
+
+    <script src="cart.js"></script>
+
+
+</body>
+
+</html>

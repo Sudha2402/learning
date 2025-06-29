@@ -1,0 +1,50 @@
+<!-- This XML file does not appear to have any style information associated with it. The document tree is shown below.  -->
+<!-- it must be commented for it to work -->
+<CATALOG>
+<CD>
+<TITLE>Empire Burlesque</TITLE>
+<ARTIST>Sudha</ARTIST>
+<COUNTRY>USA</COUNTRY>
+<COMPANY>Columbia</COMPANY>
+<PRICE>10.90</PRICE>
+<YEAR>1985</YEAR>
+</CD>
+
+<CD>
+<TITLE>Eros</TITLE>
+<ARTIST>Shanaya</ARTIST>
+<COUNTRY>EU</COUNTRY>
+<COMPANY>BMG</COMPANY>
+<PRICE>9.90</PRICE>
+<YEAR>1997</YEAR>
+</CD>
+
+<CD>
+<TITLE>Maggie May</TITLE>
+<ARTIST>Sana</ARTIST>
+<COUNTRY>UK</COUNTRY>
+<COMPANY>Pickwick</COMPANY>
+<PRICE>8.50</PRICE>
+<YEAR>1990</YEAR>
+</CD>
+
+<CD>
+<TITLE>When a man loves a woman</TITLE>
+<ARTIST>Suhana</ARTIST>
+<COUNTRY>USA</COUNTRY>
+<COMPANY>Atlantic</COMPANY>
+<PRICE>8.70</PRICE>
+<YEAR>1987</YEAR>
+</CD>
+
+<CD>
+<TITLE>For the good times</TITLE>
+<ARTIST>Hana</ARTIST>
+<COUNTRY>UK</COUNTRY>
+<COMPANY>Mucik Master</COMPANY>
+<PRICE>8.70</PRICE>
+<YEAR>1995</YEAR>
+</CD>
+
+
+</CATALOG>

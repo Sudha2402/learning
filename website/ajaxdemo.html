@@ -1,0 +1,46 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Load ASP Content with AJAX</title>  
+    <style>  
+        #output {  
+            border: 1px solid #ccc;  
+            padding: 10px;  
+            margin-top: 10px;  
+        }  
+    </style>  
+</head>  
+<body>  
+    <h1>Load ASP Content</h1>  
+    <button id="loadContent">Load Content from ASP</button>  
+    <div id="output">Content will be loaded here.</div>  
+    This page was last refreshed on <%= Now() %>. 
+    <script>  
+        document.getElementById('loadContent').addEventListener('click', function() {  
+            fetch('demo_get_time.asp')  
+                .then(response => {  
+                    if (!response.ok) {  
+                        throw new Error('Network response was not ok ' + response.statusText);  
+                    }  
+                    return response.text();  
+                    // return response.asp();  //Error loading content.
+                    // return response.responseText;  //undefined
+                    
+
+                })  
+                .then(data => {  
+                    document.getElementById('output').innerHTML = data;  
+                    // document.getElementById('output').innerHTML = this.responseText;  
+                    // to get the response data from demo_get_time.asp
+
+                })  
+                .catch(error => {  
+                    console.error('There was a problem with the fetch operation:', error);  
+                    document.getElementById('output').innerHTML = 'Error loading content.';  
+                });  
+        });  
+    </script>  
+</body>  
+</html>
