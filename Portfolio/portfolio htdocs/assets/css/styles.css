@@ -1,0 +1,151 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+header {
+    /* text-align: center; */
+    background-color: #007bff;
+    color: white;
+    padding: 20px 20px;
+ 
+}
+
+.navbar {
+  display: flex;
+  /* justify-content: space-between; */
+  justify-content: space-around;
+  align-items: center;
+  /* padding: 1.5rem 3rem; */
+
+  /* position: sticky; */
+  top: 0;
+  z-index: 999;
+  /* backdrop-filter: blur(10px); */
+  background: var(--glass);
+  backdrop-filter: blur(50px);
+}
+
+
+nav ul {
+  display: flex;
+  /* gap: 1.5rem; */
+  list-style: none;
+  /* overflow-wrap: break-word; */
+  flex-wrap: wrap;
+
+
+}
+
+
+
+nav ul li {
+  margin-left: 30px;
+}
+
+nav ul li a {
+
+  text-decoration: none;
+  color: var(--text);
+  transition: color 0.3s;
+
+  /* color: #fff; */
+  /* font-weight: 500;
+    transition: 0.3s; */
+
+}
+
+nav ul li a:hover {
+  color: var(--accent);
+}
+
+a {
+    color: aqua;
+    text-decoration: none;
+}
+
+h1 {
+    margin: 0;
+}
+
+section {
+    margin: 20px 0;
+    padding: 20px;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+
+  th,
+  td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+
+  th {
+    background-color: #f2f2f2;
+  }
+
+.skill-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 10px;
+}
+
+.skill {
+    background: #007bff;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.project {
+    border: 1px solid #007bff;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+footer {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+input, textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px;
+    background: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #218838;
+}
