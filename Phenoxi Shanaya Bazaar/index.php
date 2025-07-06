@@ -1,0 +1,1110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Phenoxi Shanaya Bazaar - Your premier ecommerce destination for fashion, accessories, home goods and more. Buy with intention, live with purpose.">
+    <meta name="keywords" content="ecommerce, shopping, fashion, accessories, home decor, beauty products, India shopping">
+    <title>Phenoxi Shanaya Bazaar</title>
+
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" as="style">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="allPageCommonStyle.css">
+    <link rel="stylesheet" href="style2.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+CU:wght@100..400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body onload="progressbar()" alink="660099" link="0000FF" vlink="" id="home" ondblclick="removeDropDown()">
+   
+
+    <div>
+        <a title="top"></a>
+       
+
+        <?php include 'includes/header.php'; ?>
+
+
+
+        <div class="topcategoryProduct">
+
+            <div class="topcategoryProductOption">
+                <button type="button" class="leftscrollsmall" onclick="leftscrollBut(this)">&lt;</button>
+                <button type="button" class="rightscrollsmall" onclick="righttscrollBut(this)">&gt;</button>
+
+
+                <div class="topcategoryProductOptionBox">
+                    <span> <img src="files acc/lahenganb.png" alt="">
+                        <p>Women</p>
+                    </span>
+
+                </div>
+
+                <div class="topcategoryProductOptionBox">
+                    <span> <img
+                            src="product/accessories/footwear/Patent Leather Heel Sandals/colors option/peach/tggz6_512.png"
+                            alt="">
+                        <p>footwear</p>
+                    </span>
+
+                </div>
+
+                <div class="topcategoryProductOptionBox">
+                    <span> <img
+                            src="product/accessories/handbags/Graceful Stylish Slingbags Luxury High Quality PU Leather Women Shoulder Bag/colors option/light green/main.png">
+                        <p>handbags</p>
+                    </span>
+
+                </div>
+
+                <div class="topcategoryProductOptionBox">
+                    <span> <img
+                            src="product/beauty and health/makeup/7-in-1-cosmetics-bottle Catelog - 250208111013/7-in-1-cosmetics-bottle2-1714370462.jpg">
+                        <p>Costmetics</p>
+                    </span>
+
+                </div>
+
+                <div class="topcategoryProductOptionBox">
+                    <span> <img
+                            src="/product/beauty and health/health care/Relax Spin Tone Body Full Body Massager Electric Machine with 3 Massage Heads for Pain Relief/relax-spin-tone-body-full-body-m.png"
+                            alt="">
+                        <p>Relax</p>
+                    </span>
+
+                </div>
+
+                <div class="topcategoryProductOptionBox">
+                    <span> <img src="product/gifts/Artificial Red Rose 24K Gold Plated/colors option/red/anzmz_512.png"
+                            alt="">
+                        <p>Gift</p>
+                    </span>
+
+                </div>
+
+                <div class="topcategoryProductOptionBox">
+                    <span> <img
+                            src="product/home and kitchen/daily use/Foldable-Mini-Capsule-Umbrella Catelog - 250208021353/Foldable-Mini-Capsule-Umbrella-1720498695 Main.jpg"
+                            alt="">
+                        <p>home</p>
+                    </span>
+
+                </div>
+
+                <div class="topcategoryProductOptionBox">
+                    <span> <img
+                            src="product/kids/girl wear/Stylish Partywear Multicolor Cotton Girls Frocks Dresses/colors option/brown/g3gkk_512.png"
+                            alt="">
+                        <p>kids</p>
+                    </span>
+
+                </div>
+
+                <div class="topcategoryProductOptionBox">
+                    <span> <img src="product/men/men.jpg" alt="">
+                        <p>men</p>
+                    </span>
+
+                </div>
+
+                <div class="topcategoryProductOptionBox">
+                    <span>
+                       
+
+                        <img src="product/women/bottom wear/Anara Fashion Women Solid Bell Bottoms Black Trousers Pants/colors option/black/rj4nc_512.png"
+                            alt="">
+                        <p>bottomwear</p>
+                    </span>
+
+                </div>
+                <div class="topcategoryProductOptionBox">
+                    <span> <img
+                            src="product/women/ethnic wear/kurta sets/Pakistani Suit  Women Kurta Pair/colors option/green/main.png"
+                            alt="">
+                        <p>kurta_set</p>
+                    </span>
+
+                </div>
+                <div class="topcategoryProductOptionBox">
+                    <span> <img
+                            src="product/women/ethnic wear/kurtis/Embroidery Gaithering Anarkali kurtis/colors option/maroon/spnia_512.png"
+                            alt="">
+                        <p>kurtis</p>
+                    </span>
+
+                </div>
+                <div class="topcategoryProductOptionBox">
+                    <span> <img
+                            src="product/women/ethnic wear/saree/Two-Tone Georgette Saree With Blouse/colors option/grey/xguqx_512.png"
+                            alt="">
+                        <p>saree</p>
+                    </span>
+
+                </div>
+                <div class="topcategoryProductOptionBox">
+                    <span> <img
+                            src="product/women/ethnic wear/saree/Banarsi/banarasi saree/colors option/green/fufrj_512.png"
+                            alt="">
+                        <p>Banarsi</p>
+                    </span>
+
+                </div>
+                <div class="topcategoryProductOptionBox">
+                    <span> <img
+                            src="product/women/top wear/White embroidery short top/colors option/white/qi2ap_512.png"
+                            alt="">
+                        <p>top</p>
+                    </span>
+
+                </div>
+                <div class="topcategoryProductOptionBox">
+                    <span> <img
+                            src="product/women/top wear/latest trending classic check shirt and top/colors option/black/main.png"
+                            alt="">
+                        <p>trendy</p>
+                    </span>
+
+                </div>
+                <div class="topcategoryProductOptionBox">
+                    <span> <img
+                            src="product/home and kitchen/kitchen and appliances/Electric Capsule Cutter Grinder Machine Kitchenware/Electric-Capsule-Cutter-Grinde- Main.jpg"
+                            alt="">
+                        <p>Kitchen</p>
+                    </span>
+
+                </div>
+                <div class="topcategoryProductOptionBox">
+                    <span> <img
+                            src="product/beauty and health/health care/Earpick-Cleaner-Tool-Set-Beauty-Mackup-Tool Catelog - 250207090729/Earpick-Cleaner-Tool-Set-Main.jpg"
+                            alt="">
+                        <p>Accesories</p>
+                    </span>
+
+                </div>
+                <div class="topcategoryProductOptionBox">
+                    <span> <img
+                            src="product/men/men accessories/sports shocks/SPORTS SOCKS FOR MEN 12 PAIR/colors option/20gjn_512.png"
+                            alt="">
+                        <p>Shocks</p>
+                    </span>
+
+                </div>
+
+
+
+            </div>
+        </div>
+
+
+        <br>
+
+
+        <div class="mobilepopover">
+            <div class="popover" id="surpriseSection">
+                <button type="button" class="cuttab" onclick="cutbutton()">&#10006;</button>
+
+
+                <span onclick='document.getElementById("mahaloot").scrollIntoView({ behavior: "smooth", block: "end" });
+                this.parentElement.parentElement.style.display="none"'>
+
+
+                    <video src="files acc/welcome to shanaya bazaar.mp4" autoplay muted playsinline loop>
+                      
+
+                </span>
+
+            </div>
+        </div>
+
+
+
+        <main class="bannersection">
+
+            <div class="banner">
+
+
+
+
+
+
+                <span class="mahaloot"><img src="files acc/magasalebanner.png" alt="banner" class="bannerphoto mobilebanner"></span>
+
+                <span class="women"><img src="files acc/Fashion Sale Banner Post - Made with PosterMyWall.jpg"
+                        alt="banner" class="bannerphoto mobilebanner"></span>
+
+                <span class="men"><img src="files acc/Men's Wear.jpg" alt="banner"
+                        class="bannerphoto mobilebanner"></span>
+                <span class="kids"><img src="files acc/kids wear.jpg" alt="banner"
+                        class="bannerphoto mobilebanner"></span>
+                <span class="beautyHealth"><img src="files acc/Health and Beauty.jpg" alt="banner"
+                        class="bannerphoto mobilebanner"></span>
+                <span class="homeGarden"><img src="/files acc/home and kitchen.jpg" alt="banner"
+                        class="bannerphoto mobilebanner"></span>
+            </div>
+
+            <br>
+
+            <!-- <div class="swap" onclick="pauseslide()" > -->
+            <div class="swap">
+
+                <div class="swapslide" id="swapslide1" onclick="openBanner1()"> </div>
+                <div class="swapslide" id="swapslide2" onclick="openBanner2()"> </div>
+                <div class="swapslide" id="swapslide3" onclick="openBanner3()"> </div>
+                <div class="swapslide" id="swapslide4" onclick="openBanner4()"> </div>
+                <div class="swapslide" id="swapslide5" onclick="openBanner5()"> </div>
+                <div class="swapslide" id="swapslide6" onclick="openBanner6()"> </div>
+
+            </div>
+            <section>
+                <!-- <h3>Top Products</h3> -->
+                <div class="gridSectionContainer" id="">
+
+                    <div class="gridSection">
+                        <div class="colgrid1">
+
+                            <h4>Most popular</h4>
+                            <span> <img
+                                    src="product/women/ethnic wear/lahenga/Solid Semi Stitched Lehenga Choli/colors option/rama/Screenshot 2025-02-10 214918.png"
+                                    alt="" class="gridbigimg"></span>
+
+                            <span> <img
+                                    src="product/accessories/footwear/Patent Leather Heel Sandals/colors option/peach/tggz6_512.png"
+                                    alt="" class="gridsmallimg"></span>
+                            <span> <img
+                                    src="product/women/top wear/latest trending classic check shirt and top/colors option/black/main.png"
+                                    alt="" class="gridsmallimg"></span>
+
+                            <span> <img
+                                    src="product/gifts/Artificial Red Rose 24K Gold Plated/colors option/red/anzmz_512.png"
+                                    alt="" class="gridsmallimg"></span>
+
+                        </div>
+
+                        <div class="colgrid2">
+                            <div class="smallgridContainer">
+
+
+                                <h4>New arrivals</h4>
+                                <div class="smallgrid">
+
+                                    <div>
+                                        <span> <img
+                                                src="product/home and kitchen/daily use/Foldable-Mini-Capsule-Umbrella Catelog - 250208021353/Foldable-Mini-Capsule-Umbrella-1720498695 Main.jpg"
+                                                alt="" class="smallsquareimg"></span>
+                                    </div>
+
+                                    <div>
+                                        <span> <img
+                                                src="product/women/ethnic wear/saree/satin silk saree with Blouse/colors option/violet/main.png"
+                                                alt="" class="smallsquareimg"></span>
+                                    </div>
+
+                                    <div>
+
+                                        <span> <img
+                                                src="product/women/top wear/White embroidery short top/colors option/white/qi2ap_512.png"
+                                                alt="" class="smallsquareimg"></span>
+                                    </div>
+                                    <div>
+                                        <span> <img
+                                                src="product/women/western wear/Women Floral V-neck Multicolor Dresses/colors option/black/nm3lu_512.png"
+                                                alt="" class="smallsquareimg"></span>
+                                    </div>
+                                </div>
+
+
+                            </div>
+
+                            <div class="gridrowcontainer">
+
+
+                                <div class="gridrow">
+                                    <div class="gridrowimagecontaianer">
+                                        <span> <img
+                                                src="product/women/ethnic wear/saree/Banarsi/banarasi saree/colors option/green/fufrj_512.png"
+                                                alt="" class="gridrowimage"></span>
+                                    </div>
+
+                                    <div>
+                                        <h4>New this week</h4>
+                                    </div>
+
+
+                                </div>
+                            </div>
+
+
+
+                        </div>
+                        <div class="colgrid3">
+                            <div class="gridrowcontainer">
+
+
+                                <div class="gridrow">
+                                    <div class="gridrowimagecontaianer">
+                                        <span> <img
+                                                src="product/women/ethnic wear/kurta sets/Pakistani Suit  Women Kurta Pair/colors option/green/main.png"
+                                                alt="" class="gridrowimage"></span>
+                                    </div>
+
+                                    <div>
+                                        <h4>Deals on best seller</h4>
+                                    </div>
+
+
+                                </div>
+                            </div>
+
+                            <div class="smallgridContainer">
+
+                                <span> <img
+                                        src="product/women/ethnic wear/saree/Two-Tone Georgette Saree With Blouse/colors option/grey/xguqx_512.png"
+                                        alt="" class="gridsquareimage">
+                                </span>
+
+
+                                <h4>affordable products for the day</h4>
+
+
+
+                            </div>
+
+                        </div>
+                        <div class="colgrid4">
+
+                            <h4>Trending</h4>
+                            <span> <img
+                                    src="product/kids/girl wear/Girls Silk Frocks Dresses/colors option/aqua green/main.webp"
+                                    alt="" class="gridbigimg"></span>
+
+                            <span> <img
+                                    src="product/kids/girl wear/roshani frock blue/colors option/blue/main.webp"
+                                    alt="" class="gridsmallimg"></span>
+                            <span> <img
+                                    src="product/kids/girl wear/Baby Girls trendy western Dress/colors option/red/main.webp"
+                                    alt="" class="gridsmallimg"></span>
+
+                            <span> <img
+                                    src="product/gifts/Artificial Red Rose 24K Gold Plated/colors option/red/anzmz_512.png"
+                                    alt="" class="gridsmallimg"></span>
+
+                        </div>
+
+                    </div>
+
+
+
+            </section>
+        </main>
+
+
+
+        <div class="categoryoptions searchOutBlock">
+
+            <h4>searchOut</h4>
+
+            <div class="completeonecategory">
+                <div id="searchOut">
+
+                    <!-- <button type="button" class="leftscroll" onclick="this.scrollLeft +=50 ">&lt;</button> -->
+
+                    <button type="button" class="leftscroll" onclick="leftscrollBut(this)">&lt;</button>
+                    <button type="button" class="rightscroll" onclick="righttscrollBut(this)">&gt;</button>
+
+
+
+                    <a href="index.php" class="underlineremover">
+                        <div class="completeproductbox">
+                            <img src="files acc/magasalebanner.png" alt="productimg" class="productimg" />
+
+                            <div class="productheighlight">
+
+                                <h4>&#8377;<span class="priceOfProduct">Rs. 199</span></h4>
+                                <p class="productCode" style="display: none;"></p>
+                                <h5 class="productName">Shanaya bazaar</h5>
+                            </div>
+                        </div>
+                    </a>
+
+
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+
+        <div class="categoryoptions searchOutMoreBlock">
+
+            <h4>searchOutMore</h4>
+
+            <div class="completeonecategory">
+                <div id="searchOutMore">
+
+                    <!-- <button type="button" class="leftscroll" onclick="this.scrollLeft +=50 ">&lt;</button> -->
+
+                    <button type="button" class="leftscroll" onclick="leftscrollBut(this)">&lt;</button>
+                    <button type="button" class="rightscroll" onclick="righttscrollBut(this)">&gt;</button>
+
+                    <a href="index.php" class="underlineremover">
+                        <div class="completeproductbox">
+                            <img src="files acc/magasalebanner.png" alt="productimg" class="productimg" />
+
+                            <div class="productheighlight">
+
+                                <h4>&#8377;<span class="priceOfProduct">Rs. 199</span></h4>
+                                <p class="productCode" style="display: none;"></p>
+                                <h5 class="productName">Shanaya bazaar</h5>
+                            </div>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+
+        </div>
+
+
+
+        <div class="categoryoptions">
+
+            <h4>Women</h4>
+
+            <div class="completeonecategory">
+                <div id="women">
+
+                    <!-- <button type="button" class="leftscroll" onclick="this.scrollLeft +=50 ">&lt;</button> -->
+
+                    <button type="button" class="leftscroll" onclick="leftscrollBut(this)">&lt;</button>
+                    <button type="button" class="rightscroll" onclick="righttscrollBut(this)">&gt;</button>
+
+                    <a href="index.php" class="underlineremover">
+                        <div class="completeproductbox">
+                            <img src="files acc/magasalebanner.png" alt="productimg" class="productimg" />
+
+                            <div class="productheighlight">
+
+                                <h4>&#8377;<span class="priceOfProduct">Rs. 199</span></h4>
+                                <p class="productCode" style="display: none;"></p>
+                                <h5 class="productName">Shanaya bazaar</h5>
+                            </div>
+                        </div>
+                    </a>
+
+
+
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="categoryoptions">
+            <h4>men</h4>
+            <div class="completeonecategory">
+                <div id="men">
+                    <button type="button" class="leftscroll" onclick="leftscrollBut(this)">&lt;</button>
+                    <button type="button" class="rightscroll" onclick="righttscrollBut(this)">&gt;</button>
+
+                    <a href="index.php" class="underlineremover">
+                        <div class="completeproductbox">
+                            <img src="files acc/magasalebanner.png" alt="productimg" class="productimg" />
+
+                            <div class="productheighlight">
+
+                                <h4>&#8377;<span class="priceOfProduct">Rs. 199</span></h4>
+                                <p class="productCode" style="display: none;"></p>
+                                <h5 class="productName">Shanaya bazaar</h5>
+                            </div>
+                        </div>
+                    </a>
+
+
+
+
+
+
+
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+
+
+
+
+
+        <div class="categoryoptions">
+            <h4>Kids</h4>
+            <div class="completeonecategory">
+                <div id="kids">
+                    <button type="button" class="leftscroll" onclick="leftscrollBut(this)">&lt;</button>
+                    <button type="button" class="rightscroll" onclick="righttscrollBut(this)">&gt;</button>
+
+                    <a href="index.php" class="underlineremover">
+                        <div class="completeproductbox">
+                            <img src="files acc/magasalebanner.png" alt="productimg" class="productimg" />
+
+                            <div class="productheighlight">
+
+                                <h4>&#8377;<span class="priceOfProduct">Rs. 199</span></h4>
+                                <p class="productCode" style="display: none;"></p>
+                                <h5 class="productName">Shanaya bazaar</h5>
+                            </div>
+                        </div>
+                    </a>
+
+
+
+
+
+                </div>
+            </div>
+
+        </div>
+
+
+
+        <section>
+            <h3>Personal Cares</h3>
+            <div class="gridSectionContainer" id="beautyHealth">
+
+                <div class="gridSection">
+                    <div class="colgrid1">
+
+                        <h4>Most popular</h4>
+                        <span> <img
+                                src='product/beauty and health/health care/Relax Spin Tone Body Full Body Massager Electric Machine with 3 Massage Heads for Pain Relief/relax-spin-tone-body-full-body-m.png'
+                                alt="" class="gridbigimg"></span>
+
+                        <span> <img
+                                src="product/beauty and health/health care/Electric-Hot-Water-Bag-for-Pain-Relief Catelog - 250208125716/Electric-Hot-Water-Bag-for-Pai1-1678772917.jpg"
+                                alt="" class="gridsmallimg"></span>
+                        <span> <img
+                                src="product/beauty and health/health care/Relax Spin Tone Body Full Body Massager Electric Machine with 3 Massage Heads for Pain Relief/tm9zc_512.png"
+                                alt="" class="gridsmallimg"></span>
+                        <span> <img
+                                src="product/beauty and health/health care/Head-Massager-for-Pain-Relief Catelog - 250207112506/Head-Massager-for-Pain-Relief6-1678773522.jpg"
+                                alt="" class="gridsmallimg"></span>
+
+
+                    </div>
+
+                    <div class="colgrid2">
+                        <div class="smallgridContainer">
+
+
+                            <h4>New arrivals</h4>
+                            <div class="smallgrid">
+
+                                <div>
+                                    <span> <img
+                                            src="product/beauty and health/health care/Electric Velvet heating bags for Pain Relief Personal Care/Electric-Velvet-heating-bags-f6-1678777060.jpg"
+                                            alt="" class="smallsquareimg
+                            "></span>
+                                </div>
+
+                                <div>
+                                    <span> <img
+                                            src="product/beauty and health/health care/Earpick-Cleaner-Tool-Set-Beauty-Mackup-Tool Catelog - 250207090729/Earpick-Cleaner-Tool-Set-Main.jpg"
+                                            alt="" class="smallsquareimg
+                        "></span>
+                                </div>
+
+                                <div>
+
+                                    <span> <img
+                                            src="product/beauty and health/health care/Head-Massager-for-Pain-Relief Catelog - 250207112506/Head-Massager-for-Pain-Main.jpg"
+                                            alt="" class="smallsquareimg"></span>
+                                </div>
+                                <div>
+                                    <span> <img
+                                            src="product/beauty and health/skin care/The Derma Co Kojic Acid Face Serum/main.png"
+                                            alt="" class="smallsquareimg"></span>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                        <div class="gridrowcontainer">
+
+
+                            <div class="gridrow">
+                                <div class="gridrowimagecontaianer">
+                                    <span> <img
+                                            src="product/beauty and health/makeup/7-in-1-cosmetics-bottle Catelog - 250208111013/7-in-1-cosmetics-bottle-1714370461 Main.jpg"
+                                            alt="" class="gridrowimage"></span>
+                                </div>
+
+                                <div>
+                                    <h4>New this week</h4>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                    <div class="colgrid3">
+                        <div class="gridrowcontainer">
+
+
+                            <div class="gridrow">
+                                <div class="gridrowimagecontaianer">
+                                    <span> <img
+                                            src="product/beauty and health/skin care/Matico Brightening Whitening Vitamin C Face Serum/main.png"
+                                            alt="" class="gridrowimage"></span>
+                                </div>
+
+                                <div>
+                                    <h4>Deals on best seller</h4>
+                                </div>
+
+
+                            </div>
+                        </div>
+
+                        <div class="smallgridContainer">
+
+                            <span> <img
+                                    src="product/beauty and health/skin care/3 In 1 Electric Face Massager/pgigs_512.png"
+                                    alt="" class="gridsquareimage">
+                            </span>
+
+
+                            <h4>affordable products for the day</h4>
+
+
+
+                        </div>
+
+                    </div>
+                    <div class="colgrid4">
+
+                        <h4>Trending</h4>
+                        <span> <img
+                                src="product/beauty and health/health care/Electric-Hot-Water-Bag-for-Pain-Relief Catelog - 250208125716/Electric-Hot-Water-Bag-for-Pai3-1678772918.jpg"
+                                alt="" class="gridbigimg"></span>
+
+                        <span> <img
+                                src="product/kids/girl wear/roshani frock blue/colors option/blue/main.webp"
+                                alt="" class="gridsmallimg"></span>
+                        <span> <img
+                                src="product/kids/girl wear/Baby Girls trendy western Dress/colors option/red/main.webp"
+                                alt="" class="gridsmallimg"></span>
+
+                        <span> <img
+                                src="product/gifts/Artificial Red Rose 24K Gold Plated/colors option/red/anzmz_512.png"
+                                alt="" class="gridsmallimg"></span>
+
+                    </div>
+                </div>
+
+
+
+        </section>
+
+
+
+
+        <section>
+            <h3>Accessories</h3>
+            <div class="gridSectionContainer" id="accessories">
+
+                <div class="gridSection">
+                    <div class="colgrid1">
+
+                        <h4>Most popular</h4>
+                        <span> <img
+                                src="product/accessories/handbags/Beautiful Sling Bags for women and girls/colors option/white/main.png"
+                                alt="" class="gridbigimg"></span>
+
+                        <span> <img
+                                src="product/accessories/footwear/Patent Leather Heel Sandals/colors option/black/ppzvq_512.png"
+                                alt="" class="gridsmallimg"></span>
+                        <span> <img
+                                src="product/accessories/general products/Four Sided Folding Mirror/GPW0001-Four-Sided-Folding-Mirror.jpeg"
+                                alt="" class="gridsmallimg"></span>
+                        <span> <img
+                                src="product/kids/girl wear/Baby Girls trendy western Dress/colors option/red/main.webp"
+                                alt="" class="gridsmallimg"></span>
+
+
+                    </div>
+
+                    <div class="colgrid2">
+                        <div class="smallgridContainer">
+
+
+                            <h4>New arrivals</h4>
+                            <div class="smallgrid">
+
+                                <div>
+                                    <span> <img
+                                            src="product/accessories/footwear/Patent Leather Heel Sandals/colors option/peach/tggz6_512.png"
+                                            alt="" class="smallsquareimg
+                            "></span>
+                                </div>
+
+                                <div>
+                                    <span> <img
+                                            src="product/beauty and health/health care/Earpick-Cleaner-Tool-Set-Beauty-Mackup-Tool Catelog - 250207090729/Earpick-Cleaner-Tool-Set-Main.jpg"
+                                            alt="" class="smallsquareimg
+                        "></span>
+                                </div>
+
+                                <div>
+
+                                    <span> <img
+                                            src="product/accessories/handbags/Graceful Stylish Slingbags Luxury High Quality PU Leather Women Shoulder Bag/colors option/white/main.png"
+                                            alt="" class="smallsquareimg"></span>
+                                </div>
+                                <div>
+                                    <span> <img
+                                            src="product/women/women accessories/perfume/Ramsons - U R LOVELY Eau De Parfume/colors option/xqawd_512.png"
+                                            alt="" class="smallsquareimg"></span>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                        <div class="gridrowcontainer">
+
+
+                            <div class="gridrow">
+                                <div class="gridrowimagecontaianer">
+                                    <span> <img
+                                            src="product/accessories/handbags/Graceful Stylish Slingbags Luxury High Quality PU Leather Women Shoulder Bag/colors option/pink/main.png"
+                                            alt="" class="gridrowimage"></span>
+                                </div>
+
+                                <div>
+                                    <h4>New this week</h4>
+                                </div>
+
+
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                    <div class="colgrid3">
+                        <div class="gridrowcontainer">
+
+
+                            <div class="gridrow">
+                                <div class="gridrowimagecontaianer">
+                                    <span> <img
+                                            src="product/men/men accessories/sports shocks/SPORTS SOCKS FOR MEN 12 PAIR/colors option/2wzfz_512.png"
+                                            alt="" class="gridrowimage"></span>
+                                </div>
+
+                                <div>
+                                    <h4>Deals on best seller</h4>
+                                </div>
+
+
+                            </div>
+                        </div>
+
+                        <div class="smallgridContainer">
+
+                            <span> <img
+                                    src="product/women/women accessories/watch/Flowered Dial Megnet Watch/colors option/ssr1i_512.png"
+                                    alt="" class="gridsquareimage">
+                            </span>
+
+
+                            <h4>affordable products for the day</h4>
+
+
+
+                        </div>
+
+                    </div>
+                    <div class="colgrid1">
+
+                        <h4>Most popular</h4>
+                        <span> <img
+                                src="product/women/western wear/Women Floral V-neck Multicolor Dresses/colors option/white/nhjzm_512.png"
+                                alt="" class="gridbigimg"></span>
+
+                        <span> <img
+                                src="product/women/bottom wear/Anara Fashion Women Solid Bell Bottoms Black Trousers Pants/colors option/black/de5it_512.png"
+                                alt="" class="gridsmallimg"></span>
+                        <span> <img
+                                src="product/women/top wear/latest trending classic check shirt and top/colors option/black/main.png"
+                                alt="" class="gridsmallimg"></span>
+
+                        <span> <img
+                                src="product/gifts/Artificial Red Rose 24K Gold Plated/colors option/red/anzmz_512.png"
+                                alt="" class="gridsmallimg"></span>
+
+                    </div>
+
+                </div>
+
+
+
+        </section>
+
+        <div class="categoryoptions">
+
+            <h4>Home and Garden</h4>
+            <div class="completeonecategory">
+                <div id="homeGarden">
+
+                    <button type="button" class="leftscroll" onclick="leftscrollBut(this)">&lt;</button>
+                    <button type="button" class="rightscroll" onclick="righttscrollBut(this)">&gt;</button>
+
+                    <a href="index.php" class="underlineremover">
+                        <div class="completeproductbox">
+                            <img src="files acc/magasalebanner.png" alt="productimg" class="productimg" />
+
+
+
+                            <div class="productheighlight">
+
+                                <h4>&#8377;<span class="priceOfProduct">Rs. 199</span></h4>
+                                <p class="productCode" style="display: none;"></p>
+                                <h5 class="productName">Shanaya bazaar</h5>
+                            </div>
+                        </div>
+                    </a>
+
+
+
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+        <div>
+            <h3>Ready for maha loot of the day</h3>
+            <br>
+            <h5>Get ready for the maha loot of the day. We have a wide range
+                of products at discounted prices. Don't miss out on this amazing opportunity to save big!<br><br>Deal
+                will off after 24:00:00</h5>
+
+
+
+
+
+
+
+
+
+            <div class="categoryoptions">
+                <h4 class="text-center" onclick="qSelectorAllHeadingCenter()" id="stickContent">first 5 lucky customers
+                    90%
+                    off on given
+                    products.
+                    <span id="time"></span>
+                </h4>
+                <div class="completeonecategory">
+                    <div id="mahaloot">
+                        <button type="button" class="leftscroll" onclick="leftscrollBut(this)">&lt;</button>
+                        <button type="button" class="rightscroll" onclick="righttscrollBut(this)">&gt;</button>
+
+                        <a href="index.php" class="underlineremover">
+                            <div class="completeproductbox">
+                                <img src="files acc/magasalebanner.png" alt="productimg" class="productimg" />
+
+                                <div class="productheighlight">
+
+                                    <h4>&#8377;<span class="priceOfProduct">Rs. 199</span></h4>
+                                    <p class="productCode" style="display: none;"></p>
+                                    <h5 class="productName">Shanaya bazaar</h5>
+                                </div>
+                            </div>
+                        </a>
+
+
+
+
+                    </div>
+                </div>
+
+            </div>
+
+
+
+            <br>
+
+
+            <p id="setTimeOutSurprise"> Hey, You will receive a bumper surprise ,Are you excited &#128516;
+
+                <!-- <button onclick="mySurprise()">Yes</button>  <button onclick="noSurprise()">No</button></p> -->
+                <button onclick="mySurprise()">Yes</button>
+                <button onclick="noSurprise()">No</button>
+            </p>
+            <br>
+           
+            <br>
+            <h3 style="color: aqua; background-color: black;display: inline-block;" lang="en">Play and win discounts
+                &#128516; &#128525; &#128522;</h3>
+            <h2 style="display: inline-block;" lang="hi">खेलो और जीतो !!</h2>
+            <br>
+            <br>
+            <a href="HTMLGame.php"><button style="background-color: indigo;">
+                    <h3>Play the below game</h3>
+                </button></a>
+            <br>
+
+           
+
+
+
+            <br>
+            <br>
+
+            <div class="rateExperience">
+                <h2>Rate Your Experience</h2>
+
+                <div class="rate">
+                    
+
+                    <div class="reviewOut">
+                        <img src="/files acc/Animation - 1737808526862.gif" alt="Waiting for review">
+
+                    </div>
+
+                    <h2 class="stars">
+
+                        <p class="star1">
+                            <input type="radio" name="rate" value="1" ondblclick="star1()" onclick="displayReview()">
+                            <label for="star1">1
+                                <span id="star1"> &bigstar;</span> <br>
+                            </label>
+                        </p>
+                        <p class="star2">
+                            <input type="radio" id="star2" name="rate" value="2" onclick="displayReview()">
+                            <label for="star2">2 &bigstar; &bigstar;<br></label>
+                        </p>
+
+                        <p class="star3">
+                            <input type="radio" id="star3" name="rate" value="3" onclick="displayReview()">
+                            <label for="star3">3 &bigstar; &bigstar; &bigstar;<br></label>
+                        </p>
+
+                        <p class="star4">
+                            <input type="radio" id="star4" name="rate" value="4" onclick="displayReview()">
+                            <label for="star4">4 &bigstar; &bigstar; &bigstar; &bigstar;<br></label>
+                        </p>
+
+                        <p class="star5">
+                            <!-- <input type="radio" id="star5" name="rate" value="5" onclick="displayReview()" checked> -->
+                            <input type="radio" id="star5" name="rate" value="5" onclick="displayReview()">
+                            <label for="star5">5 &bigstar; &bigstar; &bigstar; &bigstar; &bigstar;</label>
+                        </p>
+                    </h2>
+                </div>
+
+                <button type="submit" onclick="submitExperience()"
+                    style="margin: 3vh;padding: 10px;background-color: rgb(203, 56, 198);color: white;">Submit</button>
+
+            </div>
+
+
+
+
+        </div>
+
+
+        <div id="searchedOutput" style="display: none;
+        position: fixed;
+        bottom: 5vh;
+        left: 50%;
+transform: translateX(-50%);
+        min-width: 30vw;
+        max-width: 80vw;
+        padding: 1vh;
+        min-height: 5vh;
+        max-height: 50vh;
+        background-color: black;
+        color: white;
+        z-index: 10;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        overflow-wrap: break-word;">
+
+        </div>
+
+
+        <br>
+        <br>
+        <br>
+
+
+
+        <br>
+        <br>
+
+
+
+
+
+<?php include 'includes/footer.php'; ?>
+
+
+
+
+
+
+</body>
+<!-- Scripts loaded at bottom -->
+        <script src="script.js" defer></script>
+        <script src="traceShanayaBazaar.js" defer></script>
+        <script src="shanayaBazaarCookie.js" defer></script>
+        <script src="allPageCommonScript.js" defer></script>
+        <script src="pagesnavigation.js" defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js" defer></script>
+</html>
