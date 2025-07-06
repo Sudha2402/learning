@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gyan Sangee - Animated Book</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: radial-gradient(circle, #1a1a3a 0%, #000000 100%);
+            overflow: hidden;
+            perspective: 1000px;
+            font-family: 'Georgia', serif;
+        }
+
+        .stars {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+
+        .star {
+            position: absolute;
+            background-color: white;
+            border-radius: 50%;
+            animation: twinkle var(--duration) infinite ease-in-out;
+            opacity: 0;
+        }
+
+        @keyframes twinkle {
+
+            0%,
+            100% {
+                opacity: 0;
+                transform: scale(0.5);
+            }
+
+            50% {
+                opacity: var(--opacity);
+                transform: scale(1);
+            }
+        }
+
+        .book-container {
+            position: relative;
+            width: 400px;
+            height: 500px;
+            transform-style: preserve-3d;
+            transform: rotateY(-20deg) rotateX(10deg) rotateZ(-5deg);
+            transition: transform 1s ease;
+            z-index: 10;
+        }
+
+        .book {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+            transition: transform 1.5s ease;
+        }
+
+        .cover {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #0a0a2a 0%, #1a1a5a 100%);
+            border: 2px solid #d4af37;
+            border-radius: 5px 15px 15px 5px;
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
+            transform-origin: left;
+            transition: transform 1.5s ease;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            backface-visibility: visible;
+            z-index: 10;
+        }
+
+        .cover::before {
+            content: '';
+            position: absolute;
+            top: 10px;
+            bottom: 10px;
+            left: 10px;
+            right: 10px;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            border-radius: 3px 13px 13px 3px;
+            pointer-events: none;
+        }
+
+        .title {
+            color: #d4af37;
+            font-size: 3rem;
+            text-shadow: 0 0 10px rgba(212, 175, 55, 0.7);
+            transform: rotateY(180deg);
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+            letter-spacing: 10px;
+            margin-right: -10px;
+        }
+
+        .pages {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+            z-index: 5;
+        }
+
+        .page {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: white;
+            border: 1px solid #ddd;
+            transform-origin: left;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            backface-visibility: hidden;
+            box-sizing: border-box;
+            padding: 20px;
+        }
+
+        .page video {
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        .page-left {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: white;
+            border: 1px solid #ddd;
+            transform-origin: right;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            backface-visibility: hidden;
+            box-sizing: border-box;
+            padding: 20px;
+        }
+
+        .glow {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 5px 15px 15px 5px;
+            box-shadow: 0 0 30px rgba(212, 175, 55, 0.7);
+            opacity: 0;
+            animation: pulse 3s infinite;
+            pointer-events: none;
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                opacity: 0.3;
+            }
+
+            50% {
+                opacity: 0.7;
+            }
+        }
+
+        .cursor-pointer {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="stars" id="stars"></div>
+    <div class="book-container">
+        <div class="book" id="book">
+            <div class="cover cursor-pointer" id="cover">
+                <div class="title">Gyan Sangee</div>
+                <div class="glow"></div>
+            </div>
+            <div class="pages" id="pages">
+                <div class="page" id="page1">
+                    <video id="video1" preload="auto">
+                        <source src="attachments/Gyansangee.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="page" id="page2">
+                    <video id="video2" preload="auto">
+                        <source src="attachments/0416.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="page" id="page3">
+                    <video id="video3" preload="auto">
+                        <source
+                            src="attachments/socho agar tumhare pas doraemon hota to. #nevergiveup #lifesolutions #lifeadvice.mp4"
+                            type="video/mp4">
+                    </video>
+                </div>
+                <div class="page" id="page4">
+                    <video id="video4" preload="auto">
+                        <source
+                            src="attachments/History in Shorts- Mahatma Jyotiba Phule _ UPSC PRE 2023 _ StudyIQ IAS Hindi.mp4"
+                            type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Create stars
+            const starsContainer = document.getElementById('stars');
+            for (let i = 0; i < 100; i++) {
+                const star = document.createElement('div');
+                star.classList.add('star');
+                star.style.width = `${Math.random() * 3 + 1}px`;
+                star.style.height = star.style.width;
+                star.style.left = `${Math.random() * 100}%`;
+                star.style.top = `${Math.random() * 100}%`;
+                star.style.setProperty('--duration', `${Math.random() * 3 + 2}s`);
+                star.style.setProperty('--opacity', `${Math.random() * 0.7 + 0.3}`);
+                star.style.animationDelay = `${Math.random() * 5}s`;
+                starsContainer.appendChild(star);
+            }
+
+            const book = document.getElementById('book');
+            const cover = document.getElementById('cover');
+            const pages = document.getElementById('pages');
+            const page1 = document.getElementById('page1');
+            const page2 = document.getElementById('page2');
+            const page3 = document.getElementById('page3');
+            const page4 = document.getElementById('page4');
+            const video1 = document.getElementById('video1');
+            const video2 = document.getElementById('video2');
+            const video3 = document.getElementById('video3');
+            const video4 = document.getElementById('video4');
+
+            let isBookOpen = false;
+            let currentPage = 0;
+            const totalPages = 4;
+
+            // Set video durations (using sample videos, so we'll simulate the timing)
+            video1.addEventListener('loadedmetadata', function () {
+                this.currentTime = Math.min(16, this.duration - 1);
+            });
+            video2.addEventListener('loadedmetadata', function () {
+                this.currentTime = Math.min(15, this.duration - 1);
+            });
+            video3.addEventListener('loadedmetadata', function () {
+                this.currentTime = Math.min(15, this.duration - 1);
+            });
+            video4.addEventListener('loadedmetadata', function () {
+                this.currentTime = Math.min(57, this.duration - 1);
+            });
+
+            function resetVideos() {
+                video1.pause();
+                video1.currentTime = 0;
+                video2.pause();
+                video2.currentTime = 0;
+                video3.pause();
+                video3.currentTime = 0;
+                video4.pause();
+                video4.currentTime = 0;
+            }
+
+            function openBook() {
+                isBookOpen = true;
+                book.style.transform = 'rotateY(-30deg) rotateX(10deg) rotateZ(-5deg)';
+                cover.style.transform = 'rotateY(-160deg)';
+                setTimeout(() => {
+                    currentPage = 1;
+                    playVideo(video1, page1);
+                }, 1500);
+            }
+
+            function closeBook() {
+                isBookOpen = false;
+                currentPage = 0;
+
+                // Reset all pages to original position
+                page1.style.transform = 'rotateY(0deg)';
+                page2.style.transform = 'rotateY(0deg)';
+                page3.style.transform = 'rotateY(0deg)';
+                page4.style.transform = 'rotateY(0deg)';
+
+                // Close cover
+                setTimeout(() => {
+                    cover.style.transform = 'rotateY(0deg)';
+                    book.style.transform = 'rotateY(-20deg) rotateX(10deg) rotateZ(-5deg)';
+                }, 500);
+
+                resetVideos();
+            }
+
+            function playVideo(video, page) {
+                video.play().then(() => {
+                    const duration = video.duration * 1000;
+
+                    setTimeout(() => {
+                        turnPage(page);
+                    }, duration);
+
+                }).catch(error => {
+                    console.error('Video play error:', error);
+                    // Simulate video completion if autoplay is blocked
+                    setTimeout(() => {
+                        turnPage(page);
+                    }, video === video1 ? 16000 :
+                        video === video2 ? 15000 :
+                            video === video3 ? 15000 : 57000);
+                });
+            }
+
+            function turnPage(page) {
+                if (!isBookOpen) return;
+
+                page.style.transform = 'rotateY(-180deg)';
+                currentPage++;
+
+                if (currentPage === 1) {
+                    setTimeout(() => {
+                        playVideo(video2, page2);
+                    }, 1000);
+                } else if (currentPage === 2) {
+                    setTimeout(() => {
+                        playVideo(video3, page3);
+                    }, 1000);
+                } else if (currentPage === 3) {
+                    setTimeout(() => {
+                        playVideo(video4, page4);
+                    }, 1000);
+                } else if (currentPage === 4) {
+                    setTimeout(() => {
+                        // Close all pages
+                        page1.style.transform = 'rotateY(0deg)';
+                        page2.style.transform = 'rotateY(0deg)';
+                        page3.style.transform = 'rotateY(0deg)';
+                        page4.style.transform = 'rotateY(0deg)';
+
+                        setTimeout(() => {
+                            closeBook();
+                        }, 1000);
+                    }, 15000); // Wait for last video to finish
+                }
+            }
+
+            cover.addEventListener('click', function () {
+                if (!isBookOpen) {
+                    openBook();
+                }
+            });
+
+            // Reset videos when page is hidden to avoid autoplay issues
+            document.addEventListener('visibilitychange', function () {
+                if (document.hidden) {
+                    resetVideos();
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gyan Sangee - Premium Interactive Book</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: radial-gradient(circle, #1a1a3a 0%, #000000 100%);
+            overflow: hidden;
+            perspective: 1000px;
+            font-family: 'Georgia', serif;
+        }
+
+        .stars {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            /* z-index: 0; */
+            z-index: 1;
+        }
+
+        .star {
+            position: absolute;
+            background-color: white;
+            border-radius: 50%;
+            animation: twinkle var(--duration) infinite ease-in-out;
+            opacity: 0;
+        }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 0; transform: scale(0.5); }
+            50% { opacity: var(--opacity); transform: scale(1); }
+        }
+
+        .book-container {
+            position: relative;
+            width: 400px;
+            height: 550px;
+            transform-style: preserve-3d;
+            z-index: 10;
+            margin-bottom: 30px;
+        }
+
+        .book {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+            transition: transform 0.5s ease;
+        }
+
+        .cover {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #0a0a2a 0%, #1a1a5a 100%);
+            border: 3px solid #d4af37;
+            border-radius: 5px 15px 15px 5px;
+            box-shadow: 0 0 30px rgba(212, 175, 55, 0.7);
+            transform-origin: left;
+            transition: transform 1.5s ease;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            backface-visibility: visible;
+            z-index: 10;
+        }
+
+        .cover::before {
+            content: '';
+            position: absolute;
+            top: 15px;
+            bottom: 15px;
+            left: 15px;
+            right: 15px;
+            border: 2px solid rgba(212, 175, 55, 0.5);
+            border-radius: 3px 13px 13px 3px;
+            pointer-events: none;
+        }
+
+        .title {
+            color: #d4af37;
+            font-size: 3.5rem;
+            font-weight: bold;
+            text-shadow: 0 0 15px rgba(212, 175, 55, 0.9);
+            letter-spacing: 5px;
+            text-align: center;
+            width: 100%;
+        }
+
+        .pages {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+            z-index: 5;
+        }
+
+        .page {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: #f9f5e9;
+            border-left: 1px solid #d4af37;
+            transform-origin: left;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            backface-visibility: hidden;
+            box-sizing: border-box;
+            padding: 30px;
+            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 1s ease;
+            /* z-index: 5; */
+            /* z-index: 21; */
+        }
+
+        .page-content {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .page-number {
+            position: absolute;
+            bottom: 15px;
+            right: 20px;
+            color: #d4af37;
+            font-size: 0.9rem;
+        }
+
+        .page video {
+            max-width: 90%;
+            max-height: 70%;
+            border: 1px solid #d4af37;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            margin-bottom: 20px;
+        }
+
+        .page-text {
+            color: #333;
+            font-size: 1.1rem;
+            margin-top: 15px;
+            max-width: 90%;
+        }
+
+        .page-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 40px;
+            height: 80px;
+            background: rgba(212, 175, 55, 0.7);
+            color: #1a1a3a;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            cursor: pointer;
+            z-index: 20;
+            border: none;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .page-nav:hover {
+            background: rgba(212, 175, 55, 0.9);
+        }
+
+        .prev-page {
+            left: 0;
+            border-radius: 0 5px 5px 0;
+        }
+
+        .next-page {
+            right: 0;
+            border-radius: 5px 0 0 5px;
+        }
+
+        .page:hover .page-nav {
+            opacity: 1;
+           
+
+        }
+
+        .controls {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+            z-index: 20;
+        }
+
+        .btn {
+            background: linear-gradient(to bottom, #d4af37, #a78a3a);
+            color: #1a1a3a;
+            border: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            background: linear-gradient(to bottom, #e6c050, #b89a42);
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+        }
+
+        .btn:active {
+            transform: translateY(1px);
+        }
+
+        .btn-nav {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.2rem;
+        }
+
+        .page-indicator {
+            color: #d4af37;
+            margin: 0 15px;
+            font-size: 1.1rem;
+            min-width: 80px;
+            text-align: center;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .premium-decoration {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23d4af37"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>') no-repeat center;
+            opacity: 0.7;
+        }
+
+        @keyframes pageTurn {
+            0% { transform: rotateY(0deg); }
+            100% { transform: rotateY(-180deg); }
+        }
+
+        .turning {
+            animation: pageTurn 1s forwards;
+            z-index: 15;
+            /* z-index: 21; */
+        }
+    </style>
+</head>
+<body>
+    <div class="stars" id="stars"></div>
+    <div class="book-container">
+        <div class="book" id="book">
+            <div class="cover" id="cover">
+                <div class="title">Gyan Sangee</div>
+            </div>
+            <div class="pages" id="pages">
+                <!-- Page 1 -->
+                <div class="page" id="page1">
+                    <div class="page-content">
+                        <video id="video1" preload="auto">
+                            <source src="attachments/Gyansangee.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="page-text">Wisdom begins with wonder</div>
+                    </div>
+                    <div class="page-number">Page 1</div>
+                    <button class="page-nav next-page" onclick="nextPage()">&gt;</button>
+                </div>
+                
+                <!-- Page 2 -->
+                <div class="page" id="page2">
+                    <div class="page-content">
+                        <video id="video2" preload="auto">
+                            <source src="attachments/0416.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="page-text">Knowledge is the light that dispels darkness</div>
+                    </div>
+                    <div class="page-number">Page 2</div>
+                    <button class="page-nav prev-page" onclick="prevPage()">&lt;</button>
+                    <button class="page-nav next-page" onclick="nextPage()">&gt;</button>
+                </div>
+                
+                <!-- Page 3 -->
+                <div class="page" id="page3">
+                    <div class="page-content">
+                        <video id="video3" preload="auto">
+                            <source src="attachments/Greatest Of Great Intro.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="page-text">Learning is a treasure that follows its owner everywhere</div>
+                    </div>
+                    <div class="page-number">Page 3</div>
+                    <button class="page-nav prev-page" onclick="prevPage()">&lt;</button>
+                    <button class="page-nav next-page" onclick="nextPage()">&gt;</button>
+                </div>
+                
+                <!-- Page 4 -->
+                <div class="page" id="page4">
+                    <div class="page-content">
+                        <video id="video4" preload="auto">
+                            <source src="attachments/socho agar tumhare pas doraemon hota to. #nevergiveup #lifesolutions #lifeadvice.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="page-text">The mind is not a vessel to be filled but a fire to be kindled</div>
+                    </div>
+                    <div class="page-number">Page 4</div>
+                    <button class="page-nav prev-page" onclick="prevPage()">&lt;</button>
+                    <button class="page-nav next-page" onclick="nextPage()">&gt;</button>
+                </div>
+                
+                <!-- Page 5 -->
+                <div class="page" id="page5">
+                    <div class="page-content">
+                        <video id="video5" preload="auto">
+                            <source src="attachments/History in Shorts- Mahatma Jyotiba Phule _ UPSC PRE 2023 _ StudyIQ IAS Hindi.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="page-text">True wisdom comes from understanding oneself</div>
+                    </div>
+                    <div class="page-number">Page 5</div>
+                    <button class="page-nav prev-page" onclick="prevPage()">&lt;</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="controls">
+        <button id="openBtn" class="btn">Open Book</button>
+        <div id="navControls" class="hidden">
+            <button id="prevBtn" class="btn btn-nav" onclick="prevPage()">&lt;</button>
+            <div id="pageIndicator" class="page-indicator">Page 1/5</div>
+            <button id="nextBtn" class="btn btn-nav" onclick="nextPage()">&gt;</button>
+        </div>
+    </div>
+
+    <script>
+        // Global variables
+        let currentPage = 0;
+        const totalPages = 5;
+        let isBookOpen = false;
+        let autoPlayTimeout;
+        let isAutoPlaying = false;
+
+        // DOM elements
+        const cover = document.getElementById('cover');
+        const openBtn = document.getElementById('openBtn');
+        const navControls = document.getElementById('navControls');
+        const pageIndicator = document.getElementById('pageIndicator');
+        const videos = [
+            document.getElementById('video1'),
+            document.getElementById('video2'),
+            document.getElementById('video3'),
+            document.getElementById('video4'),
+            document.getElementById('video5')
+        ];
+        const pages = [
+            document.getElementById('page1'),
+            document.getElementById('page2'),
+            document.getElementById('page3'),
+            document.getElementById('page4'),
+            document.getElementById('page5')
+        ];
+
+        // Initialize the book
+        function initBook() {
+            // Create stars
+            const starsContainer = document.getElementById('stars');
+            for (let i = 0; i < 150; i++) {
+                const star = document.createElement('div');
+                star.classList.add('star');
+                star.style.width = `${Math.random() * 4 + 1}px`;
+                star.style.height = star.style.width;
+                star.style.left = `${Math.random() * 100}%`;
+                star.style.top = `${Math.random() * 100}%`;
+                star.style.setProperty('--duration', `${Math.random() * 4 + 2}s`);
+                star.style.setProperty('--opacity', `${Math.random() * 0.8 + 0.2}`);
+                star.style.animationDelay = `${Math.random() * 6}s`;
+                starsContainer.appendChild(star);
+            }
+
+            // Add premium decorations
+            for (let i = 0; i < 8; i++) {
+                const decor = document.createElement('div');
+                decor.classList.add('premium-decoration');
+                decor.style.top = `${Math.random() * 100}%`;
+                decor.style.left = `${Math.random() * 100}%`;
+                decor.style.transform = `rotate(${Math.random() * 360}deg) scale(${Math.random() * 0.5 + 0.5})`;
+                document.body.appendChild(decor);
+            }
+
+            // Set video durations (simulated)
+            videos.forEach((video, index) => {
+                video.addEventListener('loadedmetadata', function() {
+                    // const durations = [30, 20, 10, 15, 25];
+                    const durations = [15, 15, 4, 51, 57];
+                    this.currentTime = Math.min(durations[index], this.duration - 1);
+                });
+            });
+
+            // Event listeners
+            openBtn.addEventListener('click', openBook);
+            document.addEventListener('visibilitychange', handleVisibilityChange);
+        }
+
+        // Open the book
+        function openBook() {
+            isBookOpen = true;
+            openBtn.classList.add('hidden');
+            navControls.classList.remove('hidden');
+            cover.style.transform = 'rotateY(-160deg)';
+            
+            setTimeout(() => {
+                goToPage(1);
+            }, 1500);
+        }
+
+        // Close the book
+        function closeBook() {
+            isBookOpen = false;
+            clearTimeout(autoPlayTimeout);
+            isAutoPlaying = false;
+            
+            // Reset all pages
+            pages.forEach(page => {
+                page.style.transform = 'rotateY(0deg)';
+                page.classList.remove('turning');
+            });
+            
+            // Close cover
+            setTimeout(() => {
+                cover.style.transform = 'rotateY(0deg)';
+                openBtn.classList.remove('hidden');
+                navControls.classList.add('hidden');
+            }, 500);
+            
+            // Reset videos
+            videos.forEach(video => {
+                video.pause();
+                video.currentTime = 0;
+            });
+            
+            currentPage = 0;
+        }
+
+        // Update page indicator
+        function updatePageIndicator() {
+            pageIndicator.textContent = `Page ${currentPage}/${totalPages}`;
+        }
+
+        // Go to specific page
+        function goToPage(pageNum) {
+            if (pageNum < 1 || pageNum > totalPages) return;
+            
+            clearTimeout(autoPlayTimeout);
+            isAutoPlaying = false;
+            
+            // Reset all pages to original position
+            pages.forEach(page => {
+                page.style.transform = 'rotateY(0deg)';
+                page.classList.remove('turning');
+            });
+            
+            // Turn all previous pages
+            for (let i = 1; i < pageNum; i++) {
+                pages[i-1].style.transform = 'rotateY(-180deg)';
+            }
+            
+            currentPage = pageNum;
+            updatePageIndicator();
+            autoPlayCurrentPage();
+        }
+
+        // Auto-play current page
+        function autoPlayCurrentPage() {
+            if (!isBookOpen || currentPage < 1 || currentPage > totalPages) return;
+            
+            isAutoPlaying = true;
+            // const durations = [30000, 20000, 10000, 15000, 25000]; // 30s, 20s, 10s, 15s, 25s
+            const durations = [16000, 15000, 4000, 51000, 57000]; // 30s, 20s, 10s, 15s, 25s
+            const video = videos[currentPage-1];
+            
+            video.play().then(() => {
+                autoPlayTimeout = setTimeout(() => {
+                    if (currentPage < totalPages) {
+                        turnPage(currentPage);
+                    } else {
+                        // Last page - close the book after delay
+                        setTimeout(() => {
+                            closeBook();
+                        }, 2000);
+                    }
+                }, durations[currentPage-1]);
+            }).catch(error => {
+                console.error('Video play error:', error);
+                // Simulate video completion if autoplay is blocked
+                autoPlayTimeout = setTimeout(() => {
+                    if (currentPage < totalPages) {
+                        turnPage(currentPage);
+                    } else {
+                        setTimeout(() => {
+                            closeBook();
+                        }, 2000);
+                    }
+                }, durations[currentPage-1]);
+            });
+        }
+
+        // Turn page animation
+        function turnPage(pageNum) {
+            if (pageNum < 1 || pageNum >= totalPages) return;
+            
+            const page = pages[pageNum-1];
+            page.classList.add('turning');
+            
+            setTimeout(() => {
+                page.style.transform = 'rotateY(-180deg)';
+                page.classList.remove('turning');
+                goToPage(pageNum + 1);
+            }, 1000);
+        }
+
+        // Navigation functions
+        function prevPage() {
+            if (currentPage <= 1) return;
+            pauseCurrentVideo();
+            goToPage(currentPage - 1);
+        }
+
+        function nextPage() {
+            if (currentPage >= totalPages) return;
+            pauseCurrentVideo();
+            
+            if (currentPage < totalPages) {
+                turnPage(currentPage);
+            }
+        }
+
+        // Pause current video
+        function pauseCurrentVideo() {
+            if (currentPage < 1 || currentPage > totalPages) return;
+            videos[currentPage-1].pause();
+            clearTimeout(autoPlayTimeout);
+            isAutoPlaying = false;
+        }
+
+        // Handle visibility change
+        function handleVisibilityChange() {
+            if (document.hidden) {
+                pauseCurrentVideo();
+            } else if (isBookOpen && isAutoPlaying) {
+                autoPlayCurrentPage();
+            }
+        }
+
+        // Initialize the book when DOM is loaded
+        document.addEventListener('DOMContentLoaded', initBook);
+    </script>
+</body>
+</html>

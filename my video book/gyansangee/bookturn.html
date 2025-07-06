@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magic Book - Gyan Sangee</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: radial-gradient(circle, #0a0a2a, #000);
+            overflow: hidden;
+            font-family: 'Times New Roman', serif;
+        }
+
+        /* Book Container */
+        .book-container {
+            position: relative;
+            perspective: 2000px;
+            transform: rotate(-15deg) translateX(50px) translateY(-50px);
+        }
+
+        /* Book */
+        .book {
+            width: 250px;
+            height: 350px;
+            position: relative;
+            transform-style: preserve-3d;
+            cursor: pointer;
+        }
+
+        /* Book Cover */
+        .book-cover {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, #0a1a3a, #162a5a);
+            border-radius: 5px 15px 15px 5px;
+            box-shadow: 
+                0 0 20px rgba(0, 0, 50, 0.8),
+                0 0 40px rgba(100, 100, 255, 0.3);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: gold;
+            font-size: 28px;
+            font-weight: bold;
+            text-shadow: 0 0 10px rgba(255, 215, 0, 0.7);
+            backface-visibility: hidden;
+            transform-origin: left;
+            z-index: 10;
+            transition: transform 1.5s ease-in-out;
+        }
+
+        /* Pages Container */
+        .pages-container {
+            position: absolute;
+            width: 98%;
+            height: 96%;
+            top: 2%;
+            left: 1%;
+            transform-style: preserve-3d;
+            z-index: 5;
+        }
+
+        /* Page */
+        .page {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: #fff9e6;
+            border-radius: 3px 12px 12px 3px;
+            box-shadow: 
+                inset 5px 0 10px rgba(0, 0, 0, 0.2),
+                0 0 10px rgba(255, 255, 255, 0.5);
+            backface-visibility: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            transform-origin: left;
+            transition: transform 1.5s ease-in-out;
+        }
+
+        /* Page Content */
+        .page-content {
+            width: 90%;
+            height: 90%;
+            background: #000;
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            overflow: hidden;
+        }
+
+        /* Video */
+        .page-video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Page Numbers */
+        .page-number {
+            position: absolute;
+            bottom: 10px;
+            right: 15px;
+            color: #888;
+            font-size: 12px;
+        }
+
+        /* Glow Effect */
+        .glow {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at center, rgba(100, 100, 255, 0.3), transparent 70%);
+            border-radius: 5px 15px 15px 5px;
+            opacity: 0;
+            transition: opacity 1s;
+            z-index: 2;
+        }
+
+        .book:hover .glow {
+            opacity: 1;
+        }
+
+        /* Stars */
+        .star {
+            position: absolute;
+            background: white;
+            border-radius: 50%;
+            filter: blur(0.5px);
+            animation: twinkle 2s infinite alternate;
+            opacity: 0;
+        }
+
+        @keyframes twinkle {
+            0% { opacity: 0.2; transform: scale(0.8); }
+            100% { opacity: 1; transform: scale(1.2); }
+        }
+
+        /* Magic Particles */
+        .magic-particle {
+            position: absolute;
+            background: gold;
+            border-radius: 50%;
+            filter: blur(1px);
+            opacity: 0;
+            z-index: 20;
+        }
+
+        /* Current Page Marker */
+        .current-page {
+            position: absolute;
+            right: -15px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: gold;
+            color: #0a1a3a;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            box-shadow: 0 0 10px gold;
+            z-index: 15;
+        }
+    </style>
+</head>
+<body>
+    <div class="book-container">
+        <div class="book" id="book">
+            <div class="book-cover">Gyan Sangee</div>
+            <div class="pages-container" id="pages-container">
+                <!-- Pages will be added dynamically -->
+            </div>
+            <div class="glow"></div>
+            <div class="current-page" id="current-page">0</div>
+             <!-- remove this as I a don't want to show page number but we can uncomment it later -->
+        </div>
+    </div>
+
+    <script>
+        const book = document.getElementById("book");
+        const pagesContainer = document.getElementById("pages-container");
+        const currentPageEl = document.getElementById("current-page");
+        const container = document.querySelector(".book-container");
+
+        // Page data with video URLs
+        // const pages = [
+        //     { video: "attachments/Gyansangee.mp4" },
+        //     { video: "attachments/Gyansangee.mp4" },
+        //     { video: "attachments/Gyansangee.mp4" },
+        //     { video: "attachments/Gyansangee.mp4" },
+        //     { video: "attachments/Gyansangee.mp4" }
+        //     // { video: "https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4" }
+        //     ];
+        const pages = [
+            { video: "attachments/Gyansangee.mp4" },
+            { video: "attachments/0416.mp4" },
+            { video: "attachments/Greatest Of Great Intro.mp4" },
+            { video: "attachments/socho agar tumhare pas doraemon hota to. #nevergiveup #lifesolutions #lifeadvice.mp4" },
+            { video: "attachments/History in Shorts- Mahatma Jyotiba Phule _ UPSC PRE 2023 _ StudyIQ IAS Hindi.mp4" }
+            // { video: "https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4" }
+            ];
+
+        // Create pages
+        function createPages() {
+            pages.forEach((page, index) => {
+                const pageEl = document.createElement("div");
+                pageEl.className = "page";
+                pageEl.style.zIndex = pages.length - index;
+                
+                const content = document.createElement("div");
+                content.className = "page-content";
+                
+                const video = document.createElement("video");
+                video.className = "page-video";
+                video.src = page.video;
+                // video.muted = true;
+                video.muted = false;
+                video.loop = true;
+                
+                const pageNumber = document.createElement("div");
+                pageNumber.className = "page-number";
+                pageNumber.textContent = `${index + 1}/${pages.length}`;
+                
+                content.appendChild(video);
+                content.appendChild(pageNumber);
+                pageEl.appendChild(content);
+                pagesContainer.appendChild(pageEl);
+            });
+        }
+
+        // Create stars
+        function createStars() {
+            for (let i = 0; i < 30; i++) {
+                const star = document.createElement("div");
+                star.className = "star";
+                star.style.width = `${Math.random() * 5 + 2}px`;
+                star.style.height = star.style.width;
+                star.style.left = `${Math.random() * 300 - 50}px`;
+                star.style.top = `${Math.random() * 400 - 50}px`;
+                star.style.animationDelay = `${Math.random() * 2}s`;
+                container.appendChild(star);
+            }
+        }
+
+        // Create magic particles
+        function createMagicParticles() {
+            for (let i = 0; i < 50; i++) {
+                const particle = document.createElement("div");
+                particle.className = "magic-particle";
+                particle.style.width = `${Math.random() * 8 + 2}px`;
+                particle.style.height = particle.style.width;
+                particle.style.left = `${Math.random() * 200 + 50}px`;
+                particle.style.top = `${Math.random() * 300 + 50}px`;
+                container.appendChild(particle);
+
+                setTimeout(() => {
+                    particle.style.opacity = "0.8";
+                    particle.style.transform = `translate(
+                        ${(Math.random() - 0.5) * 200}px,
+                        ${(Math.random() - 0.5) * 200}px
+                    )`;
+                    particle.style.transition = `all ${Math.random() * 2 + 1}s ease-out`;
+                    setTimeout(() => {
+                        particle.style.opacity = "0";
+                    }, 1000);
+                }, Math.random() * 1000);
+            }
+        }
+
+        // Turn page
+        function turnPage(pageIndex) {
+
+            const pageElements = document.querySelectorAll(".page");
+            
+            // Reset all pages
+            pageElements.forEach((page, i) => {
+
+                alert('i' + i +','+'pageindex '+pageIndex);
+                page.style.transform = `rotateY(${i < pageIndex ? -180 : 0}deg)`;
+                const video = page.querySelector("video");
+                // video.style.zIndex = "1000";
+                if (i === pageIndex) {
+                    // currentPageEl.textContent = pageIndex + 1;
+                    video.play();
+                } else {
+                    video.pause();
+                    video.currentTime = 0;
+                }
+            });
+         
+            currentPageEl.textContent = pageIndex + 1;
+            // set video's z index to be higest
+           
+           
+
+        }
+
+        // Auto page turning
+        function startAutoPageTurning() {
+            let currentPage = 0;
+            turnPage(currentPage);
+            
+            setInterval(() => {
+                currentPage = (currentPage + 1) % pages.length;
+                turnPage(currentPage);
+            // }, 5000);
+            }, 10000);
+        }
+
+        // Initialize
+        createPages();
+        createStars();
+        
+        book.addEventListener("click", () => {
+            createMagicParticles();
+            book.classList.add("open");
+            startAutoPageTurning();
+        });
+    </script>
+</body>
+</html>

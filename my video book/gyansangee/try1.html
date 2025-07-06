@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>The Book</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            overflow: hidden;
+            /* Hide scrollbars */
+        }
+
+        .book-container {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            /* Center vertically / justify-content: center; / Center horizontally */
+        }
+
+        .page {
+            width: 80vw;
+            height: 80vh;
+            border: 1px solid #ccc;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+            /* Center text / display: none; / Hide all pages initially / overflow: auto; / Allow scrolling if content overflows */
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            background-color: #f9f9f9;
+        }
+
+        .page.active {
+            display: block;
+            /* Show the active page */
+        }
+
+        .navigation-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            font-size: 20px;
+            border-radius: 5px;
+            z-index: 10;
+            /* Ensure buttons are above the page content */
+        }
+
+        .navigation-button:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        #prev-button {
+            left: 10px;
+        }
+
+        #next-button {
+            right: 10px;
+        }
+
+        /* Styles for Cover Page */
+        #cover-page {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #cover-page h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        #cover-page p {
+            font-style: italic;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="book-container">
+        <button id="prev-button" class="navigation-button">
+            << /button>
+
+                <div id="cover-page" class="page active">
+                    <h1>The Adventures of Bartholomew</h1>
+                    <p>A Thrilling Tale by A. Author</p>
+                </div>
+                <div id="page1" class="page">
+                    <p>Page 1: It was a dark and stormy night... and Bartholomew was trying to bake a cake. He had flour
+                        everywhere.</p>
+                </div>
+                <div id="page2" class="page">
+                    <p>Page 2: Suddenly, a loud knock echoed through the kitchen. Bartholomew jumped, spilling sugar all
+                        over the floor.</p>
+                </div>
+                <div id="page3" class="page">
+                    <p>Page 3: He cautiously opened the door to find... a talking squirrel! "I need your help!" squeaked
+                        the squirrel.</p>
+                </div>
+                <div id="page4" class="page">
+                    <p>Page 4: "My acorns have been stolen by the dreaded Gnash," the squirrel explained, "and only you
+                        can retrieve them!"</p>
+                </div>
+                <div id="page5" class="page">
+                    <p>Page 5: Bartholomew, despite his flour-covered apron, agreed to help. And so, their adventure
+                        began.</p>
+                </div>
+                <button id="next-button" class="navigation-button">></button>
+
+    </div>
+    <script> const pages = document.querySelectorAll('.page'); const prevButton = document.getElementById('prev-button'); const nextButton = document.getElementById('next-button'); let currentPageIndex = 0; function showPage(index) { pages.forEach(page => page.classList.remove('active')); pages[index].classList.add('active'); // Disable/enable buttons based on page index
+     prevButton.disabled = index === 0; nextButton.disabled = index === pages.length - 1; } prevButton.addEventListener('click', () => { if (currentPageIndex > 0) { currentPageIndex--; showPage(currentPageIndex); } }); nextButton.addEventListener('click', () => { if (currentPageIndex < pages.length - 1) { currentPageIndex++; showPage(currentPageIndex); } }); // Initialize the book on the first page (cover page). showPage(currentPageIndex); </script>
+</body>
+
+</html>
